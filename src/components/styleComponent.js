@@ -54,28 +54,25 @@ export const ItemView = styled(Item)`
   padding-left: 24px;
 `;
 
-// TODO: make a common component and inherit it.
-export const UserInput = styled(Input).attrs({
-  placeholder: 'Your username',
+const TextInput = styled(Input).attrs({
   placeholderTextColor: '#A6A6A6',
-  keyboardType: 'email-address',
-  returnKeyType: 'next',
   autoCapitalize: 'none',
   autoCorrect: false,
 })`
   color: #222b45;
 `;
 
+export const UserInput = styled(TextInput).attrs({
+  placeholder: 'Your username',
+  keyboardType: 'email-address',
+  returnKeyType: 'next',
+})``;
+
 export const PasswordInput = styled(Input).attrs({
   placeholder: '********',
-  placeholderTextColor: '#A6A6A6',
   returnKeyType: 'go',
-  autoCapitalize: 'none',
-  autoCorrect: false,
   secureTextEntry: true,
-})`
-  color: #222b45;
-`;
+})``;
 
 export const ForgetPasswordText = styled(Text)`
   font-size: 14;
