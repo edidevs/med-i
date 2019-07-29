@@ -1,25 +1,48 @@
 import React from 'react';
-import { View, StatusBar, TouchableOpacity } from 'react-native';
+import { StatusBar, TouchableOpacity } from 'react-native';
 
-import { Text } from 'react-native-paper';
-
-import { SignInContainer, ImageContainer } from './styleComponent';
+import {
+  SignInContainer,
+  ImageContainer,
+  SignInView,
+  Title,
+  SubTitle,
+  ItemView,
+  UserInput,
+  PasswordInput,
+  ForgetPasswordText,
+  LogInButton,
+  LogInButtonText,
+  SignUpText,
+  RegularText,
+} from './styleComponent';
 
 const background = require('../../assets/SignInScreen.png');
 
 const SignInScreen = props => (
   <ImageContainer source={background}>
     <StatusBar barStyle="light-content" />
-    <SignInContainer />
-    <View style={{ flexDirection: 'row', alignItems: 'center' }}>
-      <Text style={{ fontSize: 16 }}>Don't have a med-i account ? </Text>
+    <SignInContainer>
+      <Title>Login</Title>
+      <SubTitle>Username</SubTitle>
+      <ItemView rounded>
+        <UserInput />
+      </ItemView>
+      <SubTitle>Password</SubTitle>
+      <ItemView rounded>
+        <PasswordInput />
+      </ItemView>
+      <ForgetPasswordText>Forget password?</ForgetPasswordText>
+      <LogInButton rounded>
+        <LogInButtonText>Log in</LogInButtonText>
+      </LogInButton>
+    </SignInContainer>
+    <SignInView>
+      <RegularText>Don't have a med-i account ? </RegularText>
       <TouchableOpacity>
-        <Text style={{ color: '#8CCCED', fontWeight: 'bold', fontSize: 16 }}>
-          {' '}
-          Sign Up
-        </Text>
+        <SignUpText> Sign Up</SignUpText>
       </TouchableOpacity>
-    </View>
+    </SignInView>
   </ImageContainer>
 );
 export default SignInScreen;
