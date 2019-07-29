@@ -9,8 +9,7 @@ import {
   SubTitle,
   ItemView,
   UserInput,
-  PasswordInput,
-  ForgetPasswordText,
+  EmailInput,
   ConfirmButton,
   LogInButtonText,
   HyperLinkText,
@@ -19,30 +18,30 @@ import {
 
 const background = require('../../assets/AuthScreen.png');
 
-const SignInScreen = props => (
+const SignUpScreen1 = props => (
   <ImageContainer source={background}>
     <StatusBar barStyle="light-content" />
     <AuthContainer>
-      <Title>Login</Title>
+      <Title>Sing Up</Title>
       <SubTitle>Username</SubTitle>
       <ItemView rounded>
         <UserInput />
       </ItemView>
-      <SubTitle>Password</SubTitle>
+      <SubTitle>Email</SubTitle>
       <ItemView rounded>
-        <PasswordInput />
+        <EmailInput />
       </ItemView>
-      <ForgetPasswordText>Forget password?</ForgetPasswordText>
       <ConfirmButton rounded>
-        <LogInButtonText>Log in</LogInButtonText>
+        {/* TODO: navigate to sign up 2 */}
+        <LogInButtonText>Next</LogInButtonText>
       </ConfirmButton>
     </AuthContainer>
     <SignInView>
-      <RegularText>Don't have a med-i account ? </RegularText>
+      <RegularText>Already have a med-i account ? </RegularText>
       <TouchableOpacity>
-        <HyperLinkText> Sign Up</HyperLinkText>
+        <HyperLinkText> Log in</HyperLinkText>
       </TouchableOpacity>
     </SignInView>
   </ImageContainer>
 );
-export default SignInScreen;
+export default SignUpScreen1;

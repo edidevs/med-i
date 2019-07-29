@@ -13,7 +13,7 @@ export const ImageContainer = styled(ImageBackground)`
   width: ${screenWidth};
 `;
 
-export const SignInContainer = styled(View)`
+export const AuthContainer = styled(View)`
   width: 350px;
   background-color: #fff;
   border-radius: 25;
@@ -51,10 +51,10 @@ export const SubTitle = styled(Text)`
 `;
 
 export const ItemView = styled(Item)`
-  padding-left: 24px;
+  padding-left: 16px;
 `;
 
-const TextInput = styled(Input).attrs({
+const InputField = styled(Input).attrs({
   placeholderTextColor: '#A6A6A6',
   autoCapitalize: 'none',
   autoCorrect: false,
@@ -62,9 +62,21 @@ const TextInput = styled(Input).attrs({
   color: #222b45;
 `;
 
-export const UserInput = styled(TextInput).attrs({
+export const UserInput = styled(InputField).attrs({
   placeholder: 'Your username',
+  keyboardType: 'default',
+  returnKeyType: 'next',
+})``;
+
+export const EmailInput = styled(InputField).attrs({
+  placeholder: 'Your email',
   keyboardType: 'email-address',
+  returnKeyType: 'next',
+})``;
+
+export const DOBInput = styled(InputField).attrs({
+  placeholder: 'MM-DD-YYYY',
+  keyboardType: 'default',
   returnKeyType: 'next',
 })``;
 
@@ -83,11 +95,12 @@ export const ForgetPasswordText = styled(Text)`
   text-align: center;
 `;
 
-export const LogInButton = styled(Button)`
+export const ConfirmButton = styled(Button)`
   background-color: #7adfec;
   align-items: center;
   justify-content: center;
   height: 56px;
+  margin-top: 24px;
 `;
 
 export const LogInButtonText = styled(Text)`
@@ -96,7 +109,7 @@ export const LogInButtonText = styled(Text)`
   font-size: 16px;
 `;
 
-export const SignUpText = styled(Text)`
+export const HyperLinkText = styled(Text)`
   color: #8ccced;
   font-weight: bold;
   font-size: 16px;
