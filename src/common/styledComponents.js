@@ -13,7 +13,7 @@ export const ImageContainer = styled(ImageBackground)`
   width: ${screenWidth};
 `;
 
-export const SignInContainer = styled(View)`
+export const AuthContainer = styled(View)`
   width: 350px;
   background-color: #fff;
   border-radius: 25;
@@ -29,7 +29,7 @@ export const SignInContainer = styled(View)`
   padding-bottom: 35px;
 `;
 
-export const SignInView = styled(View)`
+export const NavigationView = styled(View)`
   flex-direction: row;
   align-items: center;
 `;
@@ -51,10 +51,10 @@ export const SubTitle = styled(Text)`
 `;
 
 export const ItemView = styled(Item)`
-  padding-left: 24px;
+  padding-left: 16px;
 `;
 
-const TextInput = styled(Input).attrs({
+export const InputField = styled(Input).attrs({
   placeholderTextColor: '#A6A6A6',
   autoCapitalize: 'none',
   autoCorrect: false,
@@ -62,41 +62,27 @@ const TextInput = styled(Input).attrs({
   color: #222b45;
 `;
 
-export const UserInput = styled(TextInput).attrs({
+export const UserInput = styled(InputField).attrs({
   placeholder: 'Your username',
-  keyboardType: 'email-address',
+  keyboardType: 'default',
   returnKeyType: 'next',
 })``;
 
-export const PasswordInput = styled(Input).attrs({
-  placeholder: '********',
-  returnKeyType: 'go',
-  secureTextEntry: true,
-})``;
-
-export const ForgetPasswordText = styled(Text)`
-  font-size: 14;
-  font-weight: 500;
-  color: #686d7d;
-  margin-top: 24px;
-  margin-bottom: 24px;
-  text-align: center;
-`;
-
-export const LogInButton = styled(Button)`
+export const ConfirmButton = styled(Button)`
   background-color: #7adfec;
   align-items: center;
   justify-content: center;
   height: 56px;
+  margin-top: 24px;
 `;
 
-export const LogInButtonText = styled(Text)`
+export const ConfirmButtonText = styled(Text)`
   color: #fff;
   font-weight: bold;
   font-size: 16px;
 `;
 
-export const SignUpText = styled(Text)`
+export const HyperLinkText = styled(Text)`
   color: #8ccced;
   font-weight: bold;
   font-size: 16px;
@@ -106,3 +92,9 @@ export const RegularText = styled(Text)`
   font-size: 16px;
   color: #222b45;
 `;
+
+export const PasswordInput = styled(Input).attrs({
+  placeholder: '********',
+  returnKeyType: 'go',
+  secureTextEntry: true,
+})``;

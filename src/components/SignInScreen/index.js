@@ -2,27 +2,28 @@ import React from 'react';
 import { StatusBar, TouchableOpacity } from 'react-native';
 
 import {
-  SignInContainer,
+  AuthContainer,
   ImageContainer,
-  SignInView,
+  NavigationView,
   Title,
   SubTitle,
   ItemView,
   UserInput,
   PasswordInput,
-  ForgetPasswordText,
-  LogInButton,
-  LogInButtonText,
-  SignUpText,
+  ConfirmButton,
+  ConfirmButtonText,
+  HyperLinkText,
   RegularText,
-} from './styleComponent';
+} from '../../common/styledComponents';
 
-const background = require('../../assets/SignInScreen.png');
+import { ForgetPasswordText } from './styledComponents';
+
+const background = require('../../../assets/AuthScreen.png');
 
 const SignInScreen = props => (
   <ImageContainer source={background}>
     <StatusBar barStyle="light-content" />
-    <SignInContainer>
+    <AuthContainer>
       <Title>Login</Title>
       <SubTitle>Username</SubTitle>
       <ItemView rounded>
@@ -33,16 +34,16 @@ const SignInScreen = props => (
         <PasswordInput />
       </ItemView>
       <ForgetPasswordText>Forget password?</ForgetPasswordText>
-      <LogInButton rounded>
-        <LogInButtonText>Log in</LogInButtonText>
-      </LogInButton>
-    </SignInContainer>
-    <SignInView>
+      <ConfirmButton rounded>
+        <ConfirmButtonText>Log in</ConfirmButtonText>
+      </ConfirmButton>
+    </AuthContainer>
+    <NavigationView>
       <RegularText>Don't have a med-i account ? </RegularText>
       <TouchableOpacity>
-        <SignUpText> Sign Up</SignUpText>
+        <HyperLinkText> Sign Up</HyperLinkText>
       </TouchableOpacity>
-    </SignInView>
+    </NavigationView>
   </ImageContainer>
 );
 export default SignInScreen;
