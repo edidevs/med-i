@@ -4,45 +4,44 @@ import { StatusBar, TouchableOpacity } from 'react-native';
 import {
   AuthContainer,
   ImageContainer,
-  SignInView,
+  NavigationView,
   Title,
   SubTitle,
   ItemView,
-  UserInput,
   PasswordInput,
-  ForgetPasswordText,
   ConfirmButton,
-  LogInButtonText,
+  ConfirmButtonText,
   HyperLinkText,
   RegularText,
-} from './styleComponent';
+} from '../../common/styledComponents';
 
-const background = require('../../assets/AuthScreen.png');
+import { DOBInput } from './styledComponents';
 
-const SignInScreen = props => (
+const background = require('../../../assets/AuthScreen.png');
+
+const SignUpScreen2 = props => (
   <ImageContainer source={background}>
     <StatusBar barStyle="light-content" />
     <AuthContainer>
-      <Title>Login</Title>
-      <SubTitle>Username</SubTitle>
+      <Title>Sing Up</Title>
+      <SubTitle>Date of birth</SubTitle>
       <ItemView rounded>
-        <UserInput />
+        <DOBInput />
       </ItemView>
       <SubTitle>Password</SubTitle>
       <ItemView rounded>
         <PasswordInput />
       </ItemView>
-      <ForgetPasswordText>Forget password?</ForgetPasswordText>
       <ConfirmButton rounded>
-        <LogInButtonText>Log in</LogInButtonText>
+        <ConfirmButtonText>Next</ConfirmButtonText>
       </ConfirmButton>
     </AuthContainer>
-    <SignInView>
-      <RegularText>Don't have a med-i account ? </RegularText>
+    <NavigationView>
+      <RegularText>Already have a med-i account ? </RegularText>
       <TouchableOpacity>
-        <HyperLinkText> Sign Up</HyperLinkText>
+        <HyperLinkText> Log in</HyperLinkText>
       </TouchableOpacity>
-    </SignInView>
+    </NavigationView>
   </ImageContainer>
 );
-export default SignInScreen;
+export default SignUpScreen2;

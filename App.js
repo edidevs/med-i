@@ -1,8 +1,11 @@
 import React from 'react';
-import SignUpScreen2 from './src/components/SingUpScreen2';
+import SignUpScreen1 from './src/components/SignUpScreen1';
+// import SignUpScreen2 from './src/components/SignUpScreen2/index';
+
 // import SignInScreen from './src/components/SignInScreen';
 
 export default function App() {
   // return <SignInScreen />;
-  return <SignUpScreen2 />;
+  return <SignUpScreen1 />;
+  // return <SignUpScreen2 />;
 }

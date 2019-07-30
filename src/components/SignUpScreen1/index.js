@@ -4,43 +4,44 @@ import { StatusBar, TouchableOpacity } from 'react-native';
 import {
   AuthContainer,
   ImageContainer,
-  SignInView,
+  NavigationView,
   Title,
   SubTitle,
   ItemView,
-  PasswordInput,
-  DOBInput,
+  UserInput,
   ConfirmButton,
-  LogInButtonText,
+  ConfirmButtonText,
   HyperLinkText,
   RegularText,
-} from './styleComponent';
+} from '../../common/styledComponents';
 
-const background = require('../../assets/AuthScreen.png');
+import { EmailInput } from './styledComponents';
 
-const SignUpScreen2 = props => (
+const background = require('../../../assets/AuthScreen.png');
+
+const SignUpScreen1 = props => (
   <ImageContainer source={background}>
     <StatusBar barStyle="light-content" />
     <AuthContainer>
       <Title>Sing Up</Title>
-      <SubTitle>Date of birth</SubTitle>
+      <SubTitle>Username</SubTitle>
       <ItemView rounded>
-        <DOBInput />
+        <UserInput />
       </ItemView>
-      <SubTitle>Password</SubTitle>
+      <SubTitle>Email</SubTitle>
       <ItemView rounded>
-        <PasswordInput />
+        <EmailInput />
       </ItemView>
       <ConfirmButton rounded>
-        <LogInButtonText>Next</LogInButtonText>
+        <ConfirmButtonText>Next</ConfirmButtonText>
       </ConfirmButton>
     </AuthContainer>
-    <SignInView>
+    <NavigationView>
       <RegularText>Already have a med-i account ? </RegularText>
       <TouchableOpacity>
         <HyperLinkText> Log in</HyperLinkText>
       </TouchableOpacity>
-    </SignInView>
+    </NavigationView>
   </ImageContainer>
 );
-export default SignUpScreen2;
+export default SignUpScreen1;
