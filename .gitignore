@@ -4,6 +4,7 @@ npm-debug.*
 *.jks
 *.p12
 *.key
+*.svg
 *.mobileprovision
 *.orig.*
 web-build/

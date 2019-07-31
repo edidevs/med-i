@@ -18,11 +18,11 @@ export const AuthContainer = styled(View)`
   background-color: #fff;
   border-radius: 25;
   margin-bottom: 83px;
-  shadow-opacity: 0.8;
-  shadow-radius: 22;
   elevation: 14;
   shadow-color: #9aa0b2;
   shadow-offset: 2px;
+  shadow-opacity: 0.8;
+  shadow-radius: 22;
   padding-top: 44px;
   padding-left: 24px;
   padding-right: 24px;
