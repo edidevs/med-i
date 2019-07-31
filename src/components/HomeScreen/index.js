@@ -7,6 +7,7 @@ import { screenWidth } from '../../utils/deviceSize';
 import HappyFace from './icons/Happy.svg';
 import PokerFace from './icons/Poker.svg';
 import SadFace from './icons/Sad.svg';
+import Cart from './icons/Cart.svg';
 
 const background = require('../../../assets/HomeScreen.png');
 
@@ -18,12 +19,53 @@ const HomeScreen = props => (
       <View
         style={{
           flex: 2,
-          padding: 36,
+          paddingLeft: 24,
+          paddingRight: 24,
+          paddingTop: 24,
+          flexDirection: 'row',
+          justifyContent: 'space-between',
         }}
       >
-        <Text style={{ fontSize: 28, fontWeight: 'bold', color: '#fff' }}>
-          Good morning Laarni
-        </Text>
+        <View
+          style={{
+            justifyContent: 'space-between',
+            alignSelf: 'flex-end',
+            height: 258,
+            paddingLeft: 10,
+          }}
+        >
+          <View
+            style={{
+              borderRadius: 58,
+              height: 108,
+              width: 108,
+              borderWidth: 5,
+              borderColor: 'white',
+            }}
+          />
+          <Text
+            style={{
+              fontSize: 30,
+              fontWeight: 'bold',
+              color: '#fff',
+              paddingBottom: 36,
+            }}
+          >
+            Good morning {'\n'}Laarni
+          </Text>
+        </View>
+        <View
+          style={{
+            backgroundColor: '#68CCD9',
+            height: 52,
+            width: 52,
+            borderRadius: 50,
+            alignItems: 'center',
+            justifyContent: 'center',
+          }}
+        >
+          <Cart width={30} height={24} />
+        </View>
       </View>
       <View
         style={{
