@@ -17,6 +17,8 @@ import {
 
 import { EmailInput } from './styledComponents';
 
+import { handleRoute } from '../../utils/handleRoute';
+
 const background = require('../../../assets/AuthScreen.png');
 
 const SignUpScreen1 = props => (
@@ -32,13 +34,13 @@ const SignUpScreen1 = props => (
       <ItemView rounded>
         <EmailInput />
       </ItemView>
-      <ConfirmButton rounded>
+      <ConfirmButton rounded onPress={() => handleRoute(props, 'SignUp2')}>
         <ConfirmButtonText>Next</ConfirmButtonText>
       </ConfirmButton>
     </AuthContainer>
     <NavigationView>
       <RegularText>Already have a med-i account ? </RegularText>
-      <TouchableOpacity>
+      <TouchableOpacity onPress={() => handleRoute(props, 'SignIn')}>
         <HyperLinkText> Log in</HyperLinkText>
       </TouchableOpacity>
     </NavigationView>

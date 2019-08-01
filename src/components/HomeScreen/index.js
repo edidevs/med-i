@@ -1,5 +1,5 @@
 import React from 'react';
-import { SafeAreaView } from 'react-native';
+import { SafeAreaView, AsyncStorage, Button } from 'react-native';
 
 import { ImageContainer } from '../../common/styledComponents';
 import {
@@ -14,20 +14,28 @@ import {
   StatusViewWrapper,
   StatusView,
   IconView,
+  FaceHeight,
+  FaceWidth,
   RegularText,
   InterrogationText,
   HealthyColors,
   HealthySickColors,
   SickColors,
 } from './styledComponents';
+
 import HappyFace from './icons/Happy.svg';
 import PokerFace from './icons/Poker.svg';
 import SadFace from './icons/Sad.svg';
 import Cart from './icons/Cart.svg';
 
+import { handleRoute } from '../../utils/handleRoute';
+
 const background = require('../../../assets/HomeScreen.png');
 
-const scale = 52;
+const logout = async props => {
+  await AsyncStorage.clear();
+  handleRoute(props, 'AuthLoading');
+};
 
 const HomeScreen = props => (
   <ImageContainer source={background}>
@@ -50,23 +58,24 @@ const HomeScreen = props => (
         <StatusViewWrapper>
           <StatusView>
             <IconView colors={HealthyColors}>
-              <HappyFace width={scale} height={scale} />
+              <HappyFace width={FaceWidth} height={FaceHeight} />
             </IconView>
             <RegularText>Healthy</RegularText>
           </StatusView>
           <StatusView>
             <IconView colors={HealthySickColors}>
-              <PokerFace width={scale} height={scale} />
+              <PokerFace width={FaceWidth} height={FaceHeight} />
             </IconView>
             <RegularText>Healthy/Sick</RegularText>
           </StatusView>
           <StatusView>
             <IconView colors={SickColors}>
-              <SadFace width={scale} height={scale} />
+              <SadFace width={FaceWidth} height={FaceHeight} />
             </IconView>
             <RegularText>Sick</RegularText>
           </StatusView>
         </StatusViewWrapper>
+        <Button title="logout" onPress={() => logout(props)} />
       </BottomView>
     </SafeAreaView>
   </ImageContainer>

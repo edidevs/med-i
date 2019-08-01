@@ -1,5 +1,5 @@
 import React from 'react';
-import { StatusBar, TouchableOpacity } from 'react-native';
+import { StatusBar, TouchableOpacity, AsyncStorage } from 'react-native';
 
 import {
   AuthContainer,
@@ -17,8 +17,14 @@ import {
 } from '../../common/styledComponents';
 
 import { ForgetPasswordText } from './styledComponents';
+import { handleRoute } from '../../utils/handleRoute';
 
 const background = require('../../../assets/AuthScreen.png');
+
+const login = async props => {
+  await AsyncStorage.setItem('userToken', 'abc');
+  handleRoute(props, 'App');
+};
 
 const SignInScreen = props => (
   <ImageContainer source={background}>
@@ -34,13 +40,13 @@ const SignInScreen = props => (
         <PasswordInput />
       </ItemView>
       <ForgetPasswordText>Forget password?</ForgetPasswordText>
-      <ConfirmButton rounded>
+      <ConfirmButton rounded onPress={() => login(props)}>
         <ConfirmButtonText>Log in</ConfirmButtonText>
       </ConfirmButton>
     </AuthContainer>
     <NavigationView>
       <RegularText>Don't have a med-i account ? </RegularText>
-      <TouchableOpacity>
+      <TouchableOpacity onPress={() => handleRoute(props, 'SignUp1')}>
         <HyperLinkText> Sign Up</HyperLinkText>
       </TouchableOpacity>
     </NavigationView>

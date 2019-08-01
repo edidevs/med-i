@@ -98,6 +98,8 @@ export const IconView = styled(LinearGradient)`
 export const HealthyColors = ['#55C26F', '#5ADF79'];
 export const HealthySickColors = ['#ED956A', '#F06D2E'];
 export const SickColors = ['#E36E5B', '#F0857A'];
+export const FaceHeight = 52;
+export const FaceWidth = 52;
 
 export const RegularText = styled.Text`
   font-size: 16;
