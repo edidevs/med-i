@@ -5,6 +5,11 @@ import { Input, Button, Item } from 'native-base';
 
 import { screenHeight, screenWidth } from '../utils/deviceSize';
 
+export const CenterView = styled(View)`
+  align-items: center;
+  justify-content: center;
+`;
+
 export const ImageContainer = styled(ImageBackground)`
   flex: 1;
   align-items: center;
