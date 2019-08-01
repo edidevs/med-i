@@ -1,6 +1,8 @@
 import React from 'react';
 import { Text, View, SafeAreaView } from 'react-native';
 
+import { FontAwesome } from '@expo/vector-icons';
+
 import { ImageContainer } from '../../common/styledComponents';
 import { HappyDisk, PokerDisk, SadDisk } from './styledComponents';
 import { screenWidth } from '../../utils/deviceSize';
@@ -36,13 +38,21 @@ const HomeScreen = props => (
         >
           <View
             style={{
-              borderRadius: 58,
-              height: 108,
-              width: 108,
+              borderRadius: 60,
+              height: 110,
+              width: 110,
               borderWidth: 5,
-              borderColor: 'white',
+              borderColor: '#C2F7F8',
+              backgroundColor: 'rgba(52, 52, 52, 0.5)',
+              alignItems: 'center',
+              justifyContent: 'center',
             }}
-          />
+          >
+            <FontAwesome
+              name="camera"
+              style={{ fontSize: 30, color: '#393C50' }}
+            />
+          </View>
           <Text
             style={{
               fontSize: 30,
@@ -89,7 +99,7 @@ const HomeScreen = props => (
         />
         <Text
           style={{
-            fontSize: 28,
+            fontSize: 30,
             fontWeight: '600',
             color: '#393C50',
             padding: 10,
