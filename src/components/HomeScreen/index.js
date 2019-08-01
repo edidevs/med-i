@@ -57,9 +57,9 @@ const HomeScreen = props => (
         <View
           style={{
             backgroundColor: '#68CCD9',
-            height: 52,
-            width: 52,
-            borderRadius: 50,
+            height: 55,
+            width: 55,
+            borderRadius: 55,
             alignItems: 'center',
             justifyContent: 'center',
           }}
@@ -87,7 +87,14 @@ const HomeScreen = props => (
             marginBottom: 24,
           }}
         />
-        <Text style={{ fontSize: 28, fontWeight: '600', color: '#393C50' }}>
+        <Text
+          style={{
+            fontSize: 28,
+            fontWeight: '600',
+            color: '#393C50',
+            padding: 10,
+          }}
+        >
           How are you feeling today ?
         </Text>
         <View

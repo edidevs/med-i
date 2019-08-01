@@ -4,18 +4,18 @@ import { View } from 'react-native';
 const IconView = styled(View)`
   align-items: center;
   justify-content: center;
-  height: 101px;
-  width: 101px;
-  border-radius: 50px;
+  height: 103px;
+  width: 103px;
+  border-radius: 53px;
   border-width: 3px;
   border-color: #ffffff;
   margin-top: 29.5px;
   margin-bottom: 24px;
-  elevation: 14;
-  shadow-color: #9aa0b2;
-  shadow-offset: 2px;
+  elevation: 5;
+  shadow-color: #dbdee4;
+  shadow-offset: 5px;
   shadow-opacity: 0.8;
-  shadow-radius: 20;
+  shadow-radius: 10px;
 `;
 
 export const HappyDisk = styled(IconView)`
