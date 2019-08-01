@@ -1,18 +1,18 @@
 import styled from 'styled-components/native';
-import { View, Text } from 'react-native';
 
 import { FontAwesome } from '@expo/vector-icons';
+import { LinearGradient } from 'expo-linear-gradient';
 
 import { CenterView } from '../../common/styledComponents';
 import { screenWidth } from '../../utils/deviceSize';
 
-const BigText = styled(Text)`
+const BigText = styled.Text`
   font-size: 30px;
   font-weight: bold;
   padding-bottom: 36px;
 `;
 
-export const TopView = styled(View)`
+export const TopView = styled.View`
   flex: 2;
   padding-left: 24px;
   padding-right: 24px;
@@ -21,14 +21,14 @@ export const TopView = styled(View)`
   justify-content: space-between;
 `;
 
-export const BottomView = styled(View)`
+export const BottomView = styled.View`
   flex: 3;
   background-color: #fff;
   width: ${screenWidth};
   padding: 36px;
 `;
 
-export const TopLeftView = styled(View)`
+export const TopLeftView = styled.View`
   justify-content: space-between;
   align-self: flex-end;
   height: 258px;
@@ -53,6 +53,7 @@ export const CameraIcon = styled(FontAwesome).attrs({
 
 export const GreetingText = styled(BigText)`
   color: #fff;
+  padding-left: 10px;
 `;
 
 export const TopRightView = styled(CenterView)`
@@ -62,7 +63,7 @@ export const TopRightView = styled(CenterView)`
   border-radius: 55px;
 `;
 
-export const HealthBarView = styled(View)`
+export const HealthBarView = styled.View`
   background-color: #fb69;
   height: 15px;
   border-radius: 25px;
@@ -70,14 +71,14 @@ export const HealthBarView = styled(View)`
   margin-bottom: 24px;
 `;
 
-export const StatusViewWrapper = styled(View)`
+export const StatusViewWrapper = styled.View`
   flex-direction: row;
   justify-content: space-between;
 `;
 
 export const StatusView = styled(CenterView)``;
 
-const IconView = styled(CenterView)`
+export const IconView = styled(LinearGradient)`
   height: 103px;
   width: 103px;
   border-radius: 53px;
@@ -90,21 +91,15 @@ const IconView = styled(CenterView)`
   shadow-opacity: 0.8;
   shadow-radius: 10px;
   elevation: 5;
+  align-items: center;
+  justify-content: center;
 `;
 
-export const HappyDisk = styled(IconView)`
-  background-color: #55c26f;
-`;
+export const HealthyColors = ['#55C26F', '#5ADF79'];
+export const HealthySickColors = ['#ED956A', '#F06D2E'];
+export const SickColors = ['#E36E5B', '#F0857A'];
 
-export const PokerDisk = styled(IconView)`
-  background-color: #ed956a;
-`;
-
-export const SadDisk = styled(IconView)`
-  background-color: #e36e5b;
-`;
-
-export const RegularText = styled(Text)`
+export const RegularText = styled.Text`
   font-size: 16;
   color: #393c50;
 `;

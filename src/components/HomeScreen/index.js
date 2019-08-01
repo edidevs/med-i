@@ -13,11 +13,12 @@ import {
   HealthBarView,
   StatusViewWrapper,
   StatusView,
-  HappyDisk,
-  PokerDisk,
-  SadDisk,
+  IconView,
   RegularText,
   InterrogationText,
+  HealthyColors,
+  HealthySickColors,
+  SickColors,
 } from './styledComponents';
 import HappyFace from './icons/Happy.svg';
 import PokerFace from './icons/Poker.svg';
@@ -48,21 +49,21 @@ const HomeScreen = props => (
         <InterrogationText>How are you feeling today ?</InterrogationText>
         <StatusViewWrapper>
           <StatusView>
-            <HappyDisk>
+            <IconView colors={HealthyColors}>
               <HappyFace width={scale} height={scale} />
-            </HappyDisk>
+            </IconView>
             <RegularText>Healthy</RegularText>
           </StatusView>
           <StatusView>
-            <PokerDisk>
+            <IconView colors={HealthySickColors}>
               <PokerFace width={scale} height={scale} />
-            </PokerDisk>
+            </IconView>
             <RegularText>Healthy/Sick</RegularText>
           </StatusView>
           <StatusView>
-            <SadDisk>
+            <IconView colors={SickColors}>
               <SadFace width={scale} height={scale} />
-            </SadDisk>
+            </IconView>
             <RegularText>Sick</RegularText>
           </StatusView>
         </StatusViewWrapper>
