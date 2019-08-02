@@ -1,7 +1,6 @@
 import React from 'react';
-import { SafeAreaView, AsyncStorage } from 'react-native';
+import { SafeAreaView, AsyncStorage, StatusBar } from 'react-native';
 
-import { ImageContainer } from '../../common/styledComponents';
 import {
   TopView,
   BottomView,
@@ -24,9 +23,10 @@ import {
   SickColors,
 } from './styledComponents';
 
-import HappyFace from './icons/Happy.svg';
-import PokerFace from './icons/Poker.svg';
-import SadFace from './icons/Sad.svg';
+import { ImageContainer } from '../../common/styledComponents';
+import HappyFace from '../../common/Icons/Happy.svg';
+import PokerFace from '../../common/Icons/Poker.svg';
+import SadFace from '../../common/Icons/Sad.svg';
 
 import { handleRoute } from '../../utils/handleRoute';
 
@@ -39,6 +39,7 @@ const logout = async props => {
 
 const HomeScreen = props => (
   <ImageContainer source={background}>
+    <StatusBar barStyle="light-content" />
     <SafeAreaView>
       <TopView>
         <TopLeftView>

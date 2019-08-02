@@ -1,9 +1,12 @@
+/* eslint-disable react/prop-types */
+import React from 'react';
 import {
   createSwitchNavigator,
   createStackNavigator,
   createAppContainer,
-  createBottomTabNavigator,
+  createMaterialTopTabNavigator,
 } from 'react-navigation';
+import { Feather, EvilIcons, AntDesign } from '@expo/vector-icons';
 
 import AuthLoadingScreen from './src/components/AuthLoadingScreen';
 import SignInScreen from './src/components/SignInScreen';
@@ -13,11 +16,95 @@ import SignUpScreen2 from './src/components/SignUpScreen2';
 import StoreScreen from './src/components/StoreScreen';
 import MoreScreen from './src/components/MoreScreen';
 
-const AppStack = createBottomTabNavigator({
-  Home: HomeScreen,
-  Store: StoreScreen,
-  More: MoreScreen,
-});
+const config = {
+  initialRouteName: 'Home',
+  tabBarPosition: 'bottom',
+  tabBarVisible: true,
+  swipeEnabled: true,
+  animationEnabled: true,
+  tabBarOptions: {
+    showLabel: true,
+    activeTintColor: '#1EB9CD',
+    inactiveTintColor: '#33395F',
+    borderTopWidth: 0,
+    style: {
+      backgroundColor: '#fff',
+      shadowOffset: {
+        height: 0,
+        width: 0,
+      },
+      shadowOpacity: 0.8,
+      shadowRadius: 10,
+      shadowColor: 'rgba(210,211,215,0.5)',
+      elevation: 20,
+    },
+    labelStyle: {
+      fontSize: 12,
+    },
+    iconStyle: {
+      height: 40,
+      width: 40,
+    },
+    indicatorStyle: {
+      height: 0,
+    },
+    showIcon: true,
+  },
+};
+
+const AppStack = createMaterialTopTabNavigator(
+  {
+    Home: {
+      screen: HomeScreen,
+      navigationOptions: {
+        tabBarLabel: 'Home',
+        tabBarIcon({ tintColor }) {
+          return (
+            <AntDesign
+              style={{
+                fontSize: 40,
+                color: tintColor,
+              }}
+              name="home"
+            />
+          );
+        },
+      },
+    },
+    Store: {
+      screen: StoreScreen,
+      navigationOptions: {
+        tabBarLabel: 'Store',
+        tabBarIcon({ tintColor }) {
+          return (
+            <EvilIcons
+              style={{
+                fontSize: 40,
+                color: tintColor,
+              }}
+              name="cart"
+            />
+          );
+        },
+      },
+    },
+    More: {
+      screen: MoreScreen,
+      navigationOptions: {
+        tabBarLabel: 'Store',
+        tabBarIcon({ tintColor }) {
+          return (
+            <Feather
+              style={{ fontSize: 40, color: tintColor }}
+              name="more-horizontal"
+            />
+          );
+        },
+      },
+    },
+  },
+  config
+);
 
 const AuthStack = createStackNavigator(
   {
