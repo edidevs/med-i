@@ -1,7 +1,6 @@
 import styled from 'styled-components/native';
-import { Text } from 'react-native';
 
-export const ForgetPasswordText = styled(Text)`
+export const ForgetPasswordText = styled.Text`
   font-size: 14;
   font-weight: 500;
   color: #686d7d;

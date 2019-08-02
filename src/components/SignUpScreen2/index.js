@@ -33,12 +33,12 @@ const SignUpScreen2 = props => (
         <PasswordInput />
       </ItemView>
       <ConfirmButton rounded>
-        <ConfirmButtonText>Next</ConfirmButtonText>
+        <ConfirmButtonText>Create account</ConfirmButtonText>
       </ConfirmButton>
     </AuthContainer>
     <NavigationView>
       <RegularText>Already have a med-i account ? </RegularText>
-      <TouchableOpacity>
+      <TouchableOpacity onPress={() => props.navigation.navigate('SignIn')}>
         <HyperLinkText> Log in</HyperLinkText>
       </TouchableOpacity>
     </NavigationView>
