@@ -1,5 +1,5 @@
 import React from 'react';
-import { SafeAreaView, AsyncStorage, Button } from 'react-native';
+import { SafeAreaView, AsyncStorage } from 'react-native';
 
 import { ImageContainer } from '../../common/styledComponents';
 import {
@@ -10,6 +10,7 @@ import {
   CameraIcon,
   GreetingText,
   TopRightView,
+  LogOutIcon,
   HealthBarView,
   StatusViewWrapper,
   StatusView,
@@ -26,7 +27,6 @@ import {
 import HappyFace from './icons/Happy.svg';
 import PokerFace from './icons/Poker.svg';
 import SadFace from './icons/Sad.svg';
-import Cart from './icons/Cart.svg';
 
 import { handleRoute } from '../../utils/handleRoute';
 
@@ -48,7 +48,7 @@ const HomeScreen = props => (
           <GreetingText>Good morning {'\n'}Laarni</GreetingText>
         </TopLeftView>
         <TopRightView>
-          <Cart width={30} height={24} />
+          <LogOutIcon onPress={() => logout(props)} />
         </TopRightView>
       </TopView>
       <BottomView>
@@ -75,7 +75,6 @@ const HomeScreen = props => (
             <RegularText>Sick</RegularText>
           </StatusView>
         </StatusViewWrapper>
-        <Button title="logout" onPress={() => logout(props)} />
       </BottomView>
     </SafeAreaView>
   </ImageContainer>

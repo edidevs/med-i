@@ -1,6 +1,6 @@
 import styled from 'styled-components/native';
 
-import { FontAwesome } from '@expo/vector-icons';
+import { FontAwesome, AntDesign } from '@expo/vector-icons';
 import { LinearGradient } from 'expo-linear-gradient';
 
 import { CenterView } from '../../common/styledComponents';
@@ -61,6 +61,14 @@ export const TopRightView = styled(CenterView)`
   height: 55px;
   width: 55px;
   border-radius: 55px;
+`;
+
+export const LogOutIcon = styled(AntDesign).attrs({
+  name: 'logout',
+})`
+  font-size: 25px;
+  font-weight: bold;
+  color: #fff;
 `;
 
 export const HealthBarView = styled.View`
