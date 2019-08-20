@@ -16,6 +16,8 @@ import { ImageContainer } from '../../common/styledComponents';
 import { ShadowView, HealthyColors } from '../HomeScreen/styledComponents';
 
 import HappyFace from '../../common/Icons/Happy.svg';
+import Yoga from '../../common/Icons/Yoga.svg';
+import Sports from '../../common/Icons/Sports.svg';
 
 const background = require('../../../assets/HealthyScreen.png');
 
@@ -39,15 +41,41 @@ const HealthyScreen = () => (
       </ParagraphView>
       {/* Items */}
       <ScrollView contentContainerStyle={{ alignItems: 'center' }}>
-        <ItemView>
-          <Text style={{ fontSize: 16, fontWeight: 'bold', color: '#393C50' }}>
-            Yoga
-          </Text>
+        <ItemView style={{ flexDirection: 'row' }}>
+          <Yoga />
+          <View
+            style={{
+              marginLeft: 16,
+              justifyContent: 'space-between',
+            }}
+          >
+            <Text
+              style={{ fontSize: 16, fontWeight: 'bold', color: '#393C50' }}
+            >
+              Yoga
+            </Text>
+            <Text style={{ fontSize: 14, color: '#393C50' }}>
+              Start your practice here
+            </Text>
+          </View>
         </ItemView>
-        <ItemView>
-          <Text style={{ fontSize: 16, fontWeight: 'bold', color: '#393C50' }}>
-            Exercise
-          </Text>
+        <ItemView style={{ flexDirection: 'row' }}>
+          <Sports />
+          <View
+            style={{
+              marginLeft: 16,
+              justifyContent: 'space-between',
+            }}
+          >
+            <Text
+              style={{ fontSize: 16, fontWeight: 'bold', color: '#393C50' }}
+            >
+              Exercise
+            </Text>
+            <Text style={{ fontSize: 14, color: '#393C50' }}>
+              Enroll in classes here
+            </Text>
+          </View>
         </ItemView>
       </ScrollView>
     </SafeAreaView>

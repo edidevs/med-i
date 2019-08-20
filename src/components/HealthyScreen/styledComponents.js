@@ -50,6 +50,8 @@ export const MessageTwoText = styled.Text`
   color: #45cd65;
   font-weight: 400;
   font-size: 22px;
+  font-weight: bold;
+  margin-top: 10px;
 `;
 
 export const ItemView = styled.View`
@@ -61,8 +63,8 @@ export const ItemView = styled.View`
   border-radius: 13px;
   background-color: #fff;
   shadow-color: #d5d9e6;
-  shadow-offset: 0px 0px;
+  shadow-offset: 0px 8px;
   shadow-opacity: 0.5;
-  shadow-radius: 12;
-  elevation: 0.6;
+  shadow-radius: 13;
+  elevation: 0.8;
 `;
