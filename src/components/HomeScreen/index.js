@@ -1,5 +1,10 @@
 import React from 'react';
-import { SafeAreaView, AsyncStorage, StatusBar } from 'react-native';
+import {
+  SafeAreaView,
+  AsyncStorage,
+  StatusBar,
+  TouchableOpacity,
+} from 'react-native';
 
 import {
   TopView,
@@ -60,9 +65,13 @@ const HomeScreen = props => (
         <StatusViewWrapper>
           <StatusView>
             <ShadowView>
-              <IconView colors={HealthyColors}>
-                <HappyFace width={FaceWidth} height={FaceHeight} />
-              </IconView>
+              <TouchableOpacity
+                onPress={() => props.navigation.navigate('Healthy')}
+              >
+                <IconView colors={HealthyColors}>
+                  <HappyFace width={FaceWidth} height={FaceHeight} />
+                </IconView>
+              </TouchableOpacity>
             </ShadowView>
             <RegularText>Healthy</RegularText>
           </StatusView>

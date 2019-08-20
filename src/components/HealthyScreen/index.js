@@ -1,11 +1,10 @@
 import React from 'react';
-import { SafeAreaView, ScrollView } from 'react-native';
+import { SafeAreaView, ScrollView, StatusBar } from 'react-native';
 
 import {
   ParagraphView,
   StatusView,
   IconView,
-  StatusText,
   ResultsText,
   MessageOneText,
   MessageTwoText,
@@ -13,6 +12,8 @@ import {
   ItemTextView,
   ItemText,
   ItemMessage,
+  FaceHeight,
+  FaceWidth,
 } from './styledComponents';
 
 import { ImageContainer } from '../../common/styledComponents';
@@ -26,12 +27,12 @@ const background = require('../../../assets/HealthyScreen.png');
 
 const HealthyScreen = () => (
   <ImageContainer source={background}>
+    <StatusBar barStyle="light-content" />
     <SafeAreaView>
       <StatusView>
-        <StatusText>Healthy Mood</StatusText>
         <ShadowView>
           <IconView colors={HealthyColors}>
-            <HappyFace width={95} height={95} />
+            <HappyFace width={FaceWidth} height={FaceHeight} />
           </IconView>
         </ShadowView>
       </StatusView>

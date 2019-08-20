@@ -6,13 +6,8 @@ import { screenWidth } from '../../utils/deviceSize';
 
 export const StatusView = styled.View`
   align-items: center;
-  /* bottom: 45%; */
-`;
-
-export const StatusText = styled.Text`
-  color: #fff;
-  font-weight: 600;
-  font-size: 22px;
+  margin-bottom: 24px;
+  top: 6%;
 `;
 
 export const IconView = styled(LinearGradient)`
@@ -29,10 +24,10 @@ export const IconView = styled(LinearGradient)`
 `;
 
 export const ParagraphView = styled.View`
-  margin-top: 16px;
+  margin-top: 48px;
   margin-bottom: 24px;
   align-items: center;
-  height: 130;
+  height: 130px;
   justify-content: space-between;
 `;
 
@@ -88,3 +83,6 @@ export const ItemMessage = styled.Text`
   font-size: 14;
   color: #393c50;
 `;
+
+export const FaceHeight = 95;
+export const FaceWidth = 95;
