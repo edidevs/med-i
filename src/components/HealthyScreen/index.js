@@ -1,5 +1,5 @@
 import React from 'react';
-import { SafeAreaView } from 'react-native';
+import { SafeAreaView, ScrollView, Text, View } from 'react-native';
 
 import {
   ParagraphView,
@@ -9,6 +9,7 @@ import {
   ResultsText,
   MessageOneText,
   MessageTwoText,
+  ItemView,
 } from './styledComponents';
 
 import { ImageContainer } from '../../common/styledComponents';
@@ -21,6 +22,7 @@ const background = require('../../../assets/HealthyScreen.png');
 const HealthyScreen = () => (
   <ImageContainer source={background}>
     <SafeAreaView>
+      {/* message and icon */}
       <StatusView>
         <StatusText>Healthy Mood</StatusText>
         <ShadowView>
@@ -29,11 +31,25 @@ const HealthyScreen = () => (
           </IconView>
         </ShadowView>
       </StatusView>
+      {/* paragraph */}
       <ParagraphView>
         <ResultsText>Medi I am well</ResultsText>
         <MessageOneText>Say hello to wellness</MessageOneText>
         <MessageTwoText>A healthy you is a happy you</MessageTwoText>
       </ParagraphView>
+      {/* Items */}
+      <ScrollView contentContainerStyle={{ alignItems: 'center' }}>
+        <ItemView>
+          <Text style={{ fontSize: 16, fontWeight: 'bold', color: '#393C50' }}>
+            Yoga
+          </Text>
+        </ItemView>
+        <ItemView>
+          <Text style={{ fontSize: 16, fontWeight: 'bold', color: '#393C50' }}>
+            Exercise
+          </Text>
+        </ItemView>
+      </ScrollView>
     </SafeAreaView>
   </ImageContainer>
 );

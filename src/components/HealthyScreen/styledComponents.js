@@ -2,15 +2,17 @@ import styled from 'styled-components/native';
 
 import { LinearGradient } from 'expo-linear-gradient';
 
+import { screenWidth } from '../../utils/deviceSize';
+
 export const StatusView = styled.View`
   align-items: center;
-  bottom: 45%;
+  /* bottom: 45%; */
 `;
 
 export const StatusText = styled.Text`
   color: #fff;
   font-weight: 600;
-  font-size: 20px;
+  font-size: 22px;
 `;
 
 export const IconView = styled(LinearGradient)`
@@ -27,11 +29,10 @@ export const IconView = styled(LinearGradient)`
 `;
 
 export const ParagraphView = styled.View`
+  margin-top: 10px;
   align-items: center;
-  justify-content: center;
   height: 130;
   justify-content: space-between;
-  background-color: grey;
 `;
 
 export const ResultsText = styled.Text`
@@ -42,11 +43,26 @@ export const ResultsText = styled.Text`
 
 export const MessageOneText = styled.Text`
   color: #393c50;
-  font-size: 20px;
+  font-size: 22px;
 `;
 
 export const MessageTwoText = styled.Text`
   color: #45cd65;
-  font-weight: 500;
-  font-size: 20px;
+  font-weight: 400;
+  font-size: 22px;
+`;
+
+export const ItemView = styled.View`
+  height: 91;
+  width: ${screenWidth * 0.9};
+  padding: 20px;
+  margin-top: 19px;
+  margin-bottom: 19px;
+  border-radius: 13px;
+  background-color: #fff;
+  shadow-color: #d5d9e6;
+  shadow-offset: 0px 0px;
+  shadow-opacity: 0.5;
+  shadow-radius: 12;
+  elevation: 0.6;
 `;
