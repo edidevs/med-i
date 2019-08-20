@@ -1,5 +1,5 @@
 import React from 'react';
-import { SafeAreaView, ScrollView, Text, View } from 'react-native';
+import { SafeAreaView, ScrollView } from 'react-native';
 
 import {
   ParagraphView,
@@ -10,6 +10,9 @@ import {
   MessageOneText,
   MessageTwoText,
   ItemView,
+  ItemTextView,
+  ItemText,
+  ItemMessage,
 } from './styledComponents';
 
 import { ImageContainer } from '../../common/styledComponents';
@@ -24,7 +27,6 @@ const background = require('../../../assets/HealthyScreen.png');
 const HealthyScreen = () => (
   <ImageContainer source={background}>
     <SafeAreaView>
-      {/* message and icon */}
       <StatusView>
         <StatusText>Healthy Mood</StatusText>
         <ShadowView>
@@ -33,49 +35,25 @@ const HealthyScreen = () => (
           </IconView>
         </ShadowView>
       </StatusView>
-      {/* paragraph */}
       <ParagraphView>
         <ResultsText>Medi I am well</ResultsText>
         <MessageOneText>Say hello to wellness</MessageOneText>
         <MessageTwoText>A healthy you is a happy you</MessageTwoText>
       </ParagraphView>
-      {/* Items */}
-      <ScrollView contentContainerStyle={{ alignItems: 'center' }}>
-        <ItemView style={{ flexDirection: 'row' }}>
+      <ScrollView>
+        <ItemView>
           <Yoga />
-          <View
-            style={{
-              marginLeft: 16,
-              justifyContent: 'space-between',
-            }}
-          >
-            <Text
-              style={{ fontSize: 16, fontWeight: 'bold', color: '#393C50' }}
-            >
-              Yoga
-            </Text>
-            <Text style={{ fontSize: 14, color: '#393C50' }}>
-              Start your practice here
-            </Text>
-          </View>
+          <ItemTextView>
+            <ItemText>Yoga</ItemText>
+            <ItemMessage>Start your practice here</ItemMessage>
+          </ItemTextView>
         </ItemView>
-        <ItemView style={{ flexDirection: 'row' }}>
+        <ItemView>
           <Sports />
-          <View
-            style={{
-              marginLeft: 16,
-              justifyContent: 'space-between',
-            }}
-          >
-            <Text
-              style={{ fontSize: 16, fontWeight: 'bold', color: '#393C50' }}
-            >
-              Exercise
-            </Text>
-            <Text style={{ fontSize: 14, color: '#393C50' }}>
-              Enroll in classes here
-            </Text>
-          </View>
+          <ItemTextView>
+            <ItemText>Exercise</ItemText>
+            <ItemMessage>Enroll in classes here</ItemMessage>
+          </ItemTextView>
         </ItemView>
       </ScrollView>
     </SafeAreaView>

@@ -29,7 +29,8 @@ export const IconView = styled(LinearGradient)`
 `;
 
 export const ParagraphView = styled.View`
-  margin-top: 10px;
+  margin-top: 16px;
+  margin-bottom: 24px;
   align-items: center;
   height: 130;
   justify-content: space-between;
@@ -55,6 +56,8 @@ export const MessageTwoText = styled.Text`
 `;
 
 export const ItemView = styled.View`
+  flex-direction: row;
+  align-items: center;
   height: 91;
   width: ${screenWidth * 0.9};
   padding: 20px;
@@ -67,4 +70,21 @@ export const ItemView = styled.View`
   shadow-opacity: 0.5;
   shadow-radius: 13;
   elevation: 0.8;
+`;
+
+export const ItemTextView = styled.View`
+  margin-left: 16px;
+  justify-content: space-between;
+`;
+
+export const ItemText = styled.Text`
+  font-size: 16px;
+  font-weight: bold;
+  color: #393c50;
+  padding-bottom: 8px;
+`;
+
+export const ItemMessage = styled.Text`
+  font-size: 14;
+  color: #393c50;
 `;
