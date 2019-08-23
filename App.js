@@ -106,32 +106,36 @@ const configurations = {
 
 const AppTabNavigator = createMaterialTopTabNavigator(configurations, options);
 
-const AppStack = createStackNavigator({
-  Tab: {
-    screen: AppTabNavigator,
-    navigationOptions: () => ({
-      headerBackTitle: null,
-      headerTransparent: true,
-    }),
+const AppStack = createStackNavigator(
+  {
+    Tab: {
+      screen: AppTabNavigator,
+      navigationOptions: () => ({
+        headerBackTitle: null,
+        headerTransparent: true,
+      }),
+    },
+    Healthy: {
+      screen: HealthyScreen,
+      navigationOptions: () => ({
+        headerTitle: 'Feeling Healthy',
+        headerBackTitle: null,
+        headerTransparent: true,
+        headerTitleStyle: {
+          color: '#fff',
+          fontWeight: '600',
+          fontSize: 22,
+          alignSelf: 'center',
+        },
+        headerTintColor: '#fff',
+        headerLeftContainerStyle: {
+          paddingLeft: 16,
+        },
+      }),
+    },
   },
-  Healthy: {
-    screen: HealthyScreen,
-    navigationOptions: () => ({
-      headerTitle: 'Feeling Healthy',
-      headerBackTitle: null,
-      headerTransparent: true,
-      headerTitleStyle: {
-        color: '#fff',
-        fontWeight: '600',
-        fontSize: 22,
-      },
-      headerTintColor: '#fff',
-      headerLeftContainerStyle: {
-        paddingLeft: 16,
-      },
-    }),
-  },
-});
+  { headerLayoutPreset: 'center' } // crucial to center header title in android
+);
 
 const AuthStack = createStackNavigator(
   {
