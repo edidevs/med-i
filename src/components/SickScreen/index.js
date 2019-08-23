@@ -1,62 +1,25 @@
 import React from 'react';
-import { SafeAreaView, ScrollView, StatusBar } from 'react-native';
 
-import {
-  ParagraphView,
-  StatusView,
-  IconView,
-  ResultsText,
-  MessageOneText,
-  ItemView,
-  ItemTextView,
-  ItemText,
-  ItemMessage,
-  FaceHeight,
-  FaceWidth,
-} from '../HealthyScreen/styledComponents';
+import StatusScreen from '../StatusScreen';
 
-import { ImageContainer } from '../../common/styledComponents';
-import { ShadowView, SickColors } from '../HomeScreen/styledComponents';
-
-import SadFace from '../../common/Icons/Sad.svg';
-import Body from '../../common/Icons/Body.svg';
-import Mind from '../../common/Icons/Mind.svg';
+import { SickColors } from '../HomeScreen/styledComponents';
 
 const background = require('../../../assets/SickScreen.png');
 
-const SickScreen = () => (
-  <ImageContainer source={background}>
-    <StatusBar barStyle="light-content" />
-    <SafeAreaView>
-      <StatusView>
-        <ShadowView>
-          <IconView colors={SickColors}>
-            <SadFace width={FaceWidth} height={FaceHeight} />
-          </IconView>
-        </ShadowView>
-      </StatusView>
-      <ParagraphView>
-        <ResultsText>We got you buddy</ResultsText>
-        {/* <MessageOneText>We got you buddy</MessageOneText> */}
-        <MessageOneText>Is the pain in your</MessageOneText>
-      </ParagraphView>
-      <ScrollView>
-        <ItemView>
-          <Mind />
-          <ItemTextView>
-            <ItemText>Mind</ItemText>
-            <ItemMessage>Start your practice here</ItemMessage>
-          </ItemTextView>
-        </ItemView>
-        <ItemView>
-          <Body />
-          <ItemTextView>
-            <ItemText>Body</ItemText>
-            <ItemMessage>Enroll in classes here</ItemMessage>
-          </ItemTextView>
-        </ItemView>
-      </ScrollView>
-    </SafeAreaView>
-  </ImageContainer>
-);
+const SickScreen = () => {
+  const props = {
+    sick: true,
+    background,
+    colors: SickColors,
+    resultsText: 'We got you buddy',
+    messageOne: '',
+    messageTwo: 'Is it in your',
+    itemTextOne: 'Mind',
+    itemMessageOne: 'Addressing Mental Health',
+    itemTextTwo: 'Body',
+    itemMessageTwo: 'Cure Physical Pain',
+  };
+  return <StatusScreen {...props} />;
+};
+
 export default SickScreen;
