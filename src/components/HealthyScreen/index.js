@@ -4,7 +4,7 @@ import StatusScreen from '../StatusScreen';
 
 import { HealthyColors } from '../HomeScreen/styledComponents';
 
-const background = require('../../../assets/HealthyScreen.png');
+const background = require('../../../assets/Images/HealthyScreen.png');
 
 const HealthyScreen = () => {
   const props = {

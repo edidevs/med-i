@@ -14,17 +14,17 @@ import {
   ItemMessage,
   FaceHeight,
   FaceWidth,
-} from '../HealthyScreen/styledComponents';
+} from './styledComponents';
 
 import { ImageContainer } from '../../common/styledComponents';
 import { ShadowView } from '../HomeScreen/styledComponents';
 
-import SadFace from '../../common/Icons/Sad.svg';
-import Body from '../../common/Icons/Body.svg';
-import Mind from '../../common/Icons/Mind.svg';
-import HappyFace from '../../common/Icons/Happy.svg';
-import Yoga from '../../common/Icons/Yoga.svg';
-import Sports from '../../common/Icons/Sports.svg';
+import SadFace from '../../../assets/Icons/Sad.svg';
+import Body from '../../../assets/Icons/Body.svg';
+import Mind from '../../../assets/Icons/Mind.svg';
+import HappyFace from '../../../assets/Icons/Happy.svg';
+import Yoga from '../../../assets/Icons/Yoga.svg';
+import Sports from '../../../assets/Icons/Sports.svg';
 
 const StatusScreen = ({
   sick,

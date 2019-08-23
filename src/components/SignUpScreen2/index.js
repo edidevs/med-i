@@ -17,7 +17,7 @@ import {
 
 import { DOBInput } from './styledComponents';
 
-const background = require('../../../assets/AuthScreen.png');
+const background = require('../../../assets/Images/AuthScreen.png');
 
 const SignUpScreen2 = props => (
   <ImageContainer source={background}>

@@ -19,7 +19,7 @@ import { EmailInput } from './styledComponents';
 
 import { handleRoute } from '../../utils/handleRoute';
 
-const background = require('../../../assets/AuthScreen.png');
+const background = require('../../../assets/Images/AuthScreen.png');
 
 const SignUpScreen1 = props => (
   <ImageContainer source={background}>

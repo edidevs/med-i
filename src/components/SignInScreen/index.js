@@ -19,7 +19,7 @@ import {
 import { ForgetPasswordText } from './styledComponents';
 import { handleRoute } from '../../utils/handleRoute';
 
-const background = require('../../../assets/AuthScreen.png');
+const background = require('../../../assets/Images/AuthScreen.png');
 
 const login = async props => {
   await AsyncStorage.setItem('userToken', 'abc');
