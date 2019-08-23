@@ -94,13 +94,17 @@ export const IconView = styled(LinearGradient)`
   border-color: #ffffff;
   margin-top: 29.5px;
   margin-bottom: 24px;
+  align-items: center;
+  justify-content: center;
+  elevation: 5;
+`;
+
+// Only relevant for iOS
+export const ShadowView = styled.View`
   shadow-color: #dbdee4;
   shadow-offset: 5px;
   shadow-opacity: 0.8;
   shadow-radius: 10px;
-  elevation: 5;
-  align-items: center;
-  justify-content: center;
 `;
 
 export const HealthyColors = ['#55C26F', '#5ADF79'];

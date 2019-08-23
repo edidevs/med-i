@@ -15,8 +15,9 @@ import SignUpScreen1 from './src/components/SignUpScreen1';
 import SignUpScreen2 from './src/components/SignUpScreen2';
 import StoreScreen from './src/components/StoreScreen';
 import MoreScreen from './src/components/MoreScreen';
+import HealthyScreen from './src/components/HealthyScreen';
 
-const config = {
+const options = {
   initialRouteName: 'Home',
   tabBarPosition: 'bottom',
   tabBarVisible: true,
@@ -52,58 +53,88 @@ const config = {
   },
 };
 
-const AppStack = createMaterialTopTabNavigator(
-  {
-    Home: {
-      screen: HomeScreen,
-      navigationOptions: {
-        tabBarLabel: 'Home',
-        tabBarIcon({ tintColor }) {
-          return (
-            <AntDesign
-              style={{
-                fontSize: 40,
-                color: tintColor,
-              }}
-              name="home"
-            />
-          );
-        },
+const configurations = {
+  Home: {
+    screen: HomeScreen,
+    navigationOptions: () => ({
+      tabBarLabel: 'Home',
+      tabBarIcon({ tintColor }) {
+        return (
+          <AntDesign
+            style={{
+              fontSize: 40,
+              color: tintColor,
+            }}
+            name="home"
+          />
+        );
       },
-    },
-    Store: {
-      screen: StoreScreen,
-      navigationOptions: {
-        tabBarLabel: 'Store',
-        tabBarIcon({ tintColor }) {
-          return (
-            <EvilIcons
-              style={{
-                fontSize: 40,
-                color: tintColor,
-              }}
-              name="cart"
-            />
-          );
-        },
-      },
-    },
-    More: {
-      screen: MoreScreen,
-      navigationOptions: {
-        tabBarLabel: 'Store',
-        tabBarIcon({ tintColor }) {
-          return (
-            <Feather
-              style={{ fontSize: 40, color: tintColor }}
-              name="more-horizontal"
-            />
-          );
-        },
+    }),
+  },
+  Store: {
+    screen: StoreScreen,
+    navigationOptions: {
+      tabBarLabel: 'Store',
+      tabBarIcon({ tintColor }) {
+        return (
+          <EvilIcons
+            style={{
+              fontSize: 40,
+              color: tintColor,
+            }}
+            name="cart"
+          />
+        );
       },
     },
   },
-  config
+  More: {
+    screen: MoreScreen,
+    navigationOptions: {
+      tabBarLabel: 'Store',
+      tabBarIcon({ tintColor }) {
+        return (
+          <Feather
+            style={{ fontSize: 40, color: tintColor }}
+            name="more-horizontal"
+          />
+        );
+      },
+    },
+  },
+};
+
+const AppTabNavigator = createMaterialTopTabNavigator(configurations, options);
+
+const AppStack = createStackNavigator(
+  {
+    Tab: {
+      screen: AppTabNavigator,
+      navigationOptions: () => ({
+        headerBackTitle: null,
+        headerTransparent: true,
+      }),
+    },
+    Healthy: {
+      screen: HealthyScreen,
+      navigationOptions: () => ({
+        headerTitle: 'Feeling Healthy',
+        headerBackTitle: null,
+        headerTransparent: true,
+        headerTitleStyle: {
+          color: '#fff',
+          fontWeight: '600',
+          fontSize: 22,
+          alignSelf: 'center',
+        },
+        headerTintColor: '#fff',
+        headerLeftContainerStyle: {
+          paddingLeft: 16,
+        },
+      }),
+    },
+  },
+  { headerLayoutPreset: 'center' } // crucial to center header title in android
 );
 
 const AuthStack = createStackNavigator(

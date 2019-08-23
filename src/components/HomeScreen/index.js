@@ -1,5 +1,10 @@
 import React from 'react';
-import { SafeAreaView, AsyncStorage, StatusBar } from 'react-native';
+import {
+  SafeAreaView,
+  AsyncStorage,
+  StatusBar,
+  TouchableOpacity,
+} from 'react-native';
 
 import {
   TopView,
@@ -14,6 +19,7 @@ import {
   StatusViewWrapper,
   StatusView,
   IconView,
+  ShadowView,
   FaceHeight,
   FaceWidth,
   RegularText,
@@ -58,21 +64,31 @@ const HomeScreen = props => (
         <InterrogationText>How are you feeling today ?</InterrogationText>
         <StatusViewWrapper>
           <StatusView>
-            <IconView colors={HealthyColors}>
-              <HappyFace width={FaceWidth} height={FaceHeight} />
-            </IconView>
+            <ShadowView>
+              <TouchableOpacity
+                onPress={() => props.navigation.navigate('Healthy')}
+              >
+                <IconView colors={HealthyColors}>
+                  <HappyFace width={FaceWidth} height={FaceHeight} />
+                </IconView>
+              </TouchableOpacity>
+            </ShadowView>
             <RegularText>Healthy</RegularText>
           </StatusView>
           <StatusView>
-            <IconView colors={HealthySickColors}>
-              <PokerFace width={FaceWidth} height={FaceHeight} />
-            </IconView>
+            <ShadowView>
+              <IconView colors={HealthySickColors}>
+                <PokerFace width={FaceWidth} height={FaceHeight} />
+              </IconView>
+            </ShadowView>
             <RegularText>Healthy/Sick</RegularText>
           </StatusView>
           <StatusView>
-            <IconView colors={SickColors}>
-              <SadFace width={FaceWidth} height={FaceHeight} />
-            </IconView>
+            <ShadowView>
+              <IconView colors={SickColors}>
+                <SadFace width={FaceWidth} height={FaceHeight} />
+              </IconView>
+            </ShadowView>
             <RegularText>Sick</RegularText>
           </StatusView>
         </StatusViewWrapper>
