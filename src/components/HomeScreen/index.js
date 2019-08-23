@@ -30,13 +30,13 @@ import {
 } from './styledComponents';
 
 import { ImageContainer } from '../../common/styledComponents';
-import HappyFace from '../../common/Icons/Happy.svg';
-import PokerFace from '../../common/Icons/Poker.svg';
-import SadFace from '../../common/Icons/Sad.svg';
+import HappyFace from '../../../assets/Icons/Happy.svg';
+import PokerFace from '../../../assets/Icons/Poker.svg';
+import SadFace from '../../../assets/Icons/Sad.svg';
 
 import { handleRoute } from '../../utils/handleRoute';
 
-const background = require('../../../assets/HomeScreen.png');
+const background = require('../../../assets/Images/HomeScreen.png');
 
 const logout = async props => {
   await AsyncStorage.clear();
@@ -77,17 +77,23 @@ const HomeScreen = props => (
           </StatusView>
           <StatusView>
             <ShadowView>
-              <IconView colors={HealthySickColors}>
-                <PokerFace width={FaceWidth} height={FaceHeight} />
-              </IconView>
+              <TouchableOpacity>
+                <IconView colors={HealthySickColors}>
+                  <PokerFace width={FaceWidth} height={FaceHeight} />
+                </IconView>
+              </TouchableOpacity>
             </ShadowView>
             <RegularText>Healthy/Sick</RegularText>
           </StatusView>
           <StatusView>
             <ShadowView>
-              <IconView colors={SickColors}>
-                <SadFace width={FaceWidth} height={FaceHeight} />
-              </IconView>
+              <TouchableOpacity
+                onPress={() => props.navigation.navigate('Sick')}
+              >
+                <IconView colors={SickColors}>
+                  <SadFace width={FaceWidth} height={FaceHeight} />
+                </IconView>
+              </TouchableOpacity>
             </ShadowView>
             <RegularText>Sick</RegularText>
           </StatusView>
