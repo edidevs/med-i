@@ -77,17 +77,23 @@ const HomeScreen = props => (
           </StatusView>
           <StatusView>
             <ShadowView>
-              <IconView colors={HealthySickColors}>
-                <PokerFace width={FaceWidth} height={FaceHeight} />
-              </IconView>
+              <TouchableOpacity>
+                <IconView colors={HealthySickColors}>
+                  <PokerFace width={FaceWidth} height={FaceHeight} />
+                </IconView>
+              </TouchableOpacity>
             </ShadowView>
             <RegularText>Healthy/Sick</RegularText>
           </StatusView>
           <StatusView>
             <ShadowView>
-              <IconView colors={SickColors}>
-                <SadFace width={FaceWidth} height={FaceHeight} />
-              </IconView>
+              <TouchableOpacity
+                onPress={() => props.navigation.navigate('Sick')}
+              >
+                <IconView colors={SickColors}>
+                  <SadFace width={FaceWidth} height={FaceHeight} />
+                </IconView>
+              </TouchableOpacity>
             </ShadowView>
             <RegularText>Sick</RegularText>
           </StatusView>
