@@ -18,6 +18,7 @@ import MoreScreen from './src/components/MoreScreen';
 import HealthyScreen from './src/components/HealthyScreen';
 import SickScreen from './src/components/SickScreen';
 import MindScreen from './src/components/MindScreen';
+import BodyScreen from './src/components/BodyScreen';
 
 const options = {
   initialRouteName: 'Home',
@@ -119,60 +120,47 @@ const AppStack = createStackNavigator(
     },
     Healthy: {
       screen: HealthyScreen,
-      navigationOptions: () => ({
+      navigationOptions: {
         headerTitle: 'Feeling Healthy',
-        headerBackTitle: null,
-        headerTransparent: true,
-        headerTitleStyle: {
-          color: '#fff',
-          fontWeight: '600',
-          fontSize: 22,
-          alignSelf: 'center',
-        },
-        headerTintColor: '#fff',
-        headerLeftContainerStyle: {
-          paddingLeft: 16,
-        },
-      }),
+      },
     },
     Sick: {
       screen: SickScreen,
       navigationOptions: () => ({
         headerTitle: 'Feeling Sick',
-        headerBackTitle: null,
-        headerTransparent: true,
-        headerTitleStyle: {
-          color: '#fff',
-          fontWeight: '600',
-          fontSize: 22,
-          alignSelf: 'center',
-        },
-        headerTintColor: '#fff',
-        headerLeftContainerStyle: {
-          paddingLeft: 16,
-        },
       }),
     },
     Mind: {
       screen: MindScreen,
-      navigationOptions: () => ({
+      navigationOptions: {
         headerTitle: 'Mind',
-        headerBackTitle: null,
-        headerTransparent: true,
-        headerTitleStyle: {
-          color: '#fff',
-          fontWeight: '600',
-          fontSize: 22,
-          alignSelf: 'center',
-        },
-        headerTintColor: '#fff',
-        headerLeftContainerStyle: {
-          paddingLeft: 16,
-        },
-      }),
+      },
+    },
+    Body: {
+      screen: BodyScreen,
+      navigationOptions: {
+        headerTitle: 'Body',
+      },
     },
   },
-  { headerLayoutPreset: 'center' } // crucial to center header title in android
+  {
+    // initialRouteName: 'Body',
+    headerLayoutPreset: 'center', // crucial to center header title in android
+    defaultNavigationOptions: {
+      headerBackTitle: null,
+      headerTransparent: true,
+      headerTitleStyle: {
+        color: '#fff',
+        fontWeight: '600',
+        fontSize: 22,
+        alignSelf: 'center',
+      },
+      headerTintColor: '#fff',
+      headerLeftContainerStyle: {
+        paddingLeft: 16,
+      },
+    },
+  }
 );
 
 const AuthStack = createStackNavigator(

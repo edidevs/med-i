@@ -37,6 +37,14 @@ export const NavigationView = styled.View`
   align-items: center;
 `;
 
+// Only relevant for iOS
+export const ShadowView = styled.View`
+  shadow-color: #dbdee4;
+  shadow-offset: 5px;
+  shadow-opacity: 0.8;
+  shadow-radius: 10px;
+`;
+
 export const Title = styled.Text`
   font-size: 30px;
   font-weight: bold;
@@ -101,3 +109,7 @@ export const PasswordInput = styled(Input).attrs({
   returnKeyType: 'go',
   secureTextEntry: true,
 })``;
+
+export const HealthyColors = ['#55C26F', '#5ADF79'];
+export const HealthySickColors = ['#ED956A', '#F06D2E'];
+export const SickColors = ['#E36E5B', '#F0857A'];

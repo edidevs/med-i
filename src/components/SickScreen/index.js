@@ -2,7 +2,7 @@ import React from 'react';
 
 import StatusScreen from '../StatusScreen';
 
-import { SickColors } from '../HomeScreen/styledComponents';
+import { SickColors } from '../../common/styledComponents';
 
 const background = require('../../../assets/Images/SickScreen.png');
 

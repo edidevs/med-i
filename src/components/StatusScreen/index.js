@@ -22,8 +22,7 @@ import {
   FaceWidth,
 } from './styledComponents';
 
-import { ImageContainer } from '../../common/styledComponents';
-import { ShadowView } from '../HomeScreen/styledComponents';
+import { ImageContainer, ShadowView } from '../../common/styledComponents';
 import { handleRoute } from '../../utils/handleRoute';
 
 import SadFace from '../../../assets/Icons/Sad.svg';

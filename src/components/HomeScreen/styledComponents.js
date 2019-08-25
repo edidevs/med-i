@@ -99,20 +99,6 @@ export const IconView = styled(LinearGradient)`
   elevation: 5;
 `;
 
-// Only relevant for iOS
-export const ShadowView = styled.View`
-  shadow-color: #dbdee4;
-  shadow-offset: 5px;
-  shadow-opacity: 0.8;
-  shadow-radius: 10px;
-`;
-
-export const HealthyColors = ['#55C26F', '#5ADF79'];
-export const HealthySickColors = ['#ED956A', '#F06D2E'];
-export const SickColors = ['#E36E5B', '#F0857A'];
-export const FaceHeight = 52;
-export const FaceWidth = 52;
-
 export const RegularText = styled.Text`
   font-size: 16;
   color: #393c50;
@@ -122,3 +108,6 @@ export const InterrogationText = styled(BigText)`
   color: #393c50;
   padding: 10px;
 `;
+
+export const FaceHeight = 52;
+export const FaceWidth = 52;
