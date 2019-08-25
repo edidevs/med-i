@@ -1,17 +1,20 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { SafeAreaView, StatusBar } from 'react-native';
 
-const BodyScreen = props => (
-  <View style={styles.container}>
-    <Text>BodyScreen</Text>
-  </View>
+import { TitleView, TitleText } from './styledComponents';
+import { ImageContainer } from '../../common/styledComponents';
+
+const background = require('../../../assets/Images/BodyScreen.png');
+
+const BodyScreen = () => (
+  <ImageContainer source={background}>
+    <StatusBar barStyle="light-content" />
+    <SafeAreaView>
+      <TitleView>
+        <TitleText>Tell me how you feel?</TitleText>
+      </TitleView>
+    </SafeAreaView>
+  </ImageContainer>
 );
 export default BodyScreen;
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});

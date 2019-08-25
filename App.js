@@ -139,7 +139,7 @@ const AppStack = createStackNavigator(
     Body: {
       screen: BodyScreen,
       navigationOptions: {
-        headerTitle: 'Mind',
+        headerTitle: 'Body',
       },
     },
   },
