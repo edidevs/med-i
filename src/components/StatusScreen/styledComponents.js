@@ -11,10 +11,10 @@ export const StatusView = styled.View`
 `;
 
 export const IconView = styled(LinearGradient)`
-  height: 186px;
-  width: 186px;
-  border-radius: 93px;
-  border-width: 8px;
+  height: 188px;
+  width: 188px;
+  border-radius: 95px;
+  border-width: 10px;
   border-color: #ffffff;
   margin-top: 28px;
   margin-bottom: 24px;
@@ -34,7 +34,8 @@ export const ParagraphView = styled.View`
 export const ResultsText = styled.Text`
   color: #393c50;
   font-weight: 600;
-  font-size: 36px;
+  font-size: 32px;
+  text-align: center;
 `;
 
 export const MessageOneText = styled.Text`

@@ -1,6 +1,12 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
-import { SafeAreaView, ScrollView, StatusBar } from 'react-native';
+import {
+  SafeAreaView,
+  ScrollView,
+  StatusBar,
+  TouchableOpacity,
+} from 'react-native';
+import { withNavigation } from 'react-navigation';
 
 import {
   ParagraphView,
@@ -18,6 +24,7 @@ import {
 
 import { ImageContainer } from '../../common/styledComponents';
 import { ShadowView } from '../HomeScreen/styledComponents';
+import { handleRoute } from '../../utils/handleRoute';
 
 import SadFace from '../../../assets/Icons/Sad.svg';
 import Body from '../../../assets/Icons/Body.svg';
@@ -37,6 +44,7 @@ const StatusScreen = ({
   itemMessageOne,
   itemTextTwo,
   itemMessageTwo,
+  ...otherProps
 }) => (
   <ImageContainer source={background}>
     <StatusBar barStyle="light-content" />
@@ -58,22 +66,26 @@ const StatusScreen = ({
         <MessageOneText>{messageTwo}</MessageOneText>
       </ParagraphView>
       <ScrollView>
-        <ItemView>
-          {sick ? <Mind /> : <Yoga />}
-          <ItemTextView>
-            <ItemText>{itemTextOne}</ItemText>
-            <ItemMessage>{itemMessageOne}</ItemMessage>
-          </ItemTextView>
-        </ItemView>
-        <ItemView>
-          {sick ? <Body /> : <Sports />}
-          <ItemTextView>
-            <ItemText>{itemTextTwo}</ItemText>
-            <ItemMessage>{itemMessageTwo}</ItemMessage>
-          </ItemTextView>
-        </ItemView>
+        <TouchableOpacity onPress={() => handleRoute(otherProps, 'Mind')}>
+          <ItemView>
+            {sick ? <Mind /> : <Yoga />}
+            <ItemTextView>
+              <ItemText>{itemTextOne}</ItemText>
+              <ItemMessage>{itemMessageOne}</ItemMessage>
+            </ItemTextView>
+          </ItemView>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => handleRoute(otherProps, 'Body')}>
+          <ItemView>
+            {sick ? <Body /> : <Sports />}
+            <ItemTextView>
+              <ItemText>{itemTextTwo}</ItemText>
+              <ItemMessage>{itemMessageTwo}</ItemMessage>
+            </ItemTextView>
+          </ItemView>
+        </TouchableOpacity>
       </ScrollView>
     </SafeAreaView>
   </ImageContainer>
 );
-export default StatusScreen;
+export default withNavigation(StatusScreen);

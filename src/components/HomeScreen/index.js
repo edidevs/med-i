@@ -65,9 +65,7 @@ const HomeScreen = props => (
         <StatusViewWrapper>
           <StatusView>
             <ShadowView>
-              <TouchableOpacity
-                onPress={() => props.navigation.navigate('Healthy')}
-              >
+              <TouchableOpacity onPress={() => handleRoute(props, 'Healthy')}>
                 <IconView colors={HealthyColors}>
                   <HappyFace width={FaceWidth} height={FaceHeight} />
                 </IconView>
@@ -87,9 +85,7 @@ const HomeScreen = props => (
           </StatusView>
           <StatusView>
             <ShadowView>
-              <TouchableOpacity
-                onPress={() => props.navigation.navigate('Sick')}
-              >
+              <TouchableOpacity onPress={() => handleRoute(props, 'Sick')}>
                 <IconView colors={SickColors}>
                   <SadFace width={FaceWidth} height={FaceHeight} />
                 </IconView>

@@ -12,7 +12,6 @@ export const CenterView = styled.View`
 export const ImageContainer = styled.ImageBackground`
   flex: 1;
   align-items: center;
-  justify-content: center;
   height: ${screenHeight};
   width: ${screenWidth};
 `;

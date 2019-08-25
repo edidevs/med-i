@@ -17,6 +17,7 @@ import StoreScreen from './src/components/StoreScreen';
 import MoreScreen from './src/components/MoreScreen';
 import HealthyScreen from './src/components/HealthyScreen';
 import SickScreen from './src/components/SickScreen';
+import MindScreen from './src/components/MindScreen';
 
 const options = {
   initialRouteName: 'Home',
@@ -138,6 +139,24 @@ const AppStack = createStackNavigator(
       screen: SickScreen,
       navigationOptions: () => ({
         headerTitle: 'Feeling Sick',
+        headerBackTitle: null,
+        headerTransparent: true,
+        headerTitleStyle: {
+          color: '#fff',
+          fontWeight: '600',
+          fontSize: 22,
+          alignSelf: 'center',
+        },
+        headerTintColor: '#fff',
+        headerLeftContainerStyle: {
+          paddingLeft: 16,
+        },
+      }),
+    },
+    Mind: {
+      screen: MindScreen,
+      navigationOptions: () => ({
+        headerTitle: 'Mind',
         headerBackTitle: null,
         headerTransparent: true,
         headerTitleStyle: {
