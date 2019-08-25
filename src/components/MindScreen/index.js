@@ -12,14 +12,19 @@ import {
   MessageText,
   BoldText,
 } from './styledComponents';
-import { ImageContainer } from '../../common/styledComponents';
+
+import {
+  ImageContainer,
+  ShadowView,
+  SickColors,
+} from '../../common/styledComponents';
+
 import {
   IconView,
   FaceHeight,
   FaceWidth,
   ResultsText,
 } from '../StatusScreen/styledComponents';
-import { ShadowView, SickColors } from '../HomeScreen/styledComponents';
 
 import BigMind from '../../../assets/Icons/BigMind.svg';
 

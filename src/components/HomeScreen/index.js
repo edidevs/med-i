@@ -19,17 +19,20 @@ import {
   StatusViewWrapper,
   StatusView,
   IconView,
-  ShadowView,
   FaceHeight,
   FaceWidth,
   RegularText,
   InterrogationText,
-  HealthyColors,
-  HealthySickColors,
-  SickColors,
 } from './styledComponents';
 
-import { ImageContainer } from '../../common/styledComponents';
+import {
+  ImageContainer,
+  ShadowView,
+  SickColors,
+  HealthyColors,
+  HealthySickColors,
+} from '../../common/styledComponents';
+
 import HappyFace from '../../../assets/Icons/Happy.svg';
 import PokerFace from '../../../assets/Icons/Poker.svg';
 import SadFace from '../../../assets/Icons/Sad.svg';
