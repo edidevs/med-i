@@ -151,7 +151,7 @@ const AppStack = createStackNavigator(
     },
   },
   {
-    initialRouteName: 'Body',
+    initialRouteName: 'Pain',
     headerLayoutPreset: 'center', // crucial to center header title in android
     defaultNavigationOptions: {
       headerBackTitle: null,
