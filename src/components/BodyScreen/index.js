@@ -18,6 +18,8 @@ import Cough from '../../../assets/Icons/Cough.svg';
 import Indigestion from '../../../assets/Icons/Indigestion.svg';
 import Fever from '../../../assets/Icons/Fever.svg';
 
+import { handleRoute } from '../../utils/handleRoute';
+
 const background = require('../../../assets/Images/BodyScreen.png');
 
 const components = [
@@ -29,7 +31,7 @@ const components = [
   <Fever />,
 ];
 
-const BodyScreen = () => (
+const BodyScreen = props => (
   <ImageContainer source={background}>
     <StatusBar barStyle="light-content" />
     <SafeAreaView>
@@ -41,7 +43,7 @@ const BodyScreen = () => (
         itemDimension={150}
         items={components}
         renderItem={({ item, index }) => (
-          <ItemView>
+          <ItemView onPress={() => handleRoute(props, Symptoms[index])}>
             {item}
             <ItemText>{Symptoms[index]}</ItemText>
           </ItemView>

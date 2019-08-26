@@ -18,6 +18,13 @@ export const TitleView = styled.View`
   elevation: 10;
 `;
 
+export const TitleText = styled.Text`
+  color: #e77565;
+  font-size: 24px;
+  font-weight: 600;
+  text-align: center;
+`;
+
 export const ItemView = styled.TouchableOpacity`
   border-right-width: 1px;
   border-bottom-width: 1px;
@@ -26,13 +33,6 @@ export const ItemView = styled.TouchableOpacity`
   justify-content: space-between;
   height: 200px;
   padding: 30px;
-`;
-
-export const TitleText = styled.Text`
-  color: #e77565;
-  font-size: 24px;
-  font-weight: 600;
-  text-align: center;
 `;
 
 export const ItemText = styled.Text`
