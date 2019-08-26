@@ -1,24 +1,23 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
-import { SafeAreaView, StatusBar, TouchableOpacity, View } from 'react-native';
+import { SafeAreaView, StatusBar } from 'react-native';
 
 import { FlatGrid } from 'react-native-super-grid';
 
 import {
   UpperView,
+  MiddleView,
   LowerView,
   DescriptionText,
+  ItemView,
   ItemGridText,
   BulletPointView,
+  BoldText,
 } from './styledComponents';
 import { ImageContainer } from '../../common/styledComponents';
-import {
-  ItemView,
-  ItemTextView,
-  ItemText,
-} from '../StatusScreen/styledComponents';
 
-import Mind from '../../../assets/Icons/Mind.svg';
+import Mascot from '../../../assets/Icons/Mascot.svg';
+import DrugView from './DrugView';
 
 const background = require('../../../assets/Images/BodyScreen.png');
 
@@ -35,36 +34,20 @@ const PainScreen = () => (
           itemDimension={150}
           items={['Headache', 'Body ache', 'Toothache']}
           renderItem={({ item }) => (
-            <View
-              style={{
-                flexDirection: 'row',
-                marginLeft: 30,
-                alignItems: 'center',
-              }}
-            >
+            <ItemView>
               <BulletPointView />
               <ItemGridText>{item}</ItemGridText>
-            </View>
+            </ItemView>
           )}
         />
       </UpperView>
+      <MiddleView>
+        <Mascot width={55} height={55} />
+        <BoldText>OTC tips</BoldText>
+      </MiddleView>
       <LowerView>
-        <TouchableOpacity>
-          <ItemView>
-            <Mind />
-            <ItemTextView>
-              <ItemText>Paracetamol</ItemText>
-            </ItemTextView>
-          </ItemView>
-        </TouchableOpacity>
-        <TouchableOpacity>
-          <ItemView>
-            <Mind />
-            <ItemTextView>
-              <ItemText>Ibuprofen</ItemText>
-            </ItemTextView>
-          </ItemView>
-        </TouchableOpacity>
+        <DrugView name="Paracetamol" />
+        <DrugView name="Ibuprofen" />
       </LowerView>
     </SafeAreaView>
   </ImageContainer>
