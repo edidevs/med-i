@@ -1,15 +1,17 @@
 import styled from 'styled-components/native';
+import { Platform } from 'react-native';
 
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 import { screenWidth } from '../../utils/deviceSize';
 
-// TODO: add android case for margin top
+const MARGIN_TOP = Platform.OS === 'ios' ? 65 : 95;
+
 export const UpperView = styled.View`
   height: 218px;
   width: ${screenWidth}px;
   background-color: #fef0f0;
-  margin-top: 65px;
+  margin-top: ${MARGIN_TOP}px;
   align-items: center;
 `;
 

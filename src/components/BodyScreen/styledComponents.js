@@ -3,7 +3,7 @@ import { Platform } from 'react-native';
 
 import { screenWidth } from '../../utils/deviceSize';
 
-const MARGIN_TOP = Platform.OS === 'android' ? 100 : 65;
+const MARGIN_TOP = Platform.OS === 'ios' ? 65 : 95;
 
 export const TitleView = styled.View`
   background-color: #fff;
