@@ -20,6 +20,7 @@ import SickScreen from './src/components/SickScreen';
 import MindScreen from './src/components/MindScreen';
 import BodyScreen from './src/components/BodyScreen';
 import PainScreen from './src/components/PainScreen';
+import HayfeverScreen from './src/components/HayfeverScreen';
 
 const options = {
   initialRouteName: 'Home',
@@ -147,6 +148,12 @@ const AppStack = createStackNavigator(
       screen: PainScreen,
       navigationOptions: {
         headerTitle: 'Pain',
+      },
+    },
+    Hayfever: {
+      screen: HayfeverScreen,
+      navigationOptions: {
+        headerTitle: 'Hayfever',
       },
     },
   },
