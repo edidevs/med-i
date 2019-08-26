@@ -1,8 +1,16 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
-import { SafeAreaView, StatusBar, TouchableOpacity } from 'react-native';
+import { SafeAreaView, StatusBar, TouchableOpacity, View } from 'react-native';
 
-import { UpperView, LowerView, DescriptionText } from './styledComponents';
+import { FlatGrid } from 'react-native-super-grid';
+
+import {
+  UpperView,
+  LowerView,
+  DescriptionText,
+  ItemGridText,
+  BulletPointView,
+} from './styledComponents';
 import { ImageContainer } from '../../common/styledComponents';
 import {
   ItemView,
@@ -22,6 +30,23 @@ const PainScreen = () => (
         <DescriptionText>
           Mild pain that is less than six months
         </DescriptionText>
+        <FlatGrid
+          spacing={4}
+          itemDimension={150}
+          items={['Headache', 'Body ache', 'Toothache']}
+          renderItem={({ item }) => (
+            <View
+              style={{
+                flexDirection: 'row',
+                marginLeft: 30,
+                alignItems: 'center',
+              }}
+            >
+              <BulletPointView />
+              <ItemGridText>{item}</ItemGridText>
+            </View>
+          )}
+        />
       </UpperView>
       <LowerView>
         <TouchableOpacity>
