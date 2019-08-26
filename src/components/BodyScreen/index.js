@@ -13,6 +13,7 @@ import {
 import { ImageContainer } from '../../common/styledComponents';
 
 import Pain from '../../../assets/Icons/Pain.svg';
+import Hayfever from '../../../assets/Icons/Hayfever.svg';
 import Itchiness from '../../../assets/Icons/Itchiness.svg';
 import Cough from '../../../assets/Icons/Cough.svg';
 import Indigestion from '../../../assets/Icons/Indigestion.svg';
@@ -24,7 +25,7 @@ const background = require('../../../assets/Images/BodyScreen.png');
 
 const components = [
   <Pain />,
-  <Fever />,
+  <Hayfever />,
   <Itchiness />,
   <Indigestion />,
   <Cough />,
