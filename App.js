@@ -19,6 +19,7 @@ import HealthyScreen from './src/components/HealthyScreen';
 import SickScreen from './src/components/SickScreen';
 import MindScreen from './src/components/MindScreen';
 import BodyScreen from './src/components/BodyScreen';
+import PainScreen from './src/components/PainScreen';
 
 const options = {
   initialRouteName: 'Home',
@@ -142,9 +143,15 @@ const AppStack = createStackNavigator(
         headerTitle: 'Body',
       },
     },
+    Pain: {
+      screen: PainScreen,
+      navigationOptions: {
+        headerTitle: 'Pain',
+      },
+    },
   },
   {
-    // initialRouteName: 'Body',
+    // initialRouteName: 'Pain',
     headerLayoutPreset: 'center', // crucial to center header title in android
     defaultNavigationOptions: {
       headerBackTitle: null,
