@@ -27,9 +27,9 @@ const components = [
   <Pain />,
   <Hayfever />,
   <Itchiness />,
-  <Indigestion />,
-  <Cough />,
   <Fever />,
+  <Cough />,
+  <Indigestion />,
 ];
 
 const BodyScreen = props => (

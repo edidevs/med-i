@@ -6,7 +6,6 @@ import { screenWidth } from '../../utils/deviceSize';
 const MARGIN_TOP = Platform.OS === 'ios' ? 65 : 95;
 
 export const UpperView = styled.View`
-  height: 218px;
   width: ${screenWidth}px;
   background-color: #fef0f0;
   margin-top: ${MARGIN_TOP}px;
@@ -32,7 +31,7 @@ export const BoldText = styled.Text`
 
 export const DescriptionText = styled(BoldText)`
   margin-top: 36px;
-  margin-bottom: 30px;
+  margin-bottom: 24px;
 `;
 
 export const ItemGridText = styled.Text`

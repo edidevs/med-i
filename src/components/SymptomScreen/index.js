@@ -40,6 +40,8 @@ const SymptomScreen = ({
         <DescriptionText>
           Mild pain that is less than six months
         </DescriptionText>
+        {/* TODO: turn this into a separate component flat list similar to above */}
+        {/* symptoms */}
         <FlatGrid
           spacing={4}
           itemDimension={150}
@@ -64,8 +66,9 @@ const SymptomScreen = ({
         <Mascot width={55} height={55} />
         <BoldText>OTC tips</BoldText>
       </MiddleView>
-      {/* TODO: turn this into flat list similar to above */}
+      {/* TODO: turn this into a separate component flat list similar to above */}
       <LowerView>
+        {/* medications */}
         <DrugView name={drugOne} />
         <DrugView name={drugTwo} />
         <DrugView name={drugThree} />

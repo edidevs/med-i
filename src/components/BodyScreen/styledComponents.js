@@ -45,7 +45,7 @@ export const Symptoms = [
   'Pain',
   'Hayfever',
   'Itchiness',
-  'Indigestion',
-  'Cough',
   'Fever',
+  'Cough',
+  'Indigestion',
 ];

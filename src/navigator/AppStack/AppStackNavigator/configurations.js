@@ -4,6 +4,10 @@ import MindScreen from '../../../components/MindScreen';
 import BodyScreen from '../../../components/BodyScreen';
 import PainScreen from '../../../components/PainScreen';
 import HayfeverScreen from '../../../components/HayfeverScreen';
+import ItchinessScreen from '../../../components/ItchinessScreen';
+import FeverScreen from '../../../components/FeverScreen';
+import CoughScreen from '../../../components/CoughScreen';
+import IndigestionScreen from '../../../components/IndigestionScreen';
 
 import { AppTabNavigator } from '../AppTabNavigator';
 
@@ -49,6 +53,30 @@ export const configurations = {
     screen: HayfeverScreen,
     navigationOptions: {
       headerTitle: 'Hayfever',
+    },
+  },
+  Itchiness: {
+    screen: ItchinessScreen,
+    navigationOptions: {
+      headerTitle: 'Itchiness',
+    },
+  },
+  Fever: {
+    screen: FeverScreen,
+    navigationOptions: {
+      headerTitle: 'Fever',
+    },
+  },
+  Cough: {
+    screen: CoughScreen,
+    navigationOptions: {
+      headerTitle: 'Cough',
+    },
+  },
+  Indigestion: {
+    screen: IndigestionScreen,
+    navigationOptions: {
+      headerTitle: 'Indigestion',
     },
   },
 };
