@@ -19,7 +19,7 @@ export const MiddleView = styled.View`
   flex-direction: row;
 `;
 
-export const LowerView = styled.ScrollView.attrs({
+export const LowerView = styled.FlatList.attrs({
   alignItems: 'center',
 })``;
 

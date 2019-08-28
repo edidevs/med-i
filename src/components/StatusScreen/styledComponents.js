@@ -69,15 +69,15 @@ export const ItemView = styled.View`
 `;
 
 export const ItemTextView = styled.View`
-  margin-left: 16px;
-  justify-content: space-between;
+  margin-left: 100px;
+  position: absolute;
 `;
 
 export const ItemText = styled.Text`
   font-size: 16px;
   font-weight: bold;
   color: #393c50;
-  padding-bottom: 8px;
+  padding-bottom: 16px;
 `;
 
 export const ItemMessage = styled.Text`

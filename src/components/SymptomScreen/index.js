@@ -51,15 +51,11 @@ const SymptomScreen = ({
         <Mascot width={55} height={55} />
         <BoldText>OTC tips</BoldText>
       </MiddleView>
-      {/* TODO: turn this into a separate component flat list similar to above */}
-      <LowerView>
-        {/* medications */}
-        <DrugView name={drugOne} />
-        <DrugView name={drugTwo} />
-        <DrugView name={drugThree} />
-        <DrugView name={drugFour} />
-        <DrugView name={drugFive} />
-      </LowerView>
+      <LowerView
+        data={[drugOne, drugTwo, drugThree, drugFour, drugFive]}
+        renderItem={({ item }) => <DrugView name={item} />}
+        keyExtractor={(item, index) => `key${index}`}
+      />
     </SafeAreaView>
   </ImageContainer>
 );

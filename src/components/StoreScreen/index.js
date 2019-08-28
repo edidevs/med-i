@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 
-const StoreScreen = props => (
+const StoreScreen = () => (
   <View style={styles.container}>
     <Text>StoreScreen</Text>
   </View>
