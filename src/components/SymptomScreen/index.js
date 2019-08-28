@@ -2,18 +2,15 @@
 import React from 'react';
 import { SafeAreaView, StatusBar } from 'react-native';
 
-import { FlatGrid } from 'react-native-super-grid';
+import SymptomsView from './SymptomsView';
 
 import DrugView from './DrugView';
 import {
   UpperView,
   MiddleView,
   LowerView,
-  DescriptionText,
-  ItemView,
-  ItemGridText,
-  BulletPointView,
   BoldText,
+  DescriptionText,
 } from './styledComponents';
 import { ImageContainer } from '../../common/styledComponents';
 
@@ -40,26 +37,14 @@ const SymptomScreen = ({
         <DescriptionText>
           Mild pain that is less than six months
         </DescriptionText>
-        {/* TODO: turn this into a separate component flat list similar to above */}
-        {/* symptoms */}
-        <FlatGrid
-          spacing={4}
-          itemDimension={150}
-          items={[
+        <SymptomsView
+          symptoms={[
             symptomOne,
             symptomTwo,
             symptomThree,
             symptomFour,
             symptomFive,
           ]}
-          renderItem={({ item }) =>
-            item ? (
-              <ItemView>
-                <BulletPointView />
-                <ItemGridText>{item}</ItemGridText>
-              </ItemView>
-            ) : null
-          }
         />
       </UpperView>
       <MiddleView>
