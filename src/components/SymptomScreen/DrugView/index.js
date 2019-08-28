@@ -7,13 +7,16 @@ import {
   ItemTextView,
   ItemText,
 } from '../../StatusScreen/styledComponents';
-import { PillIcon } from './styledComponents';
+import Medicine from '../../../../assets/Icons/medicine.svg';
+import { CircleView } from '../../../common/styledComponents';
 
 const DrugView = ({ name }) =>
   name ? (
     <TouchableOpacity>
       <ItemView>
-        <PillIcon />
+        <CircleView>
+          <Medicine />
+        </CircleView>
         <ItemTextView>
           <ItemText>{name}</ItemText>
         </ItemTextView>

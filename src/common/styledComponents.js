@@ -110,6 +110,15 @@ export const PasswordInput = styled(Input).attrs({
   secureTextEntry: true,
 })``;
 
+export const CircleView = styled.View`
+  height: ${props => props.diameter || 55}px;
+  width: ${props => props.diameter || 55}px;
+  background-color: ${props => props.color || '#f0f1f1'};
+  align-items: center;
+  justify-content: center;
+  border-radius: 100;
+`;
+
 export const HealthyColors = ['#55C26F', '#5ADF79'];
 export const HealthySickColors = ['#ED956A', '#F06D2E'];
 export const SickColors = ['#E36E5B', '#F0857A'];

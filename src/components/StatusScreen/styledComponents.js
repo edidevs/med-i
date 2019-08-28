@@ -54,6 +54,7 @@ export const MessageTwoText = styled.Text`
 export const ItemView = styled.View`
   flex-direction: row;
   align-items: center;
+  /* justify-content: center; */
   height: 91;
   width: ${screenWidth * 0.9};
   padding: 20px;
@@ -77,12 +78,12 @@ export const ItemText = styled.Text`
   font-size: 16px;
   font-weight: bold;
   color: #393c50;
-  padding-bottom: 16px;
 `;
 
 export const ItemMessage = styled.Text`
   font-size: 14;
   color: #393c50;
+  margin-top: 16px;
 `;
 
 export const FaceHeight = 95;
