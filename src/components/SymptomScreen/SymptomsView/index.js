@@ -20,4 +20,5 @@ const SymptomsView = ({ symptoms }) => (
     }
   />
 );
+
 export default SymptomsView;

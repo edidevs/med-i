@@ -1,13 +1,16 @@
 import styled from 'styled-components/native';
+import { Platform } from 'react-native';
 
 import { LinearGradient } from 'expo-linear-gradient';
 
 import { screenWidth } from '../../utils/deviceSize';
 
+const MARGIN_TOP = Platform.OS === 'ios' ? 5 : 6;
+
 export const StatusView = styled.View`
   align-items: center;
   margin-bottom: 24px;
-  top: 6%;
+  top: ${MARGIN_TOP}%;
 `;
 
 export const IconView = styled(LinearGradient)`
