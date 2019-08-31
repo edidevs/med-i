@@ -10,6 +10,7 @@ export const UpperView = styled.View`
   background-color: #fef0f0;
   margin-top: ${MARGIN_TOP}px;
   align-items: center;
+  padding-bottom: 24px;
 `;
 
 export const MiddleView = styled.View`
@@ -25,18 +26,18 @@ export const LowerView = styled.FlatList.attrs({
 
 export const BoldText = styled.Text`
   color: #393c50;
-  font-size: 21px;
+  font-size: 20px;
   font-weight: 600;
 `;
 
 export const DescriptionText = styled(BoldText)`
-  margin-top: 36px;
+  margin-top: 32px;
   margin-bottom: 24px;
 `;
 
 export const ItemGridText = styled.Text`
   color: #393c50;
-  font-size: 20px;
+  font-size: 18px;
   margin-left: 8px;
   padding: 8px;
 `;

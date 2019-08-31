@@ -12,15 +12,15 @@ export const CenterView = styled.View`
 export const ImageContainer = styled.ImageBackground`
   flex: 1;
   align-items: center;
+  justify-content: center;
   height: ${screenHeight};
   width: ${screenWidth};
 `;
 
 export const AuthContainer = styled.View`
-  width: 350px;
+  width: ${screenWidth * 0.85}px;
   background-color: #fff;
   border-radius: 25;
-  margin-bottom: 83px;
   elevation: 14;
   shadow-color: #9aa0b2;
   shadow-offset: 2px;
@@ -30,11 +30,11 @@ export const AuthContainer = styled.View`
   padding-left: 24px;
   padding-right: 24px;
   padding-bottom: 35px;
+  margin-bottom: 83px;
 `;
 
 export const NavigationView = styled.View`
   flex-direction: row;
-  align-items: center;
 `;
 
 // Only relevant for iOS

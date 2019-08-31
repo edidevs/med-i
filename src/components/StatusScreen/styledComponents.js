@@ -54,7 +54,6 @@ export const MessageTwoText = styled.Text`
 export const ItemView = styled.View`
   flex-direction: row;
   align-items: center;
-  /* justify-content: center; */
   height: 91;
   width: ${screenWidth * 0.9};
   padding: 20px;
