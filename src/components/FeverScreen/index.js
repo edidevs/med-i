@@ -3,15 +3,12 @@ import React from 'react';
 
 import SymptomScreen from '../SymptomScreen';
 
-const PainScreen = () => {
+const FeverScreen = () => {
   const otherProps = {
-    symptomOne: 'Headache',
-    symptomTwo: 'Body ache',
-    symptomThree: 'Toothache',
+    symptomOne: 'Body temperature ofr 38C or more',
     drugOne: 'Paracetamol',
-    drugTwo: 'Ibuprofen',
   };
   return <SymptomScreen {...otherProps} />;
 };
 
-export default PainScreen;
+export default FeverScreen;

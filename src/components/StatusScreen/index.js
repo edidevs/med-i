@@ -65,21 +65,22 @@ const StatusScreen = ({
         <MessageOneText>{messageTwo}</MessageOneText>
       </ParagraphView>
       <ScrollView>
-        <TouchableOpacity onPress={() => handleRoute(otherProps, 'Mind')}>
-          <ItemView>
-            {sick ? <Mind /> : <Yoga />}
-            <ItemTextView>
-              <ItemText>{itemTextOne}</ItemText>
-              <ItemMessage>{itemMessageOne}</ItemMessage>
-            </ItemTextView>
-          </ItemView>
-        </TouchableOpacity>
+        {/* TODO: make this component reusable */}
         <TouchableOpacity onPress={() => handleRoute(otherProps, 'Body')}>
           <ItemView>
             {sick ? <Body /> : <Sports />}
             <ItemTextView>
               <ItemText>{itemTextTwo}</ItemText>
               <ItemMessage>{itemMessageTwo}</ItemMessage>
+            </ItemTextView>
+          </ItemView>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => handleRoute(otherProps, 'Mind')}>
+          <ItemView>
+            {sick ? <Mind /> : <Yoga />}
+            <ItemTextView>
+              <ItemText>{itemTextOne}</ItemText>
+              <ItemMessage>{itemMessageOne}</ItemMessage>
             </ItemTextView>
           </ItemView>
         </TouchableOpacity>

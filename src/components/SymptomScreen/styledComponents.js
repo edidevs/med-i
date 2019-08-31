@@ -1,16 +1,16 @@
 import styled from 'styled-components/native';
-
-import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { Platform } from 'react-native';
 
 import { screenWidth } from '../../utils/deviceSize';
 
-// TODO: add android case for margin top
+const MARGIN_TOP = Platform.OS === 'ios' ? 65 : 95;
+
 export const UpperView = styled.View`
-  height: 218px;
   width: ${screenWidth}px;
   background-color: #fef0f0;
-  margin-top: 65px;
+  margin-top: ${MARGIN_TOP}px;
   align-items: center;
+  padding-bottom: 24px;
 `;
 
 export const MiddleView = styled.View`
@@ -20,24 +20,24 @@ export const MiddleView = styled.View`
   flex-direction: row;
 `;
 
-export const LowerView = styled.ScrollView.attrs({
+export const LowerView = styled.FlatList.attrs({
   alignItems: 'center',
 })``;
 
 export const BoldText = styled.Text`
   color: #393c50;
-  font-size: 21px;
+  font-size: 20px;
   font-weight: 600;
 `;
 
 export const DescriptionText = styled(BoldText)`
-  margin-top: 36px;
-  margin-bottom: 30px;
+  margin-top: 32px;
+  margin-bottom: 24px;
 `;
 
 export const ItemGridText = styled.Text`
   color: #393c50;
-  font-size: 20px;
+  font-size: 18px;
   margin-left: 8px;
   padding: 8px;
 `;
@@ -53,11 +53,4 @@ export const BulletPointView = styled.View`
   width: 12px;
   border-radius: 50;
   background-color: #e77565;
-`;
-
-export const PillIcon = styled(MaterialCommunityIcons).attrs({
-  name: 'pill',
-})`
-  font-size: 30px;
-  color: #3782de;
 `;

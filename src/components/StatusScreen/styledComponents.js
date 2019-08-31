@@ -1,13 +1,16 @@
 import styled from 'styled-components/native';
+import { Platform } from 'react-native';
 
 import { LinearGradient } from 'expo-linear-gradient';
 
 import { screenWidth } from '../../utils/deviceSize';
 
+const MARGIN_TOP = Platform.OS === 'ios' ? 5 : 6;
+
 export const StatusView = styled.View`
   align-items: center;
   margin-bottom: 24px;
-  top: 6%;
+  top: ${MARGIN_TOP}%;
 `;
 
 export const IconView = styled(LinearGradient)`
@@ -69,20 +72,20 @@ export const ItemView = styled.View`
 `;
 
 export const ItemTextView = styled.View`
-  margin-left: 16px;
-  justify-content: space-between;
+  margin-left: 100px;
+  position: absolute;
 `;
 
 export const ItemText = styled.Text`
   font-size: 16px;
   font-weight: bold;
   color: #393c50;
-  padding-bottom: 8px;
 `;
 
 export const ItemMessage = styled.Text`
   font-size: 14;
   color: #393c50;
+  margin-top: 16px;
 `;
 
 export const FaceHeight = 95;

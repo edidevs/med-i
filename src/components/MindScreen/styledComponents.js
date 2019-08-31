@@ -4,7 +4,7 @@ import { FontAwesome } from '@expo/vector-icons';
 export const MindView = styled.View`
   align-items: center;
   margin-bottom: 24px;
-  top: 8%;
+  bottom: 1%;
 `;
 
 export const ParagraphView = styled.View`

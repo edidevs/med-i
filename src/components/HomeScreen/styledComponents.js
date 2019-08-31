@@ -25,7 +25,7 @@ export const BottomView = styled.View`
   flex: 3;
   background-color: #fff;
   width: ${screenWidth};
-  padding: 36px;
+  padding: 24px;
 `;
 
 export const TopLeftView = styled.View`
