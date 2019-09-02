@@ -1,7 +1,9 @@
 import React from 'react';
-import { View, StyleSheet, StatusBar, AsyncStorage } from 'react-native';
+import { StatusBar, AsyncStorage } from 'react-native';
 
 import { Spinner } from 'native-base';
+
+import { WrapperView } from './styledComponents';
 
 const AuthLoadingScreen = props => {
   const getUserToken = async () => {
@@ -14,19 +16,11 @@ const AuthLoadingScreen = props => {
   });
 
   return (
-    <View style={styles.container}>
+    <WrapperView>
       <StatusBar barStyle="default" />
       <Spinner color="#686d7d" />
-    </View>
+    </WrapperView>
   );
 };
 
 export default AuthLoadingScreen;
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});

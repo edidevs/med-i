@@ -1,17 +1,14 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { StatusBar } from 'react-native';
+
+import { ImageContainer } from '../../common/styledComponents';
+
+const background = require('../../../assets/Images/MoreScreen.png');
 
 const StoreScreen = () => (
-  <View style={styles.container}>
-    <Text>StoreScreen</Text>
-  </View>
+  <ImageContainer source={background}>
+    <StatusBar barStyle="light-content" />
+  </ImageContainer>
 );
-export default StoreScreen;
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default StoreScreen;

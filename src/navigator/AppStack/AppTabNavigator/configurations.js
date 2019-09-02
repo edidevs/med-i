@@ -29,7 +29,7 @@ export const configurations = {
   Store: {
     screen: StoreScreen,
     navigationOptions: {
-      tabBarLabel: 'Store',
+      tabBarLabel: 'Cart',
       tabBarIcon({ tintColor }) {
         return (
           <EvilIcons
@@ -46,7 +46,7 @@ export const configurations = {
   More: {
     screen: MoreScreen,
     navigationOptions: {
-      tabBarLabel: 'Store',
+      tabBarLabel: 'More',
       tabBarIcon({ tintColor }) {
         return (
           <Feather
