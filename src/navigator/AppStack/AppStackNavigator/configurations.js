@@ -14,10 +14,15 @@ import { AppTabNavigator } from '../AppTabNavigator';
 export const configurations = {
   Tab: {
     screen: AppTabNavigator,
-    navigationOptions: () => ({
-      headerBackTitle: null,
-      headerTransparent: true,
-    }),
+    navigationOptions: props => {
+      const title = {};
+      if (props.navigation.state.index === 1) {
+        title.headerTitle = 'Cart';
+      } else if (props.navigation.state.index === 2) {
+        title.headerTitle = 'More';
+      }
+      return title;
+    },
   },
   Healthy: {
     screen: HealthyScreen,
@@ -27,9 +32,9 @@ export const configurations = {
   },
   Sick: {
     screen: SickScreen,
-    navigationOptions: () => ({
+    navigationOptions: {
       headerTitle: 'Feeling Sick',
-    }),
+    },
   },
   Mind: {
     screen: MindScreen,

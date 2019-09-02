@@ -15,9 +15,9 @@ const SickScreen = () => {
     messageOne: '',
     messageTwo: 'Is it in your',
     itemTextOne: 'Mind',
-    itemMessageOne: 'Addressing Mental Health',
+    itemMessageOne: 'Address Mental Health',
     itemTextTwo: 'Body',
-    itemMessageTwo: 'Cure Physical Pain',
+    itemMessageTwo: 'Relieve Physical Pain',
   };
   return <StatusScreen {...props} />;
 };
