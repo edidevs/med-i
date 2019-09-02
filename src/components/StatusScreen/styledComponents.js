@@ -63,12 +63,12 @@ export const ItemView = styled.View`
   margin-top: 19px;
   margin-bottom: 19px;
   border-radius: 13px;
-  background-color: #fff;
+  background-color: #fafbfc;
   shadow-color: #d5d9e6;
   shadow-offset: 0px 8px;
   shadow-opacity: 0.5;
   shadow-radius: 13;
-  elevation: 0.8;
+  elevation: 1;
 `;
 
 export const ItemTextView = styled.View`

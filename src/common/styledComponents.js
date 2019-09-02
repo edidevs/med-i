@@ -119,6 +119,13 @@ export const CircleView = styled.View`
   border-radius: 100;
 `;
 
+export const SeparatorView = styled.View`
+  height: 2px;
+  width: 316px;
+  border: 1px;
+  border-color: #e9e9e9;
+`;
+
 export const HealthyColors = ['#55C26F', '#5ADF79'];
 export const HealthySickColors = ['#ED956A', '#F06D2E'];
 export const SickColors = ['#E36E5B', '#F0857A'];
