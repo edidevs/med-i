@@ -2,12 +2,15 @@ import HealthyScreen from '../../../components/HealthyScreen';
 import SickScreen from '../../../components/SickScreen';
 import MindScreen from '../../../components/MindScreen';
 import BodyScreen from '../../../components/BodyScreen';
+import YogaScreen from '../../../components/YogaScreen';
+import SportsScreen from '../../../components/SportsScreen';
 import PainScreen from '../../../components/PainScreen';
 import HayfeverScreen from '../../../components/HayfeverScreen';
 import ItchinessScreen from '../../../components/ItchinessScreen';
 import FeverScreen from '../../../components/FeverScreen';
 import CoughScreen from '../../../components/CoughScreen';
 import IndigestionScreen from '../../../components/IndigestionScreen';
+import MedicationsListScreen from '../../../components/MedicationsListScreen';
 
 import { AppTabNavigator } from '../AppTabNavigator';
 
@@ -48,6 +51,18 @@ export const configurations = {
       headerTitle: 'Body',
     },
   },
+  Yoga: {
+    screen: YogaScreen,
+    navigationOptions: {
+      headerTitle: 'Body',
+    },
+  },
+  Sports: {
+    screen: SportsScreen,
+    navigationOptions: {
+      headerTitle: 'Body',
+    },
+  },
   Pain: {
     screen: PainScreen,
     navigationOptions: {
@@ -82,6 +97,12 @@ export const configurations = {
     screen: IndigestionScreen,
     navigationOptions: {
       headerTitle: 'Indigestion',
+    },
+  },
+  MedicationsList: {
+    screen: MedicationsListScreen,
+    navigationOptions: {
+      headerTitle: 'List of medications',
     },
   },
 };

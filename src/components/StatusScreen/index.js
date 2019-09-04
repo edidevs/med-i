@@ -14,6 +14,7 @@ import {
   IconView,
   ResultsText,
   MessageOneText,
+  MessageTwoText,
   ItemView,
   ItemTextView,
   ItemText,
@@ -62,7 +63,7 @@ const StatusScreen = ({
       <ParagraphView>
         <ResultsText>{resultsText}</ResultsText>
         <MessageOneText>{messageOne}</MessageOneText>
-        <MessageOneText>{messageTwo}</MessageOneText>
+        {!sick && <MessageTwoText>{messageTwo}</MessageTwoText>}
       </ParagraphView>
       <ScrollView>
         {/* TODO: make this component reusable */}

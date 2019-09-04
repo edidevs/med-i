@@ -20,7 +20,6 @@ export const IconView = styled(LinearGradient)`
   border-width: 10px;
   border-color: #ffffff;
   margin-top: 28px;
-  margin-bottom: 24px;
   align-items: center;
   justify-content: center;
   elevation: 5;
@@ -37,8 +36,10 @@ export const ParagraphView = styled.View`
 export const ResultsText = styled.Text`
   color: #393c50;
   font-weight: 600;
-  font-size: 32px;
+  font-size: 34px;
   text-align: center;
+  line-height: 46px;
+  letter-spacing: 1.16px;
 `;
 
 export const MessageOneText = styled.Text`
@@ -51,7 +52,7 @@ export const MessageTwoText = styled.Text`
   font-weight: 400;
   font-size: 22px;
   font-weight: bold;
-  margin-top: 10px;
+  padding-top: 16px;
 `;
 
 export const ItemView = styled.View`
