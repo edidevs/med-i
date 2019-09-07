@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 
-const YogaScreen = props => (
+const YogaScreen = () => (
   <View style={styles.container}>
     <Text>YogaScreen</Text>
   </View>

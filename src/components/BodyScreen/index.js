@@ -37,7 +37,7 @@ const BodyScreen = props => (
     <StatusBar barStyle="light-content" />
     <SafeAreaView>
       <TitleView>
-        <TitleText>Tell me how you feel?</TitleText>
+        <TitleText>Tell me how you feel</TitleText>
       </TitleView>
       <FlatGrid
         spacing={0}

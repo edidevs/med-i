@@ -3,7 +3,7 @@ import React from 'react';
 import { TouchableOpacity } from 'react-native';
 import { withNavigation } from 'react-navigation';
 
-import { ItemViewBis } from './styledComponents';
+import { ItemViewBis, AddIcon } from './styledComponents';
 import { CircleView } from '../../../common/styledComponents';
 import { ItemTextView, ItemText } from '../../StatusScreen/styledComponents';
 
@@ -23,6 +23,7 @@ const DrugView = ({ name, ...otherProps }) =>
         <ItemTextView>
           <ItemText>{name}</ItemText>
         </ItemTextView>
+        <AddIcon />
       </ItemViewBis>
     </TouchableOpacity>
   ) : null;

@@ -1,27 +1,15 @@
 import React from 'react';
-import {
-  SafeAreaView,
-  AsyncStorage,
-  StatusBar,
-  TouchableOpacity,
-} from 'react-native';
+import { StatusBar, TouchableOpacity } from 'react-native';
 
 import {
+  ContainerView,
   TopView,
+  MiddleView,
   BottomView,
-  TopLeftView,
-  AvatarView,
-  CameraIcon,
   GreetingText,
-  TopRightView,
-  LogOutIcon,
-  HealthBarView,
-  StatusViewWrapper,
-  StatusView,
   IconView,
   FaceHeight,
   FaceWidth,
-  RegularText,
   InterrogationText,
 } from './styledComponents';
 
@@ -31,42 +19,34 @@ import {
   SickColors,
   HealthyColors,
   HealthySickColors,
+  CenterView,
 } from '../../common/styledComponents';
 
 import HappyFace from '../../../assets/Icons/Happy.svg';
 import PokerFace from '../../../assets/Icons/Poker.svg';
 import SadFace from '../../../assets/Icons/Sad.svg';
+import Mascot from '../../../assets/Icons/Mascot.svg';
 
 import { handleRoute } from '../../utils/handleRoute';
 
-const background = require('../../../assets/Images/HomeScreen.png');
-
-const logout = async props => {
-  await AsyncStorage.clear();
-  handleRoute(props, 'AuthLoading');
-};
+const background = require('../../../assets/Images/HomeScreenBis.png');
 
 const HomeScreen = props => (
   <ImageContainer source={background}>
     <StatusBar barStyle="light-content" />
-    <SafeAreaView>
+    <ContainerView>
       <TopView>
-        <TopLeftView>
-          <AvatarView>
-            <CameraIcon />
-          </AvatarView>
-          <GreetingText>Good morning {'\n'}Laarni</GreetingText>
-        </TopLeftView>
-        <TopRightView>
-          <LogOutIcon onPress={() => logout(props)} />
-        </TopRightView>
+        <Mascot height={95} width={95} />
+        <React.Fragment>
+          <GreetingText>Hello Laarni</GreetingText>
+        </React.Fragment>
       </TopView>
+      <MiddleView>
+        <InterrogationText>How do you feel today ?</InterrogationText>
+      </MiddleView>
       <BottomView>
-        <RegularText>Your latest report</RegularText>
-        <HealthBarView />
-        <InterrogationText>How are you feeling today ?</InterrogationText>
-        <StatusViewWrapper>
-          <StatusView>
+        <React.Fragment>
+          <CenterView>
             <ShadowView>
               <TouchableOpacity onPress={() => handleRoute(props, 'Healthy')}>
                 <IconView colors={HealthyColors}>
@@ -74,9 +54,8 @@ const HomeScreen = props => (
                 </IconView>
               </TouchableOpacity>
             </ShadowView>
-            <RegularText>Healthy</RegularText>
-          </StatusView>
-          <StatusView>
+          </CenterView>
+          <CenterView>
             <ShadowView>
               <TouchableOpacity>
                 <IconView colors={HealthySickColors}>
@@ -84,9 +63,8 @@ const HomeScreen = props => (
                 </IconView>
               </TouchableOpacity>
             </ShadowView>
-            <RegularText>Healthy/Sick</RegularText>
-          </StatusView>
-          <StatusView>
+          </CenterView>
+          <CenterView>
             <ShadowView>
               <TouchableOpacity onPress={() => handleRoute(props, 'Sick')}>
                 <IconView colors={SickColors}>
@@ -94,11 +72,10 @@ const HomeScreen = props => (
                 </IconView>
               </TouchableOpacity>
             </ShadowView>
-            <RegularText>Sick</RegularText>
-          </StatusView>
-        </StatusViewWrapper>
+          </CenterView>
+        </React.Fragment>
       </BottomView>
-    </SafeAreaView>
+    </ContainerView>
   </ImageContainer>
 );
 export default HomeScreen;

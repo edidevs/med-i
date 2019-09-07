@@ -44,7 +44,7 @@ const MindScreen = () => (
       <ParagraphView>
         <ResultsText>Mental Health {'\n'}Crisis</ResultsText>
         <MessageText>
-          Call <BoldText>121</BoldText> and press <BoldText>2</BoldText>
+          Call <BoldText>999</BoldText>
         </MessageText>
         <CallButton>
           <CallButtonIconView>

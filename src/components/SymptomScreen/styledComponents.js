@@ -47,10 +47,3 @@ export const ItemView = styled.View`
   margin-left: 30px;
   align-items: center;
 `;
-
-export const BulletPointView = styled.View`
-  height: 12px;
-  width: 12px;
-  border-radius: 50;
-  background-color: #e77565;
-`;
