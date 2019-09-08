@@ -2,6 +2,8 @@ import HealthyScreen from '../../../components/HealthyScreen';
 import SickScreen from '../../../components/SickScreen';
 import MindScreen from '../../../components/MindScreen';
 import BodyScreen from '../../../components/BodyScreen';
+import YogaScreen from '../../../components/YogaScreen';
+import SportsScreen from '../../../components/SportsScreen';
 import PainScreen from '../../../components/PainScreen';
 import HayfeverScreen from '../../../components/HayfeverScreen';
 import ItchinessScreen from '../../../components/ItchinessScreen';
@@ -44,6 +46,18 @@ export const configurations = {
   },
   Body: {
     screen: BodyScreen,
+    navigationOptions: {
+      headerTitle: 'Body',
+    },
+  },
+  Yoga: {
+    screen: YogaScreen,
+    navigationOptions: {
+      headerTitle: 'Body',
+    },
+  },
+  Sports: {
+    screen: SportsScreen,
     navigationOptions: {
       headerTitle: 'Body',
     },

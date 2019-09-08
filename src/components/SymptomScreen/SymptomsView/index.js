@@ -3,7 +3,8 @@ import React from 'react';
 
 import { FlatGrid } from 'react-native-super-grid';
 
-import { ItemView, ItemGridText, BulletPointView } from '../styledComponents';
+import { ItemView, ItemGridText } from '../styledComponents';
+import { CircleView } from '../../../common/styledComponents';
 
 const SymptomsView = ({ symptoms }) => (
   <FlatGrid
@@ -13,7 +14,7 @@ const SymptomsView = ({ symptoms }) => (
     renderItem={({ item }) =>
       item ? (
         <ItemView>
-          <BulletPointView />
+          <CircleView color="#e77565" diameter={12} />
           <ItemGridText>{item}</ItemGridText>
         </ItemView>
       ) : null

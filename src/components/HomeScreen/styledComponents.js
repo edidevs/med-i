@@ -1,113 +1,53 @@
 import styled from 'styled-components/native';
 
-import { FontAwesome, AntDesign } from '@expo/vector-icons';
 import { LinearGradient } from 'expo-linear-gradient';
 
-import { CenterView } from '../../common/styledComponents';
-import { screenWidth } from '../../utils/deviceSize';
-
-const BigText = styled.Text`
-  font-size: 30px;
-  font-weight: bold;
-  padding-bottom: 36px;
+export const ContainerView = styled.SafeAreaView`
+  flex: 1;
+  justify-content: space-between;
 `;
 
 export const TopView = styled.View`
-  flex: 2;
-  padding-left: 24px;
-  padding-right: 24px;
-  padding-top: 24px;
+  padding: 24px;
   flex-direction: row;
-  justify-content: space-between;
+`;
+
+export const MiddleView = styled.View`
+  padding-top: 32px;
+  align-items: center;
 `;
 
 export const BottomView = styled.View`
-  flex: 3;
-  background-color: #fff;
-  width: ${screenWidth};
-  padding: 24px;
+  padding-bottom: 24px;
 `;
 
-export const TopLeftView = styled.View`
-  justify-content: space-between;
-  align-self: flex-end;
-  height: 258px;
-  padding-left: 10px;
-`;
-
-export const AvatarView = styled(CenterView)`
-  border-radius: 60px;
-  height: 110px;
-  width: 110px;
-  border-width: 5px;
-  border-color: #c2f7f8;
-  background-color: rgba(52, 52, 52, 0.5);
-`;
-
-export const CameraIcon = styled(FontAwesome).attrs({
-  name: 'camera',
-})`
-  font-size: 30px;
-  color: #393c50;
-`;
-
-export const GreetingText = styled(BigText)`
+export const GreetingText = styled.Text`
   color: #fff;
-  padding-left: 10px;
-`;
-
-export const TopRightView = styled(CenterView)`
-  background-color: #68ccd9;
-  height: 55px;
-  width: 55px;
-  border-radius: 55px;
-`;
-
-export const LogOutIcon = styled(AntDesign).attrs({
-  name: 'logout',
-})`
-  font-size: 25px;
+  padding-top: 24px;
+  font-size: 34px;
   font-weight: bold;
-  color: #fff;
+  letter-spacing: 1.16px;
 `;
 
-export const HealthBarView = styled.View`
-  background-color: #fb69;
-  height: 15px;
-  border-radius: 25px;
-  margin-top: 24px;
-  margin-bottom: 24px;
+export const InterrogationText = styled.Text`
+  color: #575772;
+  font-size: 26px;
+  font-weight: bold;
+  letter-spacing: 1.06px;
 `;
-
-export const StatusViewWrapper = styled.View`
-  flex-direction: row;
-  justify-content: space-between;
-`;
-
-export const StatusView = styled(CenterView)``;
 
 export const IconView = styled(LinearGradient)`
-  height: 103px;
-  width: 103px;
-  border-radius: 53px;
+  height: 113px;
+  width: 113px;
+  border-radius: 57px;
   border-width: 3px;
   border-color: #ffffff;
-  margin-top: 29.5px;
-  margin-bottom: 24px;
+  margin-top: 8px;
+  margin-bottom: 8px;
   align-items: center;
   justify-content: center;
-  elevation: 5;
+  elevation: 10;
 `;
 
-export const RegularText = styled.Text`
-  font-size: 16;
-  color: #393c50;
-`;
-
-export const InterrogationText = styled(BigText)`
-  color: #393c50;
-  padding: 10px;
-`;
-
-export const FaceHeight = 52;
-export const FaceWidth = 52;
+export const FaceHeight = 58;
+export const FaceWidth = 58;

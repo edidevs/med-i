@@ -1,11 +1,13 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 import { TouchableOpacity } from 'react-native';
+import { withNavigation } from 'react-navigation';
 
-import { ItemViewBis } from './styledComponents';
-import { ItemTextView, ItemText } from '../../StatusScreen/styledComponents';
-import Medicine from '../../../../assets/Icons/medicine.svg';
+import { ItemViewBis, AddIcon } from './styledComponents';
 import { CircleView } from '../../../common/styledComponents';
+import { ItemTextView, ItemText } from '../../StatusScreen/styledComponents';
+
+import Medicine from '../../../../assets/Icons/medicine.svg';
 
 const DrugView = ({ name }) =>
   name ? (
@@ -17,8 +19,9 @@ const DrugView = ({ name }) =>
         <ItemTextView>
           <ItemText>{name}</ItemText>
         </ItemTextView>
+        <AddIcon />
       </ItemViewBis>
     </TouchableOpacity>
   ) : null;
 
-export default DrugView;
+export default withNavigation(DrugView);

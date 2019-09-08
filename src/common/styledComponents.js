@@ -39,7 +39,7 @@ export const NavigationView = styled.View`
 
 // Only relevant for iOS
 export const ShadowView = styled.View`
-  shadow-color: #dbdee4;
+  shadow-color: #6e7da2;
   shadow-offset: 5px;
   shadow-opacity: 0.8;
   shadow-radius: 10px;

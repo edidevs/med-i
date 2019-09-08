@@ -11,13 +11,13 @@ const SickScreen = () => {
     sick: true,
     background,
     colors: SickColors,
-    resultsText: 'We got you buddy',
-    messageOne: '',
-    messageTwo: 'Is it in your',
-    itemTextOne: 'Mind',
-    itemMessageOne: 'Address Mental Health',
-    itemTextTwo: 'Body',
-    itemMessageTwo: 'Relieve Physical Pain',
+    resultsText: 'We got you \nBuddy!',
+    messageOne: 'Is it in your ?',
+    messageTwo: '',
+    itemTextOne: 'Body',
+    itemMessageOne: 'Relieve Physical Pain',
+    itemTextTwo: 'Mind',
+    itemMessageTwo: 'Address Mental Health',
   };
   return <StatusScreen {...props} />;
 };
