@@ -13,7 +13,7 @@ import FeverScreen from '../../../components/FeverScreen';
 import CoughScreen from '../../../components/CoughScreen';
 import IndigestionScreen from '../../../components/IndigestionScreen';
 
-import { goToCart } from '../../../utils/handleRoute';
+import { goToCart } from '../../../components/CartHeader';
 
 export const configurations = {
   Tab: {
