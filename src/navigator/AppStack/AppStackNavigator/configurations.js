@@ -10,7 +10,6 @@ import ItchinessScreen from '../../../components/ItchinessScreen';
 import FeverScreen from '../../../components/FeverScreen';
 import CoughScreen from '../../../components/CoughScreen';
 import IndigestionScreen from '../../../components/IndigestionScreen';
-import MedicationsListScreen from '../../../components/MedicationsListScreen';
 
 import { AppTabNavigator } from '../AppTabNavigator';
 
@@ -97,12 +96,6 @@ export const configurations = {
     screen: IndigestionScreen,
     navigationOptions: {
       headerTitle: 'Indigestion',
-    },
-  },
-  MedicationsList: {
-    screen: MedicationsListScreen,
-    navigationOptions: {
-      headerTitle: 'List of medications',
     },
   },
 };

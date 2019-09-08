@@ -9,13 +9,9 @@ import { ItemTextView, ItemText } from '../../StatusScreen/styledComponents';
 
 import Medicine from '../../../../assets/Icons/medicine.svg';
 
-import { handleRoute } from '../../../utils/handleRoute';
-
-const DrugView = ({ name, ...otherProps }) =>
+const DrugView = ({ name }) =>
   name ? (
-    <TouchableOpacity
-      onPress={() => handleRoute(otherProps, 'MedicationsList')}
-    >
+    <TouchableOpacity>
       <ItemViewBis>
         <CircleView>
           <Medicine />
