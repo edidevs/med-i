@@ -1,3 +1,5 @@
+import React from 'react';
+
 import { AppTabNavigator } from '../AppTabNavigator';
 
 import HealthyScreen from '../../../components/HealthyScreen';
@@ -12,8 +14,7 @@ import ItchinessScreen from '../../../components/ItchinessScreen';
 import FeverScreen from '../../../components/FeverScreen';
 import CoughScreen from '../../../components/CoughScreen';
 import IndigestionScreen from '../../../components/IndigestionScreen';
-
-import { goToCart } from '../../../components/CartHeader';
+import CartHeader from '../../../components/CartHeader';
 
 export const configurations = {
   Tab: {
@@ -70,42 +71,42 @@ export const configurations = {
     screen: PainScreen,
     navigationOptions: ({ navigation }) => ({
       headerTitle: 'Pain',
-      headerRight: goToCart(navigation),
+      headerRight: <CartHeader navigation={navigation} />,
     }),
   },
   Hayfever: {
     screen: HayfeverScreen,
     navigationOptions: ({ navigation }) => ({
       headerTitle: 'Hayfever',
-      headerRight: goToCart(navigation),
+      headerRight: <CartHeader navigation={navigation} />,
     }),
   },
   Itchiness: {
     screen: ItchinessScreen,
     navigationOptions: ({ navigation }) => ({
       headerTitle: 'Itchiness',
-      headerRight: goToCart(navigation),
+      headerRight: <CartHeader navigation={navigation} />,
     }),
   },
   Fever: {
     screen: FeverScreen,
     navigationOptions: ({ navigation }) => ({
       headerTitle: 'Fever',
-      headerRight: goToCart(navigation),
+      headerRight: <CartHeader navigation={navigation} />,
     }),
   },
   Cough: {
     screen: CoughScreen,
     navigationOptions: ({ navigation }) => ({
       headerTitle: 'Cough',
-      headerRight: goToCart(navigation),
+      headerRight: <CartHeader navigation={navigation} />,
     }),
   },
   Indigestion: {
     screen: IndigestionScreen,
     navigationOptions: ({ navigation }) => ({
       headerTitle: 'Indigestion',
-      headerRight: goToCart(navigation),
+      headerRight: <CartHeader navigation={navigation} />,
     }),
   },
 };

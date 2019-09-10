@@ -1,33 +1,24 @@
 import React from 'react';
-import { Alert } from 'react-native';
+
+import { connect } from 'react-redux';
 
 import { CartHeaderView, BadgeView, BadgeText } from './styledComponents';
 
+import { goToCartAlert } from '../../utils/handleRoute';
+
 import Cart from '../../../assets/Icons/Cart.svg';
 
-const goToCartAlert = navigation => {
-  Alert.alert(
-    'Go To Cart',
-    'Make sure you add few possible items you may need before going to cart.',
-    [
-      {
-        text: 'Cancel',
-        style: 'cancel',
-      },
-      {
-        text: 'Proceed',
-        onPress: () => navigation.navigate('Store'),
-      },
-    ],
-    { cancelable: false }
-  );
-};
-
-export const goToCart = navigation => (
+const CartHeader = navigation => (
   <CartHeaderView onPress={() => goToCartAlert(navigation)}>
     <Cart height={28} width={28} />
     <BadgeView>
-      <BadgeText>2</BadgeText>
+      <BadgeText>3</BadgeText>
     </BadgeView>
   </CartHeaderView>
 );
+
+const mapStateToProps = state => ({
+  cartItems: state.cart.cartItems,
+});
+
+export default connect(mapStateToProps)(CartHeader);
