@@ -3,8 +3,8 @@ import React from 'react';
 import { SafeAreaView, StatusBar } from 'react-native';
 
 import SymptomsView from './SymptomsView';
-
 import DrugView from './DrugView';
+
 import {
   UpperView,
   MiddleView,

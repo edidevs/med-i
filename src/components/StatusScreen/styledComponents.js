@@ -64,7 +64,7 @@ export const ItemView = styled.View`
   margin-top: 19px;
   margin-bottom: 19px;
   border-radius: 13px;
-  background-color: #fafbfc;
+  background-color: #fafafa;
   shadow-color: #d5d9e6;
   shadow-offset: 0px 8px;
   shadow-opacity: 0.5;
