@@ -12,7 +12,7 @@ import { addItemToCart } from '../../../redux/cartActions';
 
 import Medicine from '../../../../assets/Icons/medicine.svg';
 
-const DrugView = ({ name }) =>
+const DrugView = ({ name, addItem }) =>
   name ? (
     <ItemViewBis>
       <CircleView>
@@ -21,14 +21,14 @@ const DrugView = ({ name }) =>
       <ItemTextView>
         <ItemText>{name}</ItemText>
       </ItemTextView>
-      <TouchableOpacity>
+      <TouchableOpacity onPress={() => addItem(name)}>
         <AddIcon />
       </TouchableOpacity>
     </ItemViewBis>
   ) : null;
 
 const mapDispatchToProps = dispatch => ({
-  addItemToCart: item => dispatch(addItemToCart(item)),
+  addItem: item => dispatch(addItemToCart(item)),
 });
 
 export default connect(
