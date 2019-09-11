@@ -4,7 +4,7 @@ import { SafeAreaView, StatusBar } from 'react-native';
 
 import { connect } from 'react-redux';
 
-import DrugView from '../SymptomScreen/DrugView';
+import CartItemView from './CartItemView';
 import {
   UpperView,
   LowerView,
@@ -30,7 +30,7 @@ const StoreScreen = ({ cartItems }) => (
       <LowerView
         data={cartItems}
         keyExtractor={(item, index) => `key${index}-${item}`}
-        renderItem={({ item }) => <DrugView itemName={item.itemName} />}
+        renderItem={({ item }) => <CartItemView item={item} />}
       />
     </SafeAreaView>
   </ImageContainer>

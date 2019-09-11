@@ -11,6 +11,13 @@ const cartReducer = (state = INITIAL_STATE, action) => {
         ...state,
         cartItems: changeItemQuantityInCart(state.cartItems, action.payload),
       };
+    case 'REMOVE_ITEM_CART':
+      return {
+        ...state,
+        cartItems: state.cartItems.filter(
+          cartItem => cartItem.itemName !== action.payload.itemName
+        ),
+      };
     default:
       return state;
   }
