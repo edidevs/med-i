@@ -9,18 +9,20 @@ import { goToCartAlert } from '../../utils/handleRoute';
 
 import Cart from '../../../assets/Icons/Cart.svg';
 
-const CartHeader = ({ numberOfItemsInCart, ...navigation }) => (
+const CartHeader = ({ itemsCount, ...navigation }) => (
   <CartHeaderView onPress={() => goToCartAlert(navigation)}>
     <Cart height={28} width={28} />
     <BadgeView>
-      <BadgeText>{numberOfItemsInCart}</BadgeText>
+      <BadgeText>{itemsCount}</BadgeText>
     </BadgeView>
   </CartHeaderView>
 );
 
-const mapStateToProps = state => ({
-  // TODO: sum app all quantities. Maybe use reduce.
-  numberOfItemsInCart: state.cart.cartItems.length,
+const mapStateToProps = ({ cart: { cartItems } }) => ({
+  itemsCount: cartItems.reduce(
+    (accumulatedQuantity, cartItem) => accumulatedQuantity + cartItem.quantity,
+    0
+  ),
 });
 
 export default connect(mapStateToProps)(CartHeader);
