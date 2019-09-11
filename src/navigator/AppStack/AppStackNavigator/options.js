@@ -1,5 +1,5 @@
 export const options = {
-  initialRouteName: 'Pain',
+  // initialRouteName: 'Pain',
   headerLayoutPreset: 'center', // crucial to center header title in android
   defaultNavigationOptions: {
     headerBackTitle: null,

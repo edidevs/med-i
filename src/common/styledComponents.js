@@ -61,7 +61,7 @@ export const SubTitle = styled.Text`
   margin-bottom: 24px;
 `;
 
-export const ItemView = styled(Item)`
+export const InputView = styled(Item)`
   padding-left: 16px;
 `;
 
@@ -124,6 +124,52 @@ export const SeparatorView = styled.View`
   width: 316px;
   border: 1px;
   border-color: #e9e9e9;
+`;
+
+export const ItemView = styled.View`
+  flex-direction: row;
+  align-items: center;
+  height: 91;
+  width: ${screenWidth * 0.9};
+  padding: 20px;
+  margin-top: 19px;
+  margin-bottom: 19px;
+  border-radius: 13px;
+  background-color: #fafafa;
+  shadow-color: #d5d9e6;
+  shadow-offset: 0px 8px;
+  shadow-opacity: 0.5;
+  shadow-radius: 13;
+  elevation: 1;
+`;
+
+export const ItemViewBis = styled(ItemView)`
+  margin-top: 8px;
+  margin-bottom: 8px;
+  justify-content: space-between;
+`;
+
+export const ItemTextView = styled.View`
+  margin-left: 100px;
+  position: absolute;
+`;
+
+export const ItemText = styled.Text`
+  font-size: 16px;
+  font-weight: bold;
+  color: #393c50;
+`;
+
+export const ItemMessage = styled.Text`
+  font-size: 14;
+  color: #393c50;
+  margin-top: 16px;
+`;
+
+export const BoldText = styled.Text`
+  color: #393c50;
+  font-size: 20px;
+  font-weight: 600;
 `;
 
 export const HealthyColors = ['#55C26F', '#5ADF79'];

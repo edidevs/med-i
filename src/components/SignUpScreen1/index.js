@@ -7,7 +7,7 @@ import {
   NavigationView,
   Title,
   SubTitle,
-  ItemView,
+  InputView,
   UserInput,
   ConfirmButton,
   ConfirmButtonText,
@@ -27,13 +27,13 @@ const SignUpScreen1 = props => (
     <AuthContainer>
       <Title>Sing Up</Title>
       <SubTitle>Username</SubTitle>
-      <ItemView rounded>
+      <InputView rounded>
         <UserInput />
-      </ItemView>
+      </InputView>
       <SubTitle>Email</SubTitle>
-      <ItemView rounded>
+      <InputView rounded>
         <EmailInput />
-      </ItemView>
+      </InputView>
       <ConfirmButton rounded onPress={() => handleRoute(props, 'SignUp2')}>
         <ConfirmButtonText>Next</ConfirmButtonText>
       </ConfirmButton>

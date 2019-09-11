@@ -55,39 +55,5 @@ export const MessageTwoText = styled.Text`
   padding-top: 16px;
 `;
 
-export const ItemView = styled.View`
-  flex-direction: row;
-  align-items: center;
-  height: 91;
-  width: ${screenWidth * 0.9};
-  padding: 20px;
-  margin-top: 19px;
-  margin-bottom: 19px;
-  border-radius: 13px;
-  background-color: #fafafa;
-  shadow-color: #d5d9e6;
-  shadow-offset: 0px 8px;
-  shadow-opacity: 0.5;
-  shadow-radius: 13;
-  elevation: 1;
-`;
-
-export const ItemTextView = styled.View`
-  margin-left: 100px;
-  position: absolute;
-`;
-
-export const ItemText = styled.Text`
-  font-size: 16px;
-  font-weight: bold;
-  color: #393c50;
-`;
-
-export const ItemMessage = styled.Text`
-  font-size: 14;
-  color: #393c50;
-  margin-top: 16px;
-`;
-
 export const FaceHeight = 95;
 export const FaceWidth = 95;

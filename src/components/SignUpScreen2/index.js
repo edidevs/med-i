@@ -7,7 +7,7 @@ import {
   NavigationView,
   Title,
   SubTitle,
-  ItemView,
+  InputView,
   PasswordInput,
   ConfirmButton,
   ConfirmButtonText,
@@ -16,6 +16,7 @@ import {
 } from '../../common/styledComponents';
 
 import { DOBInput } from './styledComponents';
+import { handleRoute } from '../../utils/handleRoute';
 
 const background = require('../../../assets/Images/AuthScreen.png');
 
@@ -25,20 +26,20 @@ const SignUpScreen2 = props => (
     <AuthContainer>
       <Title>Sing Up</Title>
       <SubTitle>Date of birth</SubTitle>
-      <ItemView rounded>
+      <InputView rounded>
         <DOBInput />
-      </ItemView>
+      </InputView>
       <SubTitle>Password</SubTitle>
-      <ItemView rounded>
+      <InputView rounded>
         <PasswordInput />
-      </ItemView>
+      </InputView>
       <ConfirmButton rounded>
         <ConfirmButtonText>Create account</ConfirmButtonText>
       </ConfirmButton>
     </AuthContainer>
     <NavigationView>
       <RegularText>Already have a med-i account ? </RegularText>
-      <TouchableOpacity onPress={() => props.navigation.navigate('SignIn')}>
+      <TouchableOpacity onPress={() => handleRoute(props, 'SignIn')}>
         <HyperLinkText> Log in</HyperLinkText>
       </TouchableOpacity>
     </NavigationView>

@@ -5,9 +5,13 @@ import { TouchableOpacity } from 'react-native';
 import { connect } from 'react-redux';
 import { withNavigation } from 'react-navigation';
 
-import { ItemViewBis, AddIcon } from './styledComponents';
-import { CircleView } from '../../../common/styledComponents';
-import { ItemTextView, ItemText } from '../../StatusScreen/styledComponents';
+import { AddIcon } from './styledComponents';
+import {
+  CircleView,
+  ItemViewBis,
+  ItemTextView,
+  ItemText,
+} from '../../../common/styledComponents';
 import { addItemToCart } from '../../../redux/cartActions';
 
 import Medicine from '../../../../assets/Icons/medicine.svg';

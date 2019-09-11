@@ -4,10 +4,16 @@ import { TouchableOpacity } from 'react-native';
 
 import { connect } from 'react-redux';
 
-import { RemoveIcon } from './styledComponents';
-import { ItemViewBis } from '../../SymptomScreen/DrugView/styledComponents';
-import { CircleView } from '../../../common/styledComponents';
-import { ItemTextView, ItemText } from '../../StatusScreen/styledComponents';
+import { RemoveIcon, BoldTextBis } from './styledComponents';
+import {} from '../../SymptomScreen/DrugView/styledComponents';
+import {
+  CircleView,
+  ItemViewBis,
+  ItemTextView,
+  ItemText,
+  ItemMessage,
+} from '../../../common/styledComponents';
+import {} from '../../StatusScreen/styledComponents';
 import { removeItemFromCart } from '../../../redux/cartActions';
 
 import Medicine from '../../../../assets/Icons/medicine.svg';
@@ -19,6 +25,9 @@ const CartItemView = ({ item, removeItem }) => (
     </CircleView>
     <ItemTextView>
       <ItemText>{item.itemName}</ItemText>
+      <ItemMessage>
+        <BoldTextBis>Quantity:</BoldTextBis> {item.quantity}
+      </ItemMessage>
     </ItemTextView>
     <TouchableOpacity onPress={() => removeItem(item)}>
       <RemoveIcon />

@@ -9,10 +9,9 @@ import {
   UpperView,
   MiddleView,
   LowerView,
-  BoldText,
   DescriptionText,
 } from './styledComponents';
-import { ImageContainer } from '../../common/styledComponents';
+import { ImageContainer, BoldText } from '../../common/styledComponents';
 
 import Mascot from '../../../assets/Icons/Mascot.svg';
 

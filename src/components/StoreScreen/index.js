@@ -8,7 +8,6 @@ import CartItemView from './CartItemView';
 import {
   UpperView,
   LowerView,
-  BoldText,
   DescriptionText,
 } from '../SymptomScreen/styledComponents';
 import { ImageContainer } from '../../common/styledComponents';

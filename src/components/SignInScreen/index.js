@@ -12,7 +12,7 @@ import {
   NavigationView,
   Title,
   SubTitle,
-  ItemView,
+  InputView,
   UserInput,
   PasswordInput,
   ConfirmButton,
@@ -38,13 +38,13 @@ const SignInScreen = props => (
       <AuthContainer>
         <Title>Login</Title>
         <SubTitle>Username</SubTitle>
-        <ItemView rounded>
+        <InputView rounded>
           <UserInput />
-        </ItemView>
+        </InputView>
         <SubTitle>Password</SubTitle>
-        <ItemView rounded>
+        <InputView rounded>
           <PasswordInput />
-        </ItemView>
+        </InputView>
         <ForgetPasswordText>Forget password?</ForgetPasswordText>
         <ConfirmButton rounded onPress={() => login(props)}>
           <ConfirmButtonText>Log in</ConfirmButtonText>
