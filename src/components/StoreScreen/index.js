@@ -32,7 +32,7 @@ const StoreScreen = ({ cartItems }) => {
         <LowerView
           data={cartItems}
           keyExtractor={(item, index) => `key${index}`}
-          renderItem={({ item }) => <DrugView name={item.name} />}
+          renderItem={({ item }) => <DrugView itemName={item.itemName} />}
         />
       </SafeAreaView>
     </ImageContainer>

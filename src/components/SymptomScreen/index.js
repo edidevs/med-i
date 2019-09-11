@@ -53,7 +53,7 @@ const SymptomScreen = ({
       </MiddleView>
       <LowerView
         data={[drugOne, drugTwo, drugThree, drugFour, drugFive]}
-        renderItem={({ item }) => <DrugView name={item} />}
+        renderItem={({ item }) => <DrugView itemName={item} />}
         keyExtractor={(item, index) => `key${index}`}
       />
     </SafeAreaView>

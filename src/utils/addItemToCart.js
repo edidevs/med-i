@@ -1,16 +1,30 @@
-export const addItemToCart = (cartItems, cartItemToAdd) => {
-  console.log('old item', cartItems[0] && cartItems[0].name);
-  console.log('new item', cartItemToAdd);
-  const existingCartItem = cartItems.find(
-    cartItem => cartItem.name === cartItemToAdd.name
+export const changeItemQuantityInCart = (cartItems, cartItemToAdd) => {
+  const itemAlreadyInCart = cartItems.find(
+    cartItem => cartItem.itemName === cartItemToAdd.itemName
   );
 
-  if (existingCartItem) {
+  if (itemAlreadyInCart) {
     return cartItems.map(cartItem =>
-      cartItem.name === cartItemToAdd.name
+      cartItem.itemName === cartItemToAdd.itemName
         ? { ...cartItem, quantity: cartItem.quantity + 1 }
         : cartItem
     );
   }
   return [...cartItems, { ...cartItemToAdd, quantity: 1 }];
 };
+
+// const itemAlreadyInCart = (cartItems, cartItemToAdd) =>
+//   cartItems.find(cartItem => cartItem.itemName === cartItemToAdd.itemName);
+
+// const increaseThatItemQuantity = (cartItems, cartItemToAdd) =>
+//   cartItems.map(cartItem =>
+//     cartItem.itemName === cartItemToAdd.itemName
+//       ? { ...cartItem, quantity: cartItem.quantity + 1 }
+//       : cartItem
+//   );
+
+// export const changeItemQuantityInCart = (cartItems, cartItemToAdd) => {
+//   if (itemAlreadyInCart(cartItems, cartItemToAdd))
+//     increaseThatItemQuantity(cartItems, cartItemToAdd);
+//   return [...cartItems, { ...cartItemToAdd, quantity: 1 }];
+// };
