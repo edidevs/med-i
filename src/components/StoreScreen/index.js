@@ -17,24 +17,27 @@ import Mascot from '../../../assets/Icons/Mascot.svg';
 
 const background = require('../../../assets/Images/MoreScreen.png');
 
-const StoreScreen = ({ cartItems }) => (
-  <ImageContainer source={background}>
-    <StatusBar barStyle="light-content" />
-    <SafeAreaView>
-      <UpperView>
-        <Mascot width={75} height={75} />
-        <DescriptionText>
-          You can buy these medications from your local pharmacy
-        </DescriptionText>
-      </UpperView>
-      <LowerView
-        data={cartItems}
-        renderItem={({ item }) => <DrugView name={item} />}
-        keyExtractor={(item, index) => `key${index}`}
-      />
-    </SafeAreaView>
-  </ImageContainer>
-);
+const StoreScreen = ({ cartItems }) => {
+  console.log(cartItems);
+  return (
+    <ImageContainer source={background}>
+      <StatusBar barStyle="light-content" />
+      <SafeAreaView>
+        <UpperView>
+          <Mascot width={75} height={75} />
+          <DescriptionText>
+            You can buy these medications from your local pharmacy
+          </DescriptionText>
+        </UpperView>
+        <LowerView
+          data={cartItems}
+          keyExtractor={(item, index) => `key${index}`}
+          renderItem={({ item }) => <DrugView name={item.name} />}
+        />
+      </SafeAreaView>
+    </ImageContainer>
+  );
+};
 
 const mapStateToProps = state => ({
   cartItems: state.cart.cartItems,

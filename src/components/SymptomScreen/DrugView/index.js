@@ -12,7 +12,7 @@ import { addItemToCart } from '../../../redux/cartActions';
 
 import Medicine from '../../../../assets/Icons/medicine.svg';
 
-const DrugView = ({ name, addItem }) =>
+const DrugView = ({ addItem, name }) =>
   name ? (
     <ItemViewBis>
       <CircleView>
@@ -21,7 +21,7 @@ const DrugView = ({ name, addItem }) =>
       <ItemTextView>
         <ItemText>{name}</ItemText>
       </ItemTextView>
-      <TouchableOpacity onPress={() => addItem(name)}>
+      <TouchableOpacity onPress={() => addItem({ name })}>
         <AddIcon />
       </TouchableOpacity>
     </ItemViewBis>

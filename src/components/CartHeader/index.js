@@ -19,6 +19,7 @@ const CartHeader = ({ numberOfItemsInCart, ...navigation }) => (
 );
 
 const mapStateToProps = state => ({
+  // TODO: sum app all quantities. Maybe use reduce.
   numberOfItemsInCart: state.cart.cartItems.length,
 });
 
