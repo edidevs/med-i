@@ -15,15 +15,18 @@ import {
   ResultsText,
   MessageOneText,
   MessageTwoText,
-  ItemView,
-  ItemTextView,
-  ItemText,
-  ItemMessage,
   FaceHeight,
   FaceWidth,
 } from './styledComponents';
 
-import { ImageContainer, ShadowView } from '../../common/styledComponents';
+import {
+  ImageContainer,
+  ShadowView,
+  ItemView,
+  ItemTextView,
+  ItemText,
+  ItemMessage,
+} from '../../common/styledComponents';
 import { handleRoute } from '../../utils/handleRoute';
 
 import SadFace from '../../../assets/Icons/Sad.svg';

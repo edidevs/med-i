@@ -1,6 +1,8 @@
 import styled from 'styled-components/native';
 import { Platform } from 'react-native';
 
+import { BoldText } from '../../common/styledComponents';
+
 import { screenWidth } from '../../utils/deviceSize';
 
 const MARGIN_TOP = Platform.OS === 'ios' ? 65 : 95;
@@ -23,12 +25,6 @@ export const MiddleView = styled.View`
 export const LowerView = styled.FlatList.attrs({
   alignItems: 'center',
 })``;
-
-export const BoldText = styled.Text`
-  color: #393c50;
-  font-size: 20px;
-  font-weight: 600;
-`;
 
 export const DescriptionText = styled(BoldText)`
   margin-top: 32px;

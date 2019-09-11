@@ -3,16 +3,15 @@ import React from 'react';
 import { SafeAreaView, StatusBar } from 'react-native';
 
 import SymptomsView from './SymptomsView';
-
 import DrugView from './DrugView';
+
 import {
   UpperView,
   MiddleView,
   LowerView,
-  BoldText,
   DescriptionText,
 } from './styledComponents';
-import { ImageContainer } from '../../common/styledComponents';
+import { ImageContainer, BoldText } from '../../common/styledComponents';
 
 import Mascot from '../../../assets/Icons/Mascot.svg';
 
@@ -53,7 +52,7 @@ const SymptomScreen = ({
       </MiddleView>
       <LowerView
         data={[drugOne, drugTwo, drugThree, drugFour, drugFive]}
-        renderItem={({ item }) => <DrugView name={item} />}
+        renderItem={({ item }) => <DrugView itemName={item} />}
         keyExtractor={(item, index) => `key${index}`}
       />
     </SafeAreaView>

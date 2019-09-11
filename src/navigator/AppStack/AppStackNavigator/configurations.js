@@ -1,3 +1,7 @@
+import React from 'react';
+
+import { AppTabNavigator } from '../AppTabNavigator';
+
 import HealthyScreen from '../../../components/HealthyScreen';
 import SickScreen from '../../../components/SickScreen';
 import MindScreen from '../../../components/MindScreen';
@@ -10,20 +14,21 @@ import ItchinessScreen from '../../../components/ItchinessScreen';
 import FeverScreen from '../../../components/FeverScreen';
 import CoughScreen from '../../../components/CoughScreen';
 import IndigestionScreen from '../../../components/IndigestionScreen';
-
-import { AppTabNavigator } from '../AppTabNavigator';
+import CartHeader from '../../../components/CartHeader';
 
 export const configurations = {
   Tab: {
     screen: AppTabNavigator,
-    navigationOptions: props => {
-      const title = {};
-      if (props.navigation.state.index === 1) {
-        title.headerTitle = 'Cart';
-      } else if (props.navigation.state.index === 2) {
-        title.headerTitle = 'More';
+    navigationOptions: ({ navigation }) => {
+      {
+        const headerParams = { headerTitle: '' };
+        if (navigation.state.index === 1) {
+          headerParams.headerTitle = 'Cart';
+        } else if (navigation.state.index === 2) {
+          headerParams.headerTitle = 'More';
+        }
+        return headerParams;
       }
-      return title;
     },
   },
   Healthy: {
@@ -64,38 +69,44 @@ export const configurations = {
   },
   Pain: {
     screen: PainScreen,
-    navigationOptions: {
+    navigationOptions: ({ navigation }) => ({
       headerTitle: 'Pain',
-    },
+      headerRight: <CartHeader navigation={navigation} />,
+    }),
   },
   Hayfever: {
     screen: HayfeverScreen,
-    navigationOptions: {
+    navigationOptions: ({ navigation }) => ({
       headerTitle: 'Hayfever',
-    },
+      headerRight: <CartHeader navigation={navigation} />,
+    }),
   },
   Itchiness: {
     screen: ItchinessScreen,
-    navigationOptions: {
+    navigationOptions: ({ navigation }) => ({
       headerTitle: 'Itchiness',
-    },
+      headerRight: <CartHeader navigation={navigation} />,
+    }),
   },
   Fever: {
     screen: FeverScreen,
-    navigationOptions: {
+    navigationOptions: ({ navigation }) => ({
       headerTitle: 'Fever',
-    },
+      headerRight: <CartHeader navigation={navigation} />,
+    }),
   },
   Cough: {
     screen: CoughScreen,
-    navigationOptions: {
+    navigationOptions: ({ navigation }) => ({
       headerTitle: 'Cough',
-    },
+      headerRight: <CartHeader navigation={navigation} />,
+    }),
   },
   Indigestion: {
     screen: IndigestionScreen,
-    navigationOptions: {
+    navigationOptions: ({ navigation }) => ({
       headerTitle: 'Indigestion',
-    },
+      headerRight: <CartHeader navigation={navigation} />,
+    }),
   },
 };
