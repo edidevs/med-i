@@ -1,11 +1,19 @@
 import styled from 'styled-components/native';
 
-import { ItemView } from '../StatusScreen/styledComponents';
+import {
+  UpperView,
+  LowerView,
+  DescriptionText,
+} from '../SymptomScreen/styledComponents';
 
-export const CartItemView = styled(ItemView)`
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-color: #fafafa;
-  margin-top: 8px;
+export const UpperViewBis = styled(UpperView)`
+  padding-top: 32px;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-bottom: 0px;
+  background-color: transparent;
+`;
+
+export const DescriptionTextBis = styled(DescriptionText)`
+  text-align: center;
 `;

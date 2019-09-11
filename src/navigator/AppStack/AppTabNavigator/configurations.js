@@ -1,12 +1,21 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 
-import { Feather, EvilIcons, AntDesign } from '@expo/vector-icons';
+import {
+  Feather,
+  MaterialCommunityIcons,
+  Foundation,
+} from '@expo/vector-icons';
 
 import HomeScreen from '../../../components/HomeScreen';
 
 import StoreScreen from '../../../components/StoreScreen';
 import MoreScreen from '../../../components/MoreScreen';
+
+const iconStyle = tintColor => ({
+  fontSize: 40,
+  color: tintColor,
+});
 
 export const configurations = {
   Home: {
@@ -14,15 +23,7 @@ export const configurations = {
     navigationOptions: () => ({
       tabBarLabel: 'Home',
       tabBarIcon({ tintColor }) {
-        return (
-          <AntDesign
-            style={{
-              fontSize: 40,
-              color: tintColor,
-            }}
-            name="home"
-          />
-        );
+        return <Foundation style={iconStyle(tintColor)} name="home" />;
       },
     }),
   },
@@ -32,12 +33,9 @@ export const configurations = {
       tabBarLabel: 'Cart',
       tabBarIcon({ tintColor }) {
         return (
-          <EvilIcons
-            style={{
-              fontSize: 40,
-              color: tintColor,
-            }}
-            name="cart"
+          <MaterialCommunityIcons
+            style={iconStyle(tintColor)}
+            name="medical-bag"
           />
         );
       },
@@ -48,12 +46,7 @@ export const configurations = {
     navigationOptions: {
       tabBarLabel: 'More',
       tabBarIcon({ tintColor }) {
-        return (
-          <Feather
-            style={{ fontSize: 40, color: tintColor }}
-            name="more-horizontal"
-          />
-        );
+        return <Feather style={iconStyle(tintColor)} name="more-horizontal" />;
       },
     },
   },

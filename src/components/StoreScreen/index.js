@@ -5,11 +5,9 @@ import { SafeAreaView, StatusBar } from 'react-native';
 import { connect } from 'react-redux';
 
 import CartItemView from './CartItemView';
-import {
-  UpperView,
-  LowerView,
-  DescriptionText,
-} from '../SymptomScreen/styledComponents';
+
+import { UpperViewBis, DescriptionTextBis } from './styledComponents';
+import { LowerView } from '../SymptomScreen/styledComponents';
 import { ImageContainer } from '../../common/styledComponents';
 
 import Mascot from '../../../assets/Icons/Mascot.svg';
@@ -20,12 +18,12 @@ const StoreScreen = ({ cartItems }) => (
   <ImageContainer source={background}>
     <StatusBar barStyle="light-content" />
     <SafeAreaView>
-      <UpperView>
+      <UpperViewBis>
         <Mascot width={75} height={75} />
-        <DescriptionText>
-          You can buy these medications from your local pharmacy
-        </DescriptionText>
-      </UpperView>
+        <DescriptionTextBis>
+          Get any of these medications at your local pharmacy
+        </DescriptionTextBis>
+      </UpperViewBis>
       <LowerView
         data={cartItems}
         keyExtractor={(item, index) => `key${index}-${item}`}

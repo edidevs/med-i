@@ -3,15 +3,18 @@ import React from 'react';
 
 import { connect } from 'react-redux';
 
-import { CartHeaderView, BadgeView, BadgeText } from './styledComponents';
+import {
+  CartHeaderView,
+  CartIcon,
+  BadgeView,
+  BadgeText,
+} from './styledComponents';
 
 import { goToCartAlert } from '../../utils/handleRoute';
 
-import Cart from '../../../assets/Icons/Cart.svg';
-
 const CartHeader = ({ itemsCount, ...navigation }) => (
   <CartHeaderView onPress={() => goToCartAlert(navigation)}>
-    <Cart height={28} width={28} />
+    <CartIcon />
     <BadgeView>
       <BadgeText>{itemsCount}</BadgeText>
     </BadgeView>
