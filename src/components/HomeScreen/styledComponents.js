@@ -1,32 +1,34 @@
 import styled from 'styled-components/native';
 
 import { LinearGradient } from 'expo-linear-gradient';
-
-export const ContainerView = styled.SafeAreaView`
-  flex: 1;
-  justify-content: space-between;
-`;
+import { screenWidth } from '../../utils/deviceSize';
 
 export const TopView = styled.View`
-  padding: 24px;
-  flex-direction: row;
+  flex: 1;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 24px;
 `;
 
 export const MiddleView = styled.View`
-  padding-top: 32px;
   align-items: center;
+  justify-content: center;
+  flex: 1;
 `;
 
 export const BottomView = styled.View`
-  padding-bottom: 24px;
+  flex-direction: row;
+  justify-content: space-between;
+  flex: 1;
+  width: ${screenWidth * 0.88}px;
 `;
 
 export const GreetingText = styled.Text`
   color: #fff;
-  padding-top: 24px;
   font-size: 34px;
   font-weight: bold;
   letter-spacing: 1.16px;
+  padding-top: 16px;
 `;
 
 export const InterrogationText = styled.Text`
@@ -37,13 +39,11 @@ export const InterrogationText = styled.Text`
 `;
 
 export const IconView = styled(LinearGradient)`
-  height: 113px;
-  width: 113px;
-  border-radius: 57px;
+  height: 106px;
+  width: 106px;
+  border-radius: 53px;
   border-width: 3px;
   border-color: #ffffff;
-  margin-top: 8px;
-  margin-bottom: 8px;
   align-items: center;
   justify-content: center;
   elevation: 10;
