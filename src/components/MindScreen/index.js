@@ -4,7 +4,7 @@ import { SafeAreaView, StatusBar } from 'react-native';
 
 import {
   MindView,
-  ParagraphView,
+  LowerView,
   CallButton,
   CallButtonIconView,
   CallButtonText,
@@ -33,7 +33,7 @@ const background = require('../../../assets/Images/SickScreen.png');
 const MindScreen = () => (
   <ImageContainer source={background}>
     <StatusBar barStyle="light-content" />
-    <SafeAreaView>
+    <SafeAreaView style={{ flex: 1 }}>
       <MindView>
         <ShadowView>
           <IconView colors={SickColors}>
@@ -41,7 +41,7 @@ const MindScreen = () => (
           </IconView>
         </ShadowView>
       </MindView>
-      <ParagraphView>
+      <LowerView>
         <ResultsText>Mental Health {'\n'}Crisis</ResultsText>
         <MessageText>
           Call <BoldText>999</BoldText>
@@ -52,7 +52,7 @@ const MindScreen = () => (
           </CallButtonIconView>
           <CallButtonText>Call Now</CallButtonText>
         </CallButton>
-      </ParagraphView>
+      </LowerView>
     </SafeAreaView>
   </ImageContainer>
 );

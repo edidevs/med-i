@@ -1,23 +1,27 @@
 import styled from 'styled-components/native';
+import { Platform } from 'react-native';
+
 import { FontAwesome } from '@expo/vector-icons';
 
+const MARGIN_TOP = Platform.OS === 'ios' ? 24 : 54;
+
 export const MindView = styled.View`
+  flex: 1;
   align-items: center;
-  margin-bottom: 24px;
-  bottom: 1%;
+  justify-content: flex-start;
+  margin-top: ${MARGIN_TOP}px;
 `;
 
-export const ParagraphView = styled.View`
-  margin-top: 48px;
-  justify-content: space-between;
+export const LowerView = styled.View`
+  flex: 1;
   align-items: center;
+  justify-content: space-between;
+  margin-bottom: 32px;
 `;
 
 export const MessageText = styled.Text`
   color: #393c50;
   font-size: 22px;
-  margin-top: 68px;
-  margin-bottom: 96px;
 `;
 
 export const BoldText = styled(MessageText)`

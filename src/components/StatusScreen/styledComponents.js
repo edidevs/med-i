@@ -3,14 +3,11 @@ import { Platform } from 'react-native';
 
 import { LinearGradient } from 'expo-linear-gradient';
 
-import { screenWidth } from '../../utils/deviceSize';
-
-const MARGIN_TOP = Platform.OS === 'ios' ? 5 : 6;
+const MARGIN_TOP = Platform.OS === 'ios' ? 24 : 54;
 
 export const StatusView = styled.View`
   align-items: center;
-  margin-bottom: 24px;
-  top: ${MARGIN_TOP}%;
+  margin-top: ${MARGIN_TOP}px;
 `;
 
 export const IconView = styled(LinearGradient)`
@@ -26,7 +23,7 @@ export const IconView = styled(LinearGradient)`
 `;
 
 export const ParagraphView = styled.View`
-  margin-top: 48px;
+  margin-top: 32px;
   margin-bottom: 24px;
   align-items: center;
   height: 130px;
