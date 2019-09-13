@@ -17,7 +17,7 @@ import {
   ShadowView,
   SickColors,
   HealthyColors,
-  HealthySickColors,
+  NotWellColors,
 } from '../../common/styledComponents';
 
 import HappyFace from '../../../assets/Icons/Happy.svg';
@@ -51,8 +51,8 @@ const HomeScreen = props => (
           </TouchableOpacity>
         </ShadowView>
         <ShadowView>
-          <TouchableOpacity>
-            <IconView colors={HealthySickColors}>
+          <TouchableOpacity onPress={() => handleRoute(props, 'NotWell')}>
+            <IconView colors={NotWellColors}>
               <PokerFace width={FaceWidth} height={FaceHeight} />
             </IconView>
           </TouchableOpacity>

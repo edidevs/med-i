@@ -3,6 +3,7 @@ import React from 'react';
 import { AppTabNavigator } from '../AppTabNavigator';
 
 import HealthyScreen from '../../../components/HealthyScreen';
+import NotWellScreen from '../../../components/NotWellScreen';
 import SickScreen from '../../../components/SickScreen';
 import MindScreen from '../../../components/MindScreen';
 import BodyScreen from '../../../components/BodyScreen';
@@ -35,6 +36,12 @@ export const configurations = {
     screen: HealthyScreen,
     navigationOptions: {
       headerTitle: 'Feeling Healthy',
+    },
+  },
+  NotWell: {
+    screen: NotWellScreen,
+    navigationOptions: {
+      headerTitle: 'Not Feeling Well',
     },
   },
   Sick: {

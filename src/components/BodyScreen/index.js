@@ -20,8 +20,7 @@ import Indigestion from '../../../assets/Icons/Indigestion.svg';
 import Fever from '../../../assets/Icons/Fever.svg';
 
 import { handleRoute } from '../../utils/handleRoute';
-
-const background = require('../../../assets/Images/BodyScreen.png');
+import { backgroundSick as background } from '../../utils/loadAppropriateAsset';
 
 const components = [
   <Pain />,

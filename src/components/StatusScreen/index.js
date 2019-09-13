@@ -1,43 +1,21 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
-import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  TouchableOpacity,
-} from 'react-native';
+import { SafeAreaView, StatusBar } from 'react-native';
 import { withNavigation } from 'react-navigation';
+
+import StatusFace from './StatusFace';
+import ListItems from './ListItems';
 
 import {
   ParagraphView,
-  StatusView,
-  IconView,
-  ResultsText,
   MessageOneText,
   MessageTwoText,
-  FaceHeight,
-  FaceWidth,
 } from './styledComponents';
-
-import {
-  ImageContainer,
-  ShadowView,
-  ItemView,
-  ItemTextView,
-  ItemText,
-  ItemMessage,
-} from '../../common/styledComponents';
-import { handleRoute } from '../../utils/handleRoute';
-
-import SadFace from '../../../assets/Icons/Sad.svg';
-import Body from '../../../assets/Icons/Body.svg';
-import Mind from '../../../assets/Icons/Mind.svg';
-import HappyFace from '../../../assets/Icons/Happy.svg';
-import Yoga from '../../../assets/Icons/Yoga.svg';
-import Sports from '../../../assets/Icons/Sports.svg';
+import { ImageContainer, ResultsText } from '../../common/styledComponents';
 
 const StatusScreen = ({
   sick,
+  notWell,
   background,
   colors,
   resultsText,
@@ -52,46 +30,23 @@ const StatusScreen = ({
   <ImageContainer source={background}>
     <StatusBar barStyle="light-content" />
     <SafeAreaView>
-      <StatusView>
-        <ShadowView>
-          <IconView colors={colors}>
-            {sick ? (
-              <SadFace width={FaceWidth} height={FaceHeight} />
-            ) : (
-              <HappyFace width={FaceWidth} height={FaceHeight} />
-            )}
-          </IconView>
-        </ShadowView>
-      </StatusView>
+      <StatusFace colors={colors} sick={sick} notWell={notWell} />
       <ParagraphView>
         <ResultsText>{resultsText}</ResultsText>
         <MessageOneText>{messageOne}</MessageOneText>
-        {!sick && <MessageTwoText>{messageTwo}</MessageTwoText>}
+        {!sick && (
+          <MessageTwoText notWell={notWell}>{messageTwo}</MessageTwoText>
+        )}
       </ParagraphView>
-      <ScrollView>
-        <TouchableOpacity
-          onPress={() => handleRoute(otherProps, sick ? 'Body' : 'Yoga')}
-        >
-          <ItemView>
-            {sick ? <Body /> : <Yoga />}
-            <ItemTextView>
-              <ItemText>{itemTextOne}</ItemText>
-              <ItemMessage>{itemMessageOne}</ItemMessage>
-            </ItemTextView>
-          </ItemView>
-        </TouchableOpacity>
-        <TouchableOpacity
-          onPress={() => handleRoute(otherProps, sick ? 'Mind' : 'Sports')}
-        >
-          <ItemView>
-            {sick ? <Mind /> : <Sports />}
-            <ItemTextView>
-              <ItemText>{itemTextTwo}</ItemText>
-              <ItemMessage>{itemMessageTwo}</ItemMessage>
-            </ItemTextView>
-          </ItemView>
-        </TouchableOpacity>
-      </ScrollView>
+      <ListItems
+        sick={sick}
+        notWell={notWell}
+        itemTextOne={itemTextOne}
+        itemTextTwo={itemTextTwo}
+        itemMessageOne={itemMessageOne}
+        itemMessageTwo={itemMessageTwo}
+        otherProps={otherProps}
+      />
     </SafeAreaView>
   </ImageContainer>
 );

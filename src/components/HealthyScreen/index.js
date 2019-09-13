@@ -1,14 +1,13 @@
 import React from 'react';
 
 import StatusScreen from '../StatusScreen';
-
 import { HealthyColors } from '../../common/styledComponents';
-
-const background = require('../../../assets/Images/HealthyScreen.png');
+import { backgroundHealthy as background } from '../../utils/loadAppropriateAsset';
 
 const HealthyScreen = () => {
   const props = {
     sick: false,
+    notWell: false,
     background,
     colors: HealthyColors,
     resultsText: 'Medi I am well',

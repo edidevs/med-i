@@ -12,23 +12,19 @@ import {
   MessageText,
   BoldText,
 } from './styledComponents';
-
 import {
   ImageContainer,
   ShadowView,
   SickColors,
-} from '../../common/styledComponents';
-
-import {
+  ResultsText,
   IconView,
   FaceHeight,
   FaceWidth,
-  ResultsText,
-} from '../StatusScreen/styledComponents';
+} from '../../common/styledComponents';
+
+import { backgroundSick as background } from '../../utils/loadAppropriateAsset';
 
 import BigMind from '../../../assets/Icons/BigMind.svg';
-
-const background = require('../../../assets/Images/SickScreen.png');
 
 const MindScreen = () => (
   <ImageContainer source={background}>

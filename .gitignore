@@ -14,3 +14,4 @@ yarn.lock
 package-lock.json
 assets
 .watchmanconfig
+.DS_Store
