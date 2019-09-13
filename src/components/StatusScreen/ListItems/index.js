@@ -19,13 +19,13 @@ import Yoga from '../../../../assets/Icons/Yoga.svg';
 import Sports from '../../../../assets/Icons/Sports.svg';
 
 const ListItems = ({
-  otherProps,
   sick,
   notWell,
   itemTextOne,
   itemMessageOne,
   itemTextTwo,
   itemMessageTwo,
+  otherProps,
 }) => {
   const screenElements = {};
   let { itemOne, itemTwo, iconOne, iconTwo } = screenElements;
