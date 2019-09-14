@@ -1,3 +1,4 @@
+/* eslint-disable global-require */
 import { screenWidth } from './deviceSize';
 
 export const backgroundHealthy =
@@ -14,3 +15,8 @@ export const backgroundSick =
   screenWidth < 700
     ? require('../../assets/Images/SickScreen.png')
     : require('../../assets/Images/SickSTab.png');
+
+export const backgroundTabs =
+  screenWidth < 700
+    ? require('../../assets/Images/MoreScreen.png')
+    : require('../../assets/Images/MoreSTab.png');

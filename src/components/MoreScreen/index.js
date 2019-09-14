@@ -8,10 +8,7 @@ import {
   SeparatorView,
 } from '../../common/styledComponents';
 
-import logout from '../../utils/logout';
-
-// TODO: fix this
-const background = require('../../../assets/Images/MoreScreen.png');
+import { backgroundTabs as background, logout } from '../../utils';
 
 const MoreScreen = navigation => (
   <ImageContainer source={background}>

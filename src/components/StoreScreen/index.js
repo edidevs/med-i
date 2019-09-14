@@ -12,8 +12,7 @@ import { ImageContainer } from '../../common/styledComponents';
 
 import { Mascot } from '../../../assets/Icons';
 
-// TODO: fix this
-const background = require('../../../assets/Images/MoreScreen.png');
+import { backgroundTabs as background } from '../../utils';
 
 const StoreScreen = ({ cartItems }) => (
   <ImageContainer source={background}>
