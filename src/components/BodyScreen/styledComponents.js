@@ -3,13 +3,18 @@ import { Platform } from 'react-native';
 
 import { screenWidth } from '../../utils/deviceSize';
 
-const MARGIN_TOP = Platform.OS === 'ios' ? 65 : 95;
+const MARGIN_TOP = Platform.OS === 'ios' ? 90 : 110;
+
+const HEIGHT_TITLE = screenWidth < 700 ? 90 : 120;
+
+const HEIGHT_BODY = screenWidth < 700 ? 200 : 300;
 
 export const TitleView = styled.View`
   background-color: #fff;
-  height: 84px;
+  height: ${HEIGHT_TITLE}px;
   width: ${screenWidth}px;
   margin-top: ${MARGIN_TOP}px;
+  margin-bottom: 8px;
   shadow-color: #d5d9e6;
   shadow-offset: 5px;
   shadow-opacity: 0.8;
@@ -31,7 +36,7 @@ export const ItemView = styled.TouchableOpacity`
   border-color: #ebebeb;
   align-items: center;
   justify-content: space-between;
-  height: 200px;
+  height: ${HEIGHT_BODY}px;
   padding: 30px;
 `;
 

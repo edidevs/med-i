@@ -4,7 +4,7 @@ import { SafeAreaView, StatusBar } from 'react-native';
 
 import {
   MindView,
-  ParagraphView,
+  LowerView,
   CallButton,
   CallButtonIconView,
   CallButtonText,
@@ -12,28 +12,24 @@ import {
   MessageText,
   BoldText,
 } from './styledComponents';
-
 import {
   ImageContainer,
   ShadowView,
   SickColors,
-} from '../../common/styledComponents';
-
-import {
+  ResultsText,
   IconView,
   FaceHeight,
   FaceWidth,
-  ResultsText,
-} from '../StatusScreen/styledComponents';
+} from '../../common/styledComponents';
 
-import BigMind from '../../../assets/Icons/BigMind.svg';
+import { backgroundSick as background } from '../../utils';
 
-const background = require('../../../assets/Images/SickScreen.png');
+import { BigMind } from '../../../assets/Icons';
 
 const MindScreen = () => (
   <ImageContainer source={background}>
     <StatusBar barStyle="light-content" />
-    <SafeAreaView>
+    <SafeAreaView style={{ flex: 1 }}>
       <MindView>
         <ShadowView>
           <IconView colors={SickColors}>
@@ -41,7 +37,7 @@ const MindScreen = () => (
           </IconView>
         </ShadowView>
       </MindView>
-      <ParagraphView>
+      <LowerView>
         <ResultsText>Mental Health {'\n'}Crisis</ResultsText>
         <MessageText>
           Call <BoldText>999</BoldText>
@@ -52,7 +48,7 @@ const MindScreen = () => (
           </CallButtonIconView>
           <CallButtonText>Call Now</CallButtonText>
         </CallButton>
-      </ParagraphView>
+      </LowerView>
     </SafeAreaView>
   </ImageContainer>
 );

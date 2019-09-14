@@ -10,7 +10,7 @@ import {
   BadgeText,
 } from './styledComponents';
 
-import { goToCartAlert } from '../../utils/handleRoute';
+import { goToCartAlert } from '../../utils';
 
 const CartHeader = ({ itemsCount, ...navigation }) => (
   <CartHeaderView onPress={() => goToCartAlert(navigation)}>

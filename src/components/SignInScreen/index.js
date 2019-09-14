@@ -1,11 +1,7 @@
 import React from 'react';
-import {
-  SafeAreaView,
-  StatusBar,
-  TouchableOpacity,
-  AsyncStorage,
-} from 'react-native';
+import { SafeAreaView, StatusBar, TouchableOpacity } from 'react-native';
 
+import { ForgetPasswordText } from './styledComponents';
 import {
   AuthContainer,
   ImageContainer,
@@ -21,17 +17,11 @@ import {
   RegularText,
 } from '../../common/styledComponents';
 
-import { ForgetPasswordText } from './styledComponents';
-import { handleRoute } from '../../utils/handleRoute';
+import { login, handleRoute } from '../../utils';
 
 const background = require('../../../assets/Images/AuthScreen.png');
 
-const login = async props => {
-  await AsyncStorage.setItem('userToken', 'abc');
-  handleRoute(props, 'App');
-};
-
-const SignInScreen = props => (
+const SignInScreen = navigation => (
   <ImageContainer source={background}>
     <StatusBar barStyle="light-content" />
     <SafeAreaView style={{ alignItems: 'center' }}>
@@ -46,13 +36,13 @@ const SignInScreen = props => (
           <PasswordInput />
         </InputView>
         <ForgetPasswordText>Forget password?</ForgetPasswordText>
-        <ConfirmButton rounded onPress={() => login(props)}>
+        <ConfirmButton rounded onPress={() => login(navigation)}>
           <ConfirmButtonText>Log in</ConfirmButtonText>
         </ConfirmButton>
       </AuthContainer>
       <NavigationView>
         <RegularText>Don't have a med-i account ? </RegularText>
-        <TouchableOpacity onPress={() => handleRoute(props, 'SignUp1')}>
+        <TouchableOpacity onPress={() => handleRoute(navigation, 'SignUp1')}>
           <HyperLinkText> Sign Up</HyperLinkText>
         </TouchableOpacity>
       </NavigationView>

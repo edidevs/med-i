@@ -1,5 +1,5 @@
 export const options = {
-  initialRouteName: 'Store',
+  initialRouteName: 'Home',
   tabBarPosition: 'bottom',
   tabBarVisible: true,
   swipeEnabled: true,

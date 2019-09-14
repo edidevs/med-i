@@ -1,6 +1,7 @@
 import styled from 'styled-components/native';
 
 import { Input, Button, Item } from 'native-base';
+import { LinearGradient } from 'expo-linear-gradient';
 
 import { screenHeight, screenWidth } from '../utils/deviceSize';
 
@@ -173,5 +174,29 @@ export const BoldText = styled.Text`
 `;
 
 export const HealthyColors = ['#55C26F', '#5ADF79'];
-export const HealthySickColors = ['#ED956A', '#F06D2E'];
+export const NotWellColors = ['#ED956A', '#F06D2E'];
 export const SickColors = ['#E36E5B', '#F0857A'];
+
+export const IconView = styled(LinearGradient)`
+  height: 188px;
+  width: 188px;
+  border-radius: 95px;
+  border-width: 10px;
+  border-color: #ffffff;
+  margin-top: 28px;
+  align-items: center;
+  justify-content: center;
+  elevation: 5;
+`;
+
+export const ResultsText = styled.Text`
+  color: #393c50;
+  font-weight: 600;
+  font-size: 34px;
+  text-align: center;
+  line-height: 46px;
+  letter-spacing: 1.16px;
+`;
+
+export const FaceHeight = 95;
+export const FaceWidth = 95;

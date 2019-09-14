@@ -1,8 +1,7 @@
 import React from 'react';
-import { StatusBar, TouchableOpacity } from 'react-native';
+import { StatusBar, TouchableOpacity, SafeAreaView } from 'react-native';
 
 import {
-  ContainerView,
   TopView,
   MiddleView,
   BottomView,
@@ -12,31 +11,26 @@ import {
   FaceWidth,
   InterrogationText,
 } from './styledComponents';
-
 import {
   ImageContainer,
   ShadowView,
   SickColors,
   HealthyColors,
-  HealthySickColors,
-  CenterView,
+  NotWellColors,
 } from '../../common/styledComponents';
 
-import HappyFace from '../../../assets/Icons/Happy.svg';
-import PokerFace from '../../../assets/Icons/Poker.svg';
-import SadFace from '../../../assets/Icons/Sad.svg';
-import Mascot from '../../../assets/Icons/Mascot.svg';
+import { HappyFace, PokerFace, SadFace, Mascot } from '../../../assets/Icons';
 
-import { handleRoute } from '../../utils/handleRoute';
+import { handleRoute } from '../../utils';
 
 const background = require('../../../assets/Images/HomeScreenBis.png');
 
 const HomeScreen = props => (
   <ImageContainer source={background}>
     <StatusBar barStyle="light-content" />
-    <ContainerView>
+    <SafeAreaView>
       <TopView>
-        <Mascot height={95} width={95} />
+        <Mascot height={105} width={105} />
         <React.Fragment>
           <GreetingText>Hello Laarni</GreetingText>
         </React.Fragment>
@@ -45,37 +39,29 @@ const HomeScreen = props => (
         <InterrogationText>How do you feel today ?</InterrogationText>
       </MiddleView>
       <BottomView>
-        <React.Fragment>
-          <CenterView>
-            <ShadowView>
-              <TouchableOpacity onPress={() => handleRoute(props, 'Healthy')}>
-                <IconView colors={HealthyColors}>
-                  <HappyFace width={FaceWidth} height={FaceHeight} />
-                </IconView>
-              </TouchableOpacity>
-            </ShadowView>
-          </CenterView>
-          <CenterView>
-            <ShadowView>
-              <TouchableOpacity>
-                <IconView colors={HealthySickColors}>
-                  <PokerFace width={FaceWidth} height={FaceHeight} />
-                </IconView>
-              </TouchableOpacity>
-            </ShadowView>
-          </CenterView>
-          <CenterView>
-            <ShadowView>
-              <TouchableOpacity onPress={() => handleRoute(props, 'Sick')}>
-                <IconView colors={SickColors}>
-                  <SadFace width={FaceWidth} height={FaceHeight} />
-                </IconView>
-              </TouchableOpacity>
-            </ShadowView>
-          </CenterView>
-        </React.Fragment>
+        <ShadowView>
+          <TouchableOpacity onPress={() => handleRoute(props, 'Healthy')}>
+            <IconView colors={HealthyColors}>
+              <HappyFace width={FaceWidth} height={FaceHeight} />
+            </IconView>
+          </TouchableOpacity>
+        </ShadowView>
+        <ShadowView>
+          <TouchableOpacity onPress={() => handleRoute(props, 'NotWell')}>
+            <IconView colors={NotWellColors}>
+              <PokerFace width={FaceWidth} height={FaceHeight} />
+            </IconView>
+          </TouchableOpacity>
+        </ShadowView>
+        <ShadowView>
+          <TouchableOpacity onPress={() => handleRoute(props, 'Sick')}>
+            <IconView colors={SickColors}>
+              <SadFace width={FaceWidth} height={FaceHeight} />
+            </IconView>
+          </TouchableOpacity>
+        </ShadowView>
       </BottomView>
-    </ContainerView>
+    </SafeAreaView>
   </ImageContainer>
 );
 export default HomeScreen;

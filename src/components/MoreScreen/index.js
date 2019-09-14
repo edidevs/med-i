@@ -1,24 +1,16 @@
 import React from 'react';
-import { AsyncStorage, StatusBar, View } from 'react-native';
+import { StatusBar, View } from 'react-native';
 
 import { LogOutButton, RegularText, WrapperView } from './styledComponents';
-
 import {
   ImageContainer,
   ConfirmButtonText,
   SeparatorView,
 } from '../../common/styledComponents';
 
-import { handleRoute } from '../../utils/handleRoute';
+import { backgroundTabs as background, logout } from '../../utils';
 
-const background = require('../../../assets/Images/MoreScreen.png');
-
-const logout = async props => {
-  await AsyncStorage.clear();
-  handleRoute(props, 'AuthLoading');
-};
-
-const MoreScreen = props => (
+const MoreScreen = navigation => (
   <ImageContainer source={background}>
     <StatusBar barStyle="light-content" />
     <WrapperView>
@@ -31,7 +23,7 @@ const MoreScreen = props => (
         <SeparatorView />
       </View>
       <View>
-        <LogOutButton rounded onPress={() => logout(props)}>
+        <LogOutButton rounded onPress={() => logout(navigation)}>
           <ConfirmButtonText>Log out</ConfirmButtonText>
         </LogOutButton>
       </View>

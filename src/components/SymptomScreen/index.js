@@ -13,9 +13,9 @@ import {
 } from './styledComponents';
 import { ImageContainer, BoldText } from '../../common/styledComponents';
 
-import Mascot from '../../../assets/Icons/Mascot.svg';
+import { backgroundSick as background } from '../../utils';
 
-const background = require('../../../assets/Images/BodyScreen.png');
+import { Mascot } from '../../../assets/Icons';
 
 const SymptomScreen = ({
   symptomOne,
@@ -23,6 +23,7 @@ const SymptomScreen = ({
   symptomThree,
   symptomFour,
   symptomFive,
+  symptomSix,
   drugOne,
   drugTwo,
   drugThree,
@@ -43,6 +44,7 @@ const SymptomScreen = ({
             symptomThree,
             symptomFour,
             symptomFive,
+            symptomSix,
           ]}
         />
       </UpperView>

@@ -14,9 +14,9 @@ import {
   HyperLinkText,
   RegularText,
 } from '../../common/styledComponents';
-
 import { DOBInput } from './styledComponents';
-import { handleRoute } from '../../utils/handleRoute';
+
+import { handleRoute } from '../../utils';
 
 const background = require('../../../assets/Images/AuthScreen.png');
 
