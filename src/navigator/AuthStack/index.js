@@ -1,8 +1,6 @@
 import { createStackNavigator } from 'react-navigation';
 
-import SignInScreen from '../../components/SignInScreen';
-import SignUpScreen1 from '../../components/SignUpScreen1';
-import SignUpScreen2 from '../../components/SignUpScreen2';
+import { SignInScreen, SignUpScreen1, SignUpScreen2 } from '../../components';
 
 export const AuthStack = createStackNavigator(
   {

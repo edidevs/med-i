@@ -2,21 +2,22 @@ import React from 'react';
 
 import { AppTabNavigator } from '../AppTabNavigator';
 
-// TODO: use index.js in components to mass import.
-import HealthyScreen from '../../../components/HealthyScreen';
-import NotWellScreen from '../../../components/NotWellScreen';
-import SickScreen from '../../../components/SickScreen';
-import MindScreen from '../../../components/MindScreen';
-import BodyScreen from '../../../components/BodyScreen';
-import YogaScreen from '../../../components/YogaScreen';
-import SportsScreen from '../../../components/SportsScreen';
-import PainScreen from '../../../components/PainScreen';
-import HayfeverScreen from '../../../components/HayfeverScreen';
-import ItchinessScreen from '../../../components/ItchinessScreen';
-import FeverScreen from '../../../components/FeverScreen';
-import CoughScreen from '../../../components/CoughScreen';
-import IndigestionScreen from '../../../components/IndigestionScreen';
-import CartHeader from '../../../components/CartHeader';
+import {
+  NotWellScreen,
+  SickScreen,
+  MindScreen,
+  BodyScreen,
+  YogaScreen,
+  SportsScreen,
+  PainScreen,
+  HayfeverScreen,
+  ItchinessScreen,
+  FeverScreen,
+  CoughScreen,
+  IndigestionScreen,
+  CartHeader,
+  HealthyScreen,
+} from '../../../components';
 
 const navigationParams = screenName => ({ navigation }) => ({
   headerTitle: screenName,

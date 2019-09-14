@@ -1,6 +1,7 @@
 import React from 'react';
 
 import StatusScreen from '../StatusScreen';
+
 import { SickColors } from '../../common/styledComponents';
 
 import { backgroundSick as background } from '../../utils';

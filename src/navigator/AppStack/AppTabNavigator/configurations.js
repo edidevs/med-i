@@ -7,10 +7,7 @@ import {
   Foundation,
 } from '@expo/vector-icons';
 
-import HomeScreen from '../../../components/HomeScreen';
-
-import StoreScreen from '../../../components/StoreScreen';
-import MoreScreen from '../../../components/MoreScreen';
+import { HomeScreen, StoreScreen, MoreScreen } from '../../../components';
 
 const iconStyle = tintColor => ({
   fontSize: 40,

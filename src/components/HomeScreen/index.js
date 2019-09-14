@@ -21,7 +21,7 @@ import {
 
 import { HappyFace, PokerFace, SadFace, Mascot } from '../../../assets/Icons';
 
-import { handleRoute } from '../../utils/handleRoute';
+import { handleRoute } from '../../utils';
 
 const background = require('../../../assets/Images/HomeScreenBis.png');
 
