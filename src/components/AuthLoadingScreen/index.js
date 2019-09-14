@@ -19,7 +19,7 @@ const AuthLoadingScreen = props => {
   return (
     <WrapperView>
       <StatusBar barStyle="default" />
-      <Spinner color="#686d7d" />
+      <Spinner color="#E36E5B" />
     </WrapperView>
   );
 };

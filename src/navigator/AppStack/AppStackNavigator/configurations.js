@@ -2,6 +2,7 @@ import React from 'react';
 
 import { AppTabNavigator } from '../AppTabNavigator';
 
+// TODO: use index.js in components to mass import.
 import HealthyScreen from '../../../components/HealthyScreen';
 import NotWellScreen from '../../../components/NotWellScreen';
 import SickScreen from '../../../components/SickScreen';

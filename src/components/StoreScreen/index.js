@@ -10,8 +10,9 @@ import { UpperViewBis, DescriptionTextBis } from './styledComponents';
 import { LowerView } from '../SymptomScreen/styledComponents';
 import { ImageContainer } from '../../common/styledComponents';
 
-import Mascot from '../../../assets/Icons/Mascot.svg';
+import { Mascot } from '../../../assets/Icons';
 
+// TODO: fix this
 const background = require('../../../assets/Images/MoreScreen.png');
 
 const StoreScreen = ({ cartItems }) => (

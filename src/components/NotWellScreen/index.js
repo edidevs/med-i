@@ -2,7 +2,7 @@ import React from 'react';
 
 import StatusScreen from '../StatusScreen';
 import { NotWellColors } from '../../common/styledComponents';
-import { backgroundNotWell as background } from '../../utils/loadAppropriateAsset';
+import { backgroundNotWell as background } from '../../utils';
 
 const NotWellScreen = () => {
   const props = {

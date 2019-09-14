@@ -22,9 +22,9 @@ import {
   FaceWidth,
 } from '../../common/styledComponents';
 
-import { backgroundSick as background } from '../../utils/loadAppropriateAsset';
+import { backgroundSick as background } from '../../utils';
 
-import BigMind from '../../../assets/Icons/BigMind.svg';
+import { BigMind } from '../../../assets/Icons';
 
 const MindScreen = () => (
   <ImageContainer source={background}>

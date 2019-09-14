@@ -11,7 +11,6 @@ import {
   FaceWidth,
   InterrogationText,
 } from './styledComponents';
-
 import {
   ImageContainer,
   ShadowView,
@@ -20,10 +19,7 @@ import {
   NotWellColors,
 } from '../../common/styledComponents';
 
-import HappyFace from '../../../assets/Icons/Happy.svg';
-import PokerFace from '../../../assets/Icons/Poker.svg';
-import SadFace from '../../../assets/Icons/Sad.svg';
-import Mascot from '../../../assets/Icons/Mascot.svg';
+import { HappyFace, PokerFace, SadFace, Mascot } from '../../../assets/Icons';
 
 import { handleRoute } from '../../utils/handleRoute';
 

@@ -9,9 +9,7 @@ import {
   FaceWidth,
 } from '../../../common/styledComponents';
 
-import HappyFace from '../../../../assets/Icons/Happy.svg';
-import PokerFace from '../../../../assets/Icons/Poker.svg';
-import SadFace from '../../../../assets/Icons/Sad.svg';
+import { HappyFace, PokerFace, SadFace } from '../../../../assets/Icons';
 
 const StatusFace = ({ colors, sick, notWell }) => {
   let statusFace;

@@ -3,6 +3,7 @@ import React from 'react';
 import { SafeAreaView, StatusBar } from 'react-native';
 
 import { FlatGrid } from 'react-native-super-grid';
+
 import {
   TitleView,
   TitleText,
@@ -12,16 +13,20 @@ import {
 } from './styledComponents';
 import { ImageContainer } from '../../common/styledComponents';
 
-import Pain from '../../../assets/Icons/Pain.svg';
-import Hayfever from '../../../assets/Icons/Hayfever.svg';
-import Itchiness from '../../../assets/Icons/Itchiness.svg';
-import Cough from '../../../assets/Icons/Cough.svg';
-import Indigestion from '../../../assets/Icons/Indigestion.svg';
-import Fever from '../../../assets/Icons/Fever.svg';
+import {
+  Pain,
+  Hayfever,
+  Itchiness,
+  Cough,
+  Indigestion,
+  Fever,
+} from '../../../assets/Icons';
 
-import { handleRoute } from '../../utils/handleRoute';
-import { screenWidth } from '../../utils/deviceSize';
-import { backgroundSick as background } from '../../utils/loadAppropriateAsset';
+import {
+  backgroundSick as background,
+  handleRoute,
+  screenWidth,
+} from '../../utils';
 
 const itemDimension = screenWidth < 700 ? 150 : 400;
 

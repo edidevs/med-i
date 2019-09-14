@@ -15,7 +15,7 @@ import {
   ItemText,
 } from '../../../common/styledComponents';
 
-import Medicine from '../../../../assets/Icons/medicine.svg';
+import { Medicine } from '../../../../assets/Icons';
 
 const DrugView = ({ addItem, itemName }) =>
   itemName ? (

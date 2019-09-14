@@ -17,7 +17,7 @@ import {
 
 import { EmailInput } from './styledComponents';
 
-import { handleRoute } from '../../utils/handleRoute';
+import { handleRoute } from '../../utils';
 
 const background = require('../../../assets/Images/AuthScreen.png');
 

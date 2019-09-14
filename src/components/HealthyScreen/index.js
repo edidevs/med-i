@@ -2,7 +2,8 @@ import React from 'react';
 
 import StatusScreen from '../StatusScreen';
 import { HealthyColors } from '../../common/styledComponents';
-import { backgroundHealthy as background } from '../../utils/loadAppropriateAsset';
+
+import { backgroundHealthy as background } from '../../utils';
 
 const HealthyScreen = () => {
   const props = {
@@ -10,7 +11,7 @@ const HealthyScreen = () => {
     notWell: false,
     background,
     colors: HealthyColors,
-    resultsText: 'Medi I am well',
+    resultsText: 'Med-i I am well',
     messageOne: 'Say hello to wellness',
     messageTwo: 'A healthy you is a happy you',
     itemTextOne: 'Yoga',

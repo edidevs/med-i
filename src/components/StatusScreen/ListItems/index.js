@@ -2,7 +2,7 @@
 import React from 'react';
 import { ScrollView, TouchableOpacity } from 'react-native';
 
-import { handleRoute } from '../../../utils/handleRoute';
+import { handleRoute } from '../../../utils';
 
 import {
   ItemView,
@@ -11,12 +11,14 @@ import {
   ItemMessage,
 } from '../../../common/styledComponents';
 
-import Body from '../../../../assets/Icons/Body.svg';
-import Mind from '../../../../assets/Icons/Mind.svg';
-import Device from '../../../../assets/Icons/Device.svg';
-import Program from '../../../../assets/Icons/Program.svg';
-import Yoga from '../../../../assets/Icons/Yoga.svg';
-import Sports from '../../../../assets/Icons/Sports.svg';
+import {
+  Body,
+  Mind,
+  Device,
+  Program,
+  Yoga,
+  Sports,
+} from '../../../../assets/Icons';
 
 const ListItems = ({
   sick,
