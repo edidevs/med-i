@@ -5,7 +5,7 @@ import { BoldText } from '../../common/styledComponents';
 
 import { screenWidth } from '../../utils/deviceSize';
 
-const MARGIN_TOP = Platform.OS === 'ios' ? 65 : 95;
+const MARGIN_TOP = Platform.OS === 'ios' ? 90 : 110;
 
 export const UpperView = styled.View`
   width: ${screenWidth}px;

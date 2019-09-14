@@ -4,6 +4,7 @@ import { SafeAreaView, StatusBar } from 'react-native';
 
 import SymptomsView from './SymptomsView';
 import DrugView from './DrugView';
+import { backgroundSick as background } from '../../utils/loadAppropriateAsset';
 
 import {
   UpperView,
@@ -15,14 +16,13 @@ import { ImageContainer, BoldText } from '../../common/styledComponents';
 
 import Mascot from '../../../assets/Icons/Mascot.svg';
 
-const background = require('../../../assets/Images/BodyScreen.png');
-
 const SymptomScreen = ({
   symptomOne,
   symptomTwo,
   symptomThree,
   symptomFour,
   symptomFive,
+  symptomSix,
   drugOne,
   drugTwo,
   drugThree,
@@ -43,6 +43,7 @@ const SymptomScreen = ({
             symptomThree,
             symptomFour,
             symptomFive,
+            symptomSix,
           ]}
         />
       </UpperView>
