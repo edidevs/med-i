@@ -19,7 +19,7 @@ const StoreScreen = ({ cartItems }) => (
     <StatusBar barStyle="light-content" />
     <SafeAreaView>
       <UpperViewBis>
-        <Mascot width={75} height={75} />
+        <Mascot width={95} height={95} />
         <DescriptionTextBis>
           Get any of these medications at your local pharmacy
         </DescriptionTextBis>
