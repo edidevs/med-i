@@ -12,7 +12,7 @@ const SickScreen = () => {
     notWell: false,
     background,
     colors: SickColors,
-    resultsText: 'We got you \nBuddy!',
+    resultsText: 'Stay clam, we got you',
     messageOne: 'Is it in your ?',
     messageTwo: '',
     itemTextOne: 'Body',

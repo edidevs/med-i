@@ -1,6 +1,10 @@
 import { Alert } from 'react-native';
 
-export const handleRoute = (props, route) => props.navigation.navigate(route);
+export const handleRoute = ({ navigation }, route) =>
+  navigation.navigate(route);
+
+export const handleRouteCurry = ({ navigation }) => route =>
+  navigation.navigate(route);
 
 export const goToCartAlert = ({ navigation }) => {
   Alert.alert(

@@ -7,8 +7,6 @@ import {
   SickScreen,
   MindScreen,
   BodyScreen,
-  YogaScreen,
-  SportsScreen,
   PainScreen,
   HayfeverScreen,
   ItchinessScreen,
@@ -65,18 +63,6 @@ export const configurations = {
   },
   Body: {
     screen: BodyScreen,
-    navigationOptions: {
-      headerTitle: 'Body',
-    },
-  },
-  Yoga: {
-    screen: YogaScreen,
-    navigationOptions: {
-      headerTitle: 'Body',
-    },
-  },
-  Sports: {
-    screen: SportsScreen,
     navigationOptions: {
       headerTitle: 'Body',
     },

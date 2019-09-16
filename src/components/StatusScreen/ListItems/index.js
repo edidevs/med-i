@@ -1,8 +1,6 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
-import { ScrollView, TouchableOpacity } from 'react-native';
-
-import { handleRoute } from '../../../utils';
+import { ScrollView, TouchableOpacity, Linking } from 'react-native';
 
 import {
   ItemView,
@@ -17,8 +15,15 @@ import {
   Device,
   Program,
   Yoga,
-  Sports,
+  Vegetables,
 } from '../../../../assets/Icons';
+import {
+  linkOne,
+  linkTwo,
+  linkThree,
+  linkFour,
+  handleRouteCurry,
+} from '../../../utils';
 
 const ListItems = ({
   sick,
@@ -30,26 +35,29 @@ const ListItems = ({
   otherProps,
 }) => {
   const screenElements = {};
+  const goToScreen = route => handleRouteCurry(otherProps)(route);
+  const openLink = link => Linking.openURL(link);
   let { itemOne, itemTwo, iconOne, iconTwo } = screenElements;
+
   if (sick) {
-    itemOne = 'Body';
-    itemTwo = 'Mind';
+    itemOne = () => goToScreen('Body');
+    itemTwo = () => goToScreen('Mind');
     iconOne = <Body />;
     iconTwo = <Mind />;
   } else if (notWell) {
-    itemOne = 'Device';
-    itemTwo = 'Program';
+    itemOne = () => openLink(linkThree);
+    itemTwo = () => openLink(linkFour);
     iconOne = <Device />;
     iconTwo = <Program />;
   } else {
-    itemOne = 'Yoga';
-    itemTwo = 'Sports';
+    itemOne = () => openLink(linkOne);
+    itemTwo = () => openLink(linkTwo);
     iconOne = <Yoga />;
-    iconTwo = <Sports />;
+    iconTwo = <Vegetables />;
   }
   return (
     <ScrollView>
-      <TouchableOpacity onPress={() => handleRoute(otherProps, itemOne)}>
+      <TouchableOpacity onPress={itemOne}>
         <ItemView>
           {iconOne}
           <ItemTextView>
@@ -58,7 +66,7 @@ const ListItems = ({
           </ItemTextView>
         </ItemView>
       </TouchableOpacity>
-      <TouchableOpacity onPress={() => handleRoute(otherProps, itemTwo)}>
+      <TouchableOpacity onPress={itemTwo}>
         <ItemView>
           {iconTwo}
           <ItemTextView>

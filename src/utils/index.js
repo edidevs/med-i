@@ -1,6 +1,6 @@
 export { default as login } from './login';
 export { default as logout } from './logout';
-export { handleRoute, goToCartAlert } from './handleRoute';
+export { handleRoute, handleRouteCurry, goToCartAlert } from './handleRoute';
 export {
   backgroundHealthy,
   backgroundNotWell,
@@ -8,3 +8,4 @@ export {
   backgroundTabs,
 } from './loadAppropriateAsset';
 export { screenWidth, screenHeight } from './deviceSize';
+export { linkOne, linkTwo, linkThree, linkFour } from './links';

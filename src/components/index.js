@@ -2,8 +2,6 @@ export { default as NotWellScreen } from './NotWellScreen';
 export { default as SickScreen } from './SickScreen';
 export { default as MindScreen } from './MindScreen';
 export { default as BodyScreen } from './BodyScreen';
-export { default as YogaScreen } from './YogaScreen';
-export { default as SportsScreen } from './SportsScreen';
 export { default as PainScreen } from './PainScreen';
 export { default as HayfeverScreen } from './HayfeverScreen';
 export { default as ItchinessScreen } from './ItchinessScreen';

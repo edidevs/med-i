@@ -32,11 +32,11 @@ const HomeScreen = props => (
       <TopView>
         <Mascot height={105} width={105} />
         <React.Fragment>
-          <GreetingText>Hello Laarni</GreetingText>
+          <GreetingText>Good Day To You</GreetingText>
         </React.Fragment>
       </TopView>
       <MiddleView>
-        <InterrogationText>How do you feel today ?</InterrogationText>
+        <InterrogationText>How Do You Feel Today ?</InterrogationText>
       </MiddleView>
       <BottomView>
         <ShadowView>

@@ -12,7 +12,7 @@ const NotWellScreen = () => {
     notWell: true,
     background,
     colors: NotWellColors,
-    resultsText: 'It is Okay',
+    resultsText: 'Relax, take it easy',
     messageOne: 'Say hello to wellness',
     messageTwo: 'A healthy you is a happy you',
     itemTextOne: 'Med-i health',
