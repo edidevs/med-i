@@ -5,11 +5,13 @@ import SymptomScreen from '../SymptomScreen';
 
 const IndigestionScreen = () => {
   const otherProps = {
+    symptomDescription: 'Mild discomfort',
     symptomOne: 'Heartburn',
     symptomTwo: 'Acid reflux',
     symptomThree: 'Feeling bloated',
     symptomFour: 'Belching',
     symptomFive: 'Farting',
+    symptomSix: 'Nausea',
     drugOne: 'Aluminum Hydroxide',
     drugTwo: 'Magnesium Hydroxide',
     drugThree: 'Omeprazole',

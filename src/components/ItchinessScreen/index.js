@@ -5,11 +5,13 @@ import SymptomScreen from '../SymptomScreen';
 
 const ItchinessScreen = () => {
   const otherProps = {
-    symptomOne: 'Insect bites',
+    symptomDescription: 'Irritation on the skin with urge to scratch',
+    symptomOne: 'Rashes',
     symptomTwo: 'Sting',
-    symptomThree: 'Rashes',
+    symptomThree: 'Insect bites',
+    symptomFour: 'Irritation',
     drugOne: 'Calamine lotion',
-    drugTwo: 'Hydro-cortisone',
+    drugTwo: 'Hydrocortisone cream',
   };
   return <SymptomScreen {...otherProps} />;
 };

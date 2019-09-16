@@ -5,6 +5,7 @@ import SymptomScreen from '../SymptomScreen';
 
 const HayfeverScreen = () => {
   const otherProps = {
+    symptomDescription: 'Caused by an allergy to pollen or dust',
     symptomOne: 'Sneezing',
     symptomTwo: 'Coughing',
     symptomThree: 'Blocked nose',
@@ -13,9 +14,8 @@ const HayfeverScreen = () => {
     symptomSix: 'Runny nose',
     drugOne: 'Ceterizine',
     drugTwo: 'Loratidine',
-    drugThree: 'Diphenhy-dramine',
-    drugFour: 'Chlorphe-namine',
-    drugFive: 'Fexofenadine',
+    drugThree: 'Diphenhydramine',
+    drugFour: 'Chlorphenamine',
   };
   return <SymptomScreen {...otherProps} />;
 };
