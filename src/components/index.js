@@ -13,6 +13,3 @@ export { default as HealthyScreen } from './HealthyScreen';
 export { default as HomeScreen } from './HomeScreen';
 export { default as StoreScreen } from './StoreScreen';
 export { default as MoreScreen } from './MoreScreen';
-export { default as SignInScreen } from './SignInScreen';
-export { default as SignUpScreen1 } from './SignUpScreen1';
-export { default as SignUpScreen2 } from './SignUpScreen2';

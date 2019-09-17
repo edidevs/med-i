@@ -1,25 +1,18 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
-import { StatusBar, AsyncStorage } from 'react-native';
-
-import { Spinner } from 'native-base';
+import { StatusBar, ActivityIndicator } from 'react-native';
 
 import { WrapperView } from './styledComponents';
 
 const AuthLoadingScreen = props => {
-  const getUserToken = async () => {
-    const userToken = await AsyncStorage.getItem('userToken');
-    props.navigation.navigate(userToken ? 'App' : 'Auth');
-  };
-
   React.useEffect(() => {
-    getUserToken();
+    props.navigation.navigate('App');
   });
 
   return (
     <WrapperView>
       <StatusBar barStyle="default" />
-      <Spinner color="#E36E5B" />
+      <ActivityIndicator color="#E36E5B" size="large" />
     </WrapperView>
   );
 };

@@ -7,14 +7,12 @@ import { PersistGate } from 'redux-persist/integration/react';
 import { store, persistor } from './src/redux/store';
 import AuthLoadingScreen from './src/components/AuthLoadingScreen';
 import { AppStack } from './src/navigator/AppStack/AppStackNavigator';
-import { AuthStack } from './src/navigator/AuthStack';
 
 const AppNavigation = createAppContainer(
   createSwitchNavigator(
     {
       AuthLoading: AuthLoadingScreen,
       App: AppStack,
-      Auth: AuthStack,
     },
     {
       initialRouteName: 'AuthLoading',
