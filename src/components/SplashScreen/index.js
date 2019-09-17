@@ -3,11 +3,15 @@ import React from 'react';
 import { StatusBar, ActivityIndicator } from 'react-native';
 
 import { WrapperView } from './styledComponents';
+import { handleRoute } from '../../utils';
 
-const AuthLoadingScreen = props => {
+const SplashScreen = navigation => {
   React.useEffect(() => {
-    props.navigation.navigate('App');
-  });
+    const timer = setTimeout(() => {
+      handleRoute(navigation, 'App');
+    }, 3000);
+    return () => clearTimeout(timer);
+  }, [navigation]);
 
   return (
     <WrapperView>
@@ -17,4 +21,4 @@ const AuthLoadingScreen = props => {
   );
 };
 
-export default AuthLoadingScreen;
+export default SplashScreen;

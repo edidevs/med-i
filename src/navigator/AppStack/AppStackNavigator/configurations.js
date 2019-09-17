@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { AppTabNavigator } from '../AppTabNavigator';
+import { AppTab } from '../AppTabNavigator';
 
 import {
   NotWellScreen,
@@ -24,7 +24,7 @@ const navigationParams = screenName => ({ navigation }) => ({
 
 export const configurations = {
   Tab: {
-    screen: AppTabNavigator,
+    screen: AppTab,
     navigationOptions: ({ navigation }) => {
       {
         const headerParams = { headerTitle: '' };

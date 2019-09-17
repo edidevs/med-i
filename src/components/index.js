@@ -13,3 +13,4 @@ export { default as HealthyScreen } from './HealthyScreen';
 export { default as HomeScreen } from './HomeScreen';
 export { default as StoreScreen } from './StoreScreen';
 export { default as MoreScreen } from './MoreScreen';
+export { default as SplashScreen } from './SplashScreen';
