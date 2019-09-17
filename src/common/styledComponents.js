@@ -192,7 +192,7 @@ export const IconView = styled(LinearGradient)`
 export const ResultsText = styled.Text`
   color: #393c50;
   font-weight: 600;
-  font-size: 34px;
+  font-size: 30px;
   text-align: center;
   line-height: 46px;
   letter-spacing: 1.16px;

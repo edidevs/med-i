@@ -14,7 +14,17 @@ export const MessageOneText = styled.Text`
 `;
 
 export const MessageTwoText = styled.Text`
-  color: ${props => (props.notWell ? '#ed8f61' : '#45cd65')};
+  color: ${props => {
+    let colorText;
+    if (props.sick) {
+      colorText = '#e77565';
+    } else if (props.notWell) {
+      colorText = '#ed8f61';
+    } else {
+      colorText = '#45cd65';
+    }
+    return colorText;
+  }};
   font-weight: 400;
   font-size: 22px;
   font-weight: bold;

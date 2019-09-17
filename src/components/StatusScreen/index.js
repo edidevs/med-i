@@ -38,9 +38,9 @@ const StatusScreen = ({
       <ParagraphView>
         <ResultsText>{resultsText}</ResultsText>
         <MessageOneText>{messageOne}</MessageOneText>
-        {!sick && (
-          <MessageTwoText notWell={notWell}>{messageTwo}</MessageTwoText>
-        )}
+        <MessageTwoText notWell={notWell} sick={sick}>
+          {messageTwo}
+        </MessageTwoText>
       </ParagraphView>
       <ListItems
         sick={sick}
