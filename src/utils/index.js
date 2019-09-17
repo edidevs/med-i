@@ -8,11 +8,4 @@ export {
   backgroundTabs,
 } from './loadAppropriateAsset';
 export { screenWidth, screenHeight } from './deviceSize';
-export {
-  linkOne,
-  linkTwo,
-  linkThree,
-  linkFour,
-  linkFive,
-  linkSix,
-} from './links';
+export { physical, nutrition, diabetes, tobacco, food, mental } from './links';

@@ -4,14 +4,23 @@ import { ScrollView, Linking } from 'react-native';
 
 import ItemList from './ItemList';
 
-import { Body, Mind, Yoga, Vegetables } from '../../../../assets/Icons';
 import {
-  linkOne,
-  linkTwo,
-  linkThree,
-  linkFour,
-  linkFive,
-  linkSix,
+  Body,
+  Mind,
+  Yoga,
+  Vegetables,
+  Salad,
+  Smoking,
+  Diabetes,
+  Brain,
+} from '../../../../assets/Icons';
+import {
+  physical,
+  nutrition,
+  diabetes,
+  tobacco,
+  food,
+  mental,
   handleRouteCurry,
 } from '../../../utils';
 
@@ -48,17 +57,17 @@ const ListItems = ({
     iconOne = <Body />;
     iconTwo = <Mind />;
   } else if (notWell) {
-    itemOne = () => openLink(linkThree);
-    itemTwo = () => openLink(linkFour);
-    itemThree = () => openLink(linkFive);
-    itemFour = () => openLink(linkSix);
-    iconOne = <Body />;
-    iconTwo = <Body />;
-    iconThree = <Body />;
-    iconFour = <Body />;
+    itemOne = () => openLink(diabetes);
+    itemTwo = () => openLink(tobacco);
+    itemThree = () => openLink(food);
+    itemFour = () => openLink(mental);
+    iconOne = <Diabetes />;
+    iconTwo = <Smoking />;
+    iconThree = <Salad />;
+    iconFour = <Brain />;
   } else {
-    itemOne = () => openLink(linkOne);
-    itemTwo = () => openLink(linkTwo);
+    itemOne = () => openLink(physical);
+    itemTwo = () => openLink(nutrition);
     iconOne = <Yoga />;
     iconTwo = <Vegetables />;
   }
