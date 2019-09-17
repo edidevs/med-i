@@ -1,72 +1,106 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
-import { ScrollView, TouchableOpacity } from 'react-native';
+import { ScrollView, Linking } from 'react-native';
 
-import { handleRoute } from '../../../utils';
-
-import {
-  ItemView,
-  ItemTextView,
-  ItemText,
-  ItemMessage,
-} from '../../../common/styledComponents';
+import ItemList from './ItemList';
 
 import {
   Body,
   Mind,
-  Device,
-  Program,
   Yoga,
-  Sports,
+  Vegetables,
+  Salad,
+  Smoking,
+  Diabetes,
+  Brain,
 } from '../../../../assets/Icons';
+import {
+  physical,
+  nutrition,
+  diabetes,
+  tobacco,
+  food,
+  mental,
+  handleRouteCurry,
+} from '../../../utils';
 
 const ListItems = ({
   sick,
   notWell,
   itemTextOne,
-  itemMessageOne,
   itemTextTwo,
+  itemTextThree,
+  itemTextFour,
+  itemMessageOne,
   itemMessageTwo,
+  itemMessageThree,
+  itemMessageFour,
   otherProps,
 }) => {
   const screenElements = {};
-  let { itemOne, itemTwo, iconOne, iconTwo } = screenElements;
+  const goToScreen = route => handleRouteCurry(otherProps)(route);
+  const openLink = link => Linking.openURL(link);
+  let {
+    itemOne,
+    itemTwo,
+    itemThree,
+    itemFour,
+    iconOne,
+    iconTwo,
+    iconThree,
+    iconFour,
+  } = screenElements;
+
   if (sick) {
-    itemOne = 'Body';
-    itemTwo = 'Mind';
+    itemOne = () => goToScreen('Body');
+    itemTwo = () => goToScreen('Mind');
     iconOne = <Body />;
     iconTwo = <Mind />;
   } else if (notWell) {
-    itemOne = 'Device';
-    itemTwo = 'Program';
-    iconOne = <Device />;
-    iconTwo = <Program />;
+    itemOne = () => openLink(diabetes);
+    itemTwo = () => openLink(tobacco);
+    itemThree = () => openLink(food);
+    itemFour = () => openLink(mental);
+    iconOne = <Diabetes />;
+    iconTwo = <Smoking />;
+    iconThree = <Salad />;
+    iconFour = <Brain />;
   } else {
-    itemOne = 'Yoga';
-    itemTwo = 'Sports';
+    itemOne = () => openLink(physical);
+    itemTwo = () => openLink(nutrition);
     iconOne = <Yoga />;
-    iconTwo = <Sports />;
+    iconTwo = <Vegetables />;
   }
   return (
     <ScrollView>
-      <TouchableOpacity onPress={() => handleRoute(otherProps, itemOne)}>
-        <ItemView>
-          {iconOne}
-          <ItemTextView>
-            <ItemText>{itemTextOne}</ItemText>
-            <ItemMessage>{itemMessageOne}</ItemMessage>
-          </ItemTextView>
-        </ItemView>
-      </TouchableOpacity>
-      <TouchableOpacity onPress={() => handleRoute(otherProps, itemTwo)}>
-        <ItemView>
-          {iconTwo}
-          <ItemTextView>
-            <ItemText>{itemTextTwo}</ItemText>
-            <ItemMessage>{itemMessageTwo}</ItemMessage>
-          </ItemTextView>
-        </ItemView>
-      </TouchableOpacity>
+      <ItemList
+        handlePress={itemOne}
+        iconName={iconOne}
+        itemText={itemTextOne}
+        itemMessage={itemMessageOne}
+      />
+      <ItemList
+        handlePress={itemTwo}
+        iconName={iconTwo}
+        itemText={itemTextTwo}
+        itemMessage={itemMessageTwo}
+      />
+      {notWell && (
+        <>
+          <ItemList
+            handlePress={itemThree}
+            iconName={iconThree}
+            itemText={itemTextThree}
+            itemMessage={itemMessageThree}
+          />
+          <ItemList
+            handlePress={itemFour}
+            iconName={iconFour}
+            itemText={itemTextFour}
+            itemMessage={itemMessageFour}
+          />
+        </>
+      )}
     </ScrollView>
   );
 };

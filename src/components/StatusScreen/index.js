@@ -22,9 +22,13 @@ const StatusScreen = ({
   messageOne,
   messageTwo,
   itemTextOne,
-  itemMessageOne,
   itemTextTwo,
+  itemTextThree,
+  itemTextFour,
+  itemMessageOne,
   itemMessageTwo,
+  itemMessageThree,
+  itemMessageFour,
   ...otherProps
 }) => (
   <ImageContainer source={background}>
@@ -43,8 +47,12 @@ const StatusScreen = ({
         notWell={notWell}
         itemTextOne={itemTextOne}
         itemTextTwo={itemTextTwo}
+        itemTextThree={itemTextThree}
+        itemTextFour={itemTextFour}
         itemMessageOne={itemMessageOne}
         itemMessageTwo={itemMessageTwo}
+        itemMessageThree={itemMessageThree}
+        itemMessageFour={itemMessageFour}
         otherProps={otherProps}
       />
     </SafeAreaView>

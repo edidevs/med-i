@@ -14,10 +14,10 @@ const HealthyScreen = () => {
     resultsText: 'Med-i I am well',
     messageOne: 'Say hello to wellness',
     messageTwo: 'A healthy you is a happy you',
-    itemTextOne: 'Yoga',
-    itemMessageOne: 'Start your practice here',
-    itemTextTwo: 'Sport',
-    itemMessageTwo: 'Enroll in classes here',
+    itemTextOne: 'Physical Activity',
+    itemMessageOne: 'Stay active, stay healthy!',
+    itemTextTwo: 'Nutrition',
+    itemMessageTwo: 'Eat well with a healthy diet!',
   };
   return <StatusScreen {...props} />;
 };

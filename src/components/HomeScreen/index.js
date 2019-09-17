@@ -1,66 +1,34 @@
 import React from 'react';
-import { StatusBar, TouchableOpacity, SafeAreaView } from 'react-native';
+import { StatusBar, SafeAreaView } from 'react-native';
+
+import BottomView from './BottomView';
 
 import {
   TopView,
   MiddleView,
-  BottomView,
   GreetingText,
-  IconView,
-  FaceHeight,
-  FaceWidth,
   InterrogationText,
 } from './styledComponents';
-import {
-  ImageContainer,
-  ShadowView,
-  SickColors,
-  HealthyColors,
-  NotWellColors,
-} from '../../common/styledComponents';
+import { ImageContainer } from '../../common/styledComponents';
 
-import { HappyFace, PokerFace, SadFace, Mascot } from '../../../assets/Icons';
+import { Mascot } from '../../../assets/Icons';
 
-import { handleRoute } from '../../utils';
+const background = require('../../../assets/Images/HomeScreen.png');
 
-const background = require('../../../assets/Images/HomeScreenBis.png');
-
-const HomeScreen = props => (
+const HomeScreen = ({ ...navigation }) => (
   <ImageContainer source={background}>
     <StatusBar barStyle="light-content" />
     <SafeAreaView>
       <TopView>
         <Mascot height={105} width={105} />
         <React.Fragment>
-          <GreetingText>Hello Laarni</GreetingText>
+          <GreetingText>Hey there!</GreetingText>
         </React.Fragment>
       </TopView>
       <MiddleView>
-        <InterrogationText>How do you feel today ?</InterrogationText>
+        <InterrogationText>How Do You Feel Today ?</InterrogationText>
       </MiddleView>
-      <BottomView>
-        <ShadowView>
-          <TouchableOpacity onPress={() => handleRoute(props, 'Healthy')}>
-            <IconView colors={HealthyColors}>
-              <HappyFace width={FaceWidth} height={FaceHeight} />
-            </IconView>
-          </TouchableOpacity>
-        </ShadowView>
-        <ShadowView>
-          <TouchableOpacity onPress={() => handleRoute(props, 'NotWell')}>
-            <IconView colors={NotWellColors}>
-              <PokerFace width={FaceWidth} height={FaceHeight} />
-            </IconView>
-          </TouchableOpacity>
-        </ShadowView>
-        <ShadowView>
-          <TouchableOpacity onPress={() => handleRoute(props, 'Sick')}>
-            <IconView colors={SickColors}>
-              <SadFace width={FaceWidth} height={FaceHeight} />
-            </IconView>
-          </TouchableOpacity>
-        </ShadowView>
-      </BottomView>
+      <BottomView navigation={navigation} />
     </SafeAreaView>
   </ImageContainer>
 );

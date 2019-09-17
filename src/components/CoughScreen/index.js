@@ -5,7 +5,8 @@ import SymptomScreen from '../SymptomScreen';
 
 const CoughScreen = () => {
   const otherProps = {
-    symptomOne: 'Cough less than three weeks',
+    symptomDescription:
+      'A productive or non-productive cough\nthat is less than 3 weeks',
     drugOne: 'Guaifenesin',
     drugTwo: 'Dextro-methorphan',
     drugThree: 'Diphenhydramine',

@@ -5,8 +5,11 @@ import SymptomScreen from '../SymptomScreen';
 
 const FeverScreen = () => {
   const otherProps = {
-    symptomOne: 'Body temperature ofr 38C or more',
+    symptomDescription: 'High body temperature of above\n38° C / 100° F',
     drugOne: 'Paracetamol',
+    drugTwo: 'Acetaminophen',
+    drugThree: 'Aspirin',
+    drugFour: 'Ibuprofen',
   };
   return <SymptomScreen {...otherProps} />;
 };

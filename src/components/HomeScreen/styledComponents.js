@@ -16,7 +16,7 @@ export const MiddleView = styled.View`
   flex: 1;
 `;
 
-export const BottomView = styled.View`
+export const BottomViewContainer = styled.View`
   flex-direction: row;
   justify-content: space-between;
   flex: 1;

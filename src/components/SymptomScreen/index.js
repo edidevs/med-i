@@ -18,6 +18,7 @@ import { backgroundSick as background } from '../../utils';
 import { Mascot } from '../../../assets/Icons';
 
 const SymptomScreen = ({
+  symptomDescription,
   symptomOne,
   symptomTwo,
   symptomThree,
@@ -34,9 +35,7 @@ const SymptomScreen = ({
     <StatusBar barStyle="light-content" />
     <SafeAreaView>
       <UpperView>
-        <DescriptionText>
-          Mild pain that is less than six months
-        </DescriptionText>
+        <DescriptionText>{symptomDescription}</DescriptionText>
         <SymptomsView
           symptoms={[
             symptomOne,
