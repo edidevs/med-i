@@ -1,27 +1,17 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
-import { ScrollView, TouchableOpacity, Linking } from 'react-native';
+import { ScrollView, Linking } from 'react-native';
 
-import {
-  ItemView,
-  ItemTextView,
-  ItemText,
-  ItemMessage,
-} from '../../../common/styledComponents';
+import ItemList from './ItemList';
 
-import {
-  Body,
-  Mind,
-  Device,
-  Program,
-  Yoga,
-  Vegetables,
-} from '../../../../assets/Icons';
+import { Body, Mind, Yoga, Vegetables } from '../../../../assets/Icons';
 import {
   linkOne,
   linkTwo,
   linkThree,
   linkFour,
+  linkFive,
+  linkSix,
   handleRouteCurry,
 } from '../../../utils';
 
@@ -29,15 +19,28 @@ const ListItems = ({
   sick,
   notWell,
   itemTextOne,
-  itemMessageOne,
   itemTextTwo,
+  itemTextThree,
+  itemTextFour,
+  itemMessageOne,
   itemMessageTwo,
+  itemMessageThree,
+  itemMessageFour,
   otherProps,
 }) => {
   const screenElements = {};
   const goToScreen = route => handleRouteCurry(otherProps)(route);
   const openLink = link => Linking.openURL(link);
-  let { itemOne, itemTwo, iconOne, iconTwo } = screenElements;
+  let {
+    itemOne,
+    itemTwo,
+    itemThree,
+    itemFour,
+    iconOne,
+    iconTwo,
+    iconThree,
+    iconFour,
+  } = screenElements;
 
   if (sick) {
     itemOne = () => goToScreen('Body');
@@ -47,8 +50,12 @@ const ListItems = ({
   } else if (notWell) {
     itemOne = () => openLink(linkThree);
     itemTwo = () => openLink(linkFour);
-    iconOne = <Device />;
-    iconTwo = <Program />;
+    itemThree = () => openLink(linkFive);
+    itemFour = () => openLink(linkSix);
+    iconOne = <Body />;
+    iconTwo = <Body />;
+    iconThree = <Body />;
+    iconFour = <Body />;
   } else {
     itemOne = () => openLink(linkOne);
     itemTwo = () => openLink(linkTwo);
@@ -57,24 +64,34 @@ const ListItems = ({
   }
   return (
     <ScrollView>
-      <TouchableOpacity onPress={itemOne}>
-        <ItemView>
-          {iconOne}
-          <ItemTextView>
-            <ItemText>{itemTextOne}</ItemText>
-            <ItemMessage>{itemMessageOne}</ItemMessage>
-          </ItemTextView>
-        </ItemView>
-      </TouchableOpacity>
-      <TouchableOpacity onPress={itemTwo}>
-        <ItemView>
-          {iconTwo}
-          <ItemTextView>
-            <ItemText>{itemTextTwo}</ItemText>
-            <ItemMessage>{itemMessageTwo}</ItemMessage>
-          </ItemTextView>
-        </ItemView>
-      </TouchableOpacity>
+      <ItemList
+        handlePress={itemOne}
+        iconName={iconOne}
+        itemText={itemTextOne}
+        itemMessage={itemMessageOne}
+      />
+      <ItemList
+        handlePress={itemTwo}
+        iconName={iconTwo}
+        itemText={itemTextTwo}
+        itemMessage={itemMessageTwo}
+      />
+      {notWell && (
+        <>
+          <ItemList
+            handlePress={itemThree}
+            iconName={iconThree}
+            itemText={itemTextThree}
+            itemMessage={itemMessageThree}
+          />
+          <ItemList
+            handlePress={itemFour}
+            iconName={iconFour}
+            itemText={itemTextFour}
+            itemMessage={itemMessageFour}
+          />
+        </>
+      )}
     </ScrollView>
   );
 };

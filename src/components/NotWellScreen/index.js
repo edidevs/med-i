@@ -15,10 +15,14 @@ const NotWellScreen = () => {
     resultsText: 'Relax, take it easy',
     messageOne: 'Say hello to wellness',
     messageTwo: 'A healthy you is a happy you',
-    itemTextOne: 'Med-i health',
-    itemMessageOne: 'Get in shape',
-    itemTextTwo: 'Med-i devices',
-    itemMessageTwo: 'Explore health devices',
+    itemTextOne: 'Diabetes',
+    itemTextTwo: 'Smoking Cessation',
+    itemTextThree: 'Food safety',
+    itemTextFour: 'Mental Health',
+    itemMessageOne: 'bar',
+    itemMessageTwo: 'bar',
+    itemMessageThree: 'bar',
+    itemMessageFour: 'bar',
   };
   return <StatusScreen {...props} />;
 };

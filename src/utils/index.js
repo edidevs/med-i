@@ -8,4 +8,11 @@ export {
   backgroundTabs,
 } from './loadAppropriateAsset';
 export { screenWidth, screenHeight } from './deviceSize';
-export { linkOne, linkTwo, linkThree, linkFour } from './links';
+export {
+  linkOne,
+  linkTwo,
+  linkThree,
+  linkFour,
+  linkFive,
+  linkSix,
+} from './links';
