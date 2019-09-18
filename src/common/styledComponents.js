@@ -29,6 +29,14 @@ export const ShadowView = styled.View`
   shadow-radius: 10px;
 `;
 
+export const GreetingText = styled.Text`
+  color: #fff;
+  font-size: 34px;
+  font-weight: bold;
+  letter-spacing: 1.16px;
+  padding-top: 16px;
+`;
+
 export const RegularText = styled.Text`
   font-size: 16px;
   color: #222b45;

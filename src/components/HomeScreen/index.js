@@ -3,13 +3,8 @@ import { StatusBar, SafeAreaView } from 'react-native';
 
 import BottomView from './BottomView';
 
-import {
-  TopView,
-  MiddleView,
-  GreetingText,
-  InterrogationText,
-} from './styledComponents';
-import { ImageContainer } from '../../common/styledComponents';
+import { TopView, MiddleView, InterrogationText } from './styledComponents';
+import { ImageContainer, GreetingText } from '../../common/styledComponents';
 
 import { Mascot } from '../../../assets/Icons';
 
