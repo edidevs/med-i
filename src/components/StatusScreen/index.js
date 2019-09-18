@@ -27,8 +27,6 @@ const StatusScreen = ({
   itemTextFour,
   itemMessageOne,
   itemMessageTwo,
-  itemMessageThree,
-  itemMessageFour,
   ...otherProps
 }) => (
   <ImageContainer source={background}>
@@ -38,9 +36,9 @@ const StatusScreen = ({
       <ParagraphView>
         <ResultsText>{resultsText}</ResultsText>
         <MessageOneText>{messageOne}</MessageOneText>
-        {!sick && (
-          <MessageTwoText notWell={notWell}>{messageTwo}</MessageTwoText>
-        )}
+        <MessageTwoText notWell={notWell} sick={sick}>
+          {messageTwo}
+        </MessageTwoText>
       </ParagraphView>
       <ListItems
         sick={sick}
@@ -51,8 +49,6 @@ const StatusScreen = ({
         itemTextFour={itemTextFour}
         itemMessageOne={itemMessageOne}
         itemMessageTwo={itemMessageTwo}
-        itemMessageThree={itemMessageThree}
-        itemMessageFour={itemMessageFour}
         otherProps={otherProps}
       />
     </SafeAreaView>

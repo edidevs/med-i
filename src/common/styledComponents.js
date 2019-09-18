@@ -1,6 +1,5 @@
 import styled from 'styled-components/native';
 
-import { Input, Button, Item } from 'native-base';
 import { LinearGradient } from 'expo-linear-gradient';
 
 import { screenHeight, screenWidth } from '../utils/deviceSize';
@@ -18,22 +17,6 @@ export const ImageContainer = styled.ImageBackground`
   width: ${screenWidth};
 `;
 
-export const AuthContainer = styled.View`
-  width: ${screenWidth * 0.85}px;
-  background-color: #fff;
-  border-radius: 25;
-  elevation: 14;
-  shadow-color: #9aa0b2;
-  shadow-offset: 2px;
-  shadow-opacity: 0.8;
-  shadow-radius: 22;
-  padding-top: 44px;
-  padding-left: 24px;
-  padding-right: 24px;
-  padding-bottom: 35px;
-  margin-bottom: 83px;
-`;
-
 export const NavigationView = styled.View`
   flex-direction: row;
 `;
@@ -46,70 +29,18 @@ export const ShadowView = styled.View`
   shadow-radius: 10px;
 `;
 
-export const Title = styled.Text`
-  font-size: 30px;
-  font-weight: bold;
-  color: #222b45;
-  margin-left: 14px;
-`;
-
-export const SubTitle = styled.Text`
-  font-size: 16;
-  font-weight: 500;
-  color: #222b45;
-  margin-left: 14px;
-  margin-top: 24px;
-  margin-bottom: 24px;
-`;
-
-export const InputView = styled(Item)`
-  padding-left: 16px;
-`;
-
-export const InputField = styled(Input).attrs({
-  placeholderTextColor: '#A6A6A6',
-  autoCapitalize: 'none',
-  autoCorrect: false,
-})`
-  color: #222b45;
-`;
-
-export const UserInput = styled(InputField).attrs({
-  placeholder: 'Your username',
-  keyboardType: 'default',
-  returnKeyType: 'next',
-})``;
-
-export const ConfirmButton = styled(Button)`
-  background-color: #7adfec;
-  align-items: center;
-  justify-content: center;
-  height: 56px;
-  margin-top: 24px;
-`;
-
-export const ConfirmButtonText = styled.Text`
+export const GreetingText = styled.Text`
   color: #fff;
+  font-size: 34px;
   font-weight: bold;
-  font-size: 16px;
-`;
-
-export const HyperLinkText = styled.Text`
-  color: #8ccced;
-  font-weight: bold;
-  font-size: 16px;
+  letter-spacing: 1.16px;
+  padding-top: 16px;
 `;
 
 export const RegularText = styled.Text`
   font-size: 16px;
   color: #222b45;
 `;
-
-export const PasswordInput = styled(Input).attrs({
-  placeholder: '********',
-  returnKeyType: 'go',
-  secureTextEntry: true,
-})``;
 
 export const CircleView = styled.View`
   height: ${props => props.diameter || 55}px;
@@ -173,10 +104,6 @@ export const BoldText = styled.Text`
   font-weight: 600;
 `;
 
-export const HealthyColors = ['#55C26F', '#5ADF79'];
-export const NotWellColors = ['#ED956A', '#F06D2E'];
-export const SickColors = ['#E36E5B', '#F0857A'];
-
 export const IconView = styled(LinearGradient)`
   height: 188px;
   width: 188px;
@@ -192,11 +119,15 @@ export const IconView = styled(LinearGradient)`
 export const ResultsText = styled.Text`
   color: #393c50;
   font-weight: 600;
-  font-size: 34px;
+  font-size: 30px;
   text-align: center;
   line-height: 46px;
   letter-spacing: 1.16px;
 `;
+
+export const HealthyColors = ['#55C26F', '#5ADF79'];
+export const NotWellColors = ['#ED956A', '#F06D2E'];
+export const SickColors = ['#E36E5B', '#F0857A'];
 
 export const FaceHeight = 95;
 export const FaceWidth = 95;

@@ -1,23 +1,25 @@
 import React from 'react';
 
-import { createSwitchNavigator, createAppContainer } from 'react-navigation';
+import { createAppContainer } from 'react-navigation';
+import createAnimatedSwitchNavigator from 'react-navigation-animated-switch';
+
 import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
 
 import { store, persistor } from './src/redux/store';
-import AuthLoadingScreen from './src/components/AuthLoadingScreen';
 import { AppStack } from './src/navigator/AppStack/AppStackNavigator';
-import { AuthStack } from './src/navigator/AuthStack';
+import { FirstSplash, SecondSplash, ThirdSplash } from './src/components';
 
 const AppNavigation = createAppContainer(
-  createSwitchNavigator(
+  createAnimatedSwitchNavigator(
     {
-      AuthLoading: AuthLoadingScreen,
+      SplashOne: FirstSplash,
+      SplashTwo: SecondSplash,
+      SplashThree: ThirdSplash,
       App: AppStack,
-      Auth: AuthStack,
     },
     {
-      initialRouteName: 'AuthLoading',
+      initialRouteName: 'SplashOne',
     }
   )
 );

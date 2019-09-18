@@ -23,14 +23,6 @@ export const BottomViewContainer = styled.View`
   width: ${screenWidth * 0.88}px;
 `;
 
-export const GreetingText = styled.Text`
-  color: #fff;
-  font-size: 34px;
-  font-weight: bold;
-  letter-spacing: 1.16px;
-  padding-top: 16px;
-`;
-
 export const InterrogationText = styled.Text`
   color: #575772;
   font-size: 26px;

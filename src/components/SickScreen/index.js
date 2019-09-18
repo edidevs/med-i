@@ -12,12 +12,12 @@ const SickScreen = () => {
     notWell: false,
     background,
     colors: SickColors,
-    resultsText: 'Stay clam, we got you',
-    messageOne: 'Is it in your ?',
-    messageTwo: '',
+    resultsText: 'Stay clam, I got you',
+    messageOne: 'Help me locate the source of pain',
+    messageTwo: 'Is it in your ?',
     itemTextOne: 'Body',
-    itemMessageOne: 'Relieve Physical Pain',
     itemTextTwo: 'Mind',
+    itemMessageOne: 'Relieve Physical Pain',
     itemMessageTwo: 'Address Mental Health',
   };
   return <StatusScreen {...props} />;

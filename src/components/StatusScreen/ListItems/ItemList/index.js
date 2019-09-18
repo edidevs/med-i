@@ -9,13 +9,19 @@ import {
   ItemMessage,
 } from '../../../../common/styledComponents';
 
-const ItemList = ({ handlePress, iconName, itemText, itemMessage }) => (
+const ItemList = ({
+  handlePress,
+  iconName,
+  itemText,
+  itemMessage,
+  notWell,
+}) => (
   <TouchableOpacity onPress={handlePress}>
     <ItemView>
       {iconName}
       <ItemTextView>
         <ItemText>{itemText}</ItemText>
-        <ItemMessage>{itemMessage}</ItemMessage>
+        {!notWell && <ItemMessage>{itemMessage}</ItemMessage>}
       </ItemTextView>
     </ItemView>
   </TouchableOpacity>

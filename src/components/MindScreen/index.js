@@ -22,14 +22,14 @@ import {
   FaceWidth,
 } from '../../common/styledComponents';
 
-import { backgroundSick as background } from '../../utils';
+import { backgroundSick as background, callNumber } from '../../utils';
 
 import { BigMind } from '../../../assets/Icons';
 
 const MindScreen = () => (
   <ImageContainer source={background}>
     <StatusBar barStyle="light-content" />
-    <SafeAreaView style={{ flex: 1 }}>
+    <SafeAreaView>
       <MindView>
         <ShadowView>
           <IconView colors={SickColors}>
@@ -42,7 +42,7 @@ const MindScreen = () => (
         <MessageText>
           Call <BoldText>999</BoldText>
         </MessageText>
-        <CallButton>
+        <CallButton onPress={() => callNumber()}>
           <CallButtonIconView>
             <CallButtonIcon />
           </CallButtonIconView>

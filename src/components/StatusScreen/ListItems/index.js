@@ -33,8 +33,6 @@ const ListItems = ({
   itemTextFour,
   itemMessageOne,
   itemMessageTwo,
-  itemMessageThree,
-  itemMessageFour,
   otherProps,
 }) => {
   const screenElements = {};
@@ -78,12 +76,14 @@ const ListItems = ({
         iconName={iconOne}
         itemText={itemTextOne}
         itemMessage={itemMessageOne}
+        notWell={notWell}
       />
       <ItemList
         handlePress={itemTwo}
         iconName={iconTwo}
         itemText={itemTextTwo}
         itemMessage={itemMessageTwo}
+        notWell={notWell}
       />
       {notWell && (
         <>
@@ -91,13 +91,13 @@ const ListItems = ({
             handlePress={itemThree}
             iconName={iconThree}
             itemText={itemTextThree}
-            itemMessage={itemMessageThree}
+            notWell={notWell}
           />
           <ItemList
             handlePress={itemFour}
             iconName={iconFour}
             itemText={itemTextFour}
-            itemMessage={itemMessageFour}
+            notWell={notWell}
           />
         </>
       )}
