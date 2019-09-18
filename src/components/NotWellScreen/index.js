@@ -19,10 +19,6 @@ const NotWellScreen = () => {
     itemTextTwo: 'Smoking Cessation',
     itemTextThree: 'Food safety',
     itemTextFour: 'Mental Health',
-    itemMessageOne: 'bar',
-    itemMessageTwo: 'bar',
-    itemMessageThree: 'bar',
-    itemMessageFour: 'bar',
   };
   return <StatusScreen {...props} />;
 };

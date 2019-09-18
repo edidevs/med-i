@@ -6,7 +6,7 @@ const SecondSplash = navigation => (
   <CommonScreen
     navigation={navigation}
     routeName="SplashThree"
-    content="Here"
+    content="Let me know your symptoms"
   />
 );
 export default SecondSplash;

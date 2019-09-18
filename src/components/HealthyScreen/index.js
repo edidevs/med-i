@@ -15,8 +15,8 @@ const HealthyScreen = () => {
     messageOne: 'Say hello to wellness',
     messageTwo: 'A healthy you is a happy you',
     itemTextOne: 'Physical Activity',
-    itemMessageOne: 'Stay active, stay healthy!',
     itemTextTwo: 'Nutrition',
+    itemMessageOne: 'Stay active, stay healthy!',
     itemMessageTwo: 'Eat well with a healthy diet!',
   };
   return <StatusScreen {...props} />;
