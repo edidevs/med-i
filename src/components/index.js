@@ -13,6 +13,8 @@ export { default as HealthyScreen } from './HealthyScreen';
 export { default as HomeScreen } from './HomeScreen';
 export { default as StoreScreen } from './StoreScreen';
 export { default as MoreScreen } from './MoreScreen';
+export { default as TermsScreen } from './TermsScreen';
+export { default as AboutUsScreen } from './AboutUsScreen';
 export { default as FirstSplash } from './SplashScreen/FirstSplash';
 export { default as SecondSplash } from './SplashScreen/SecondSplash';
 export { default as ThirdSplash } from './SplashScreen/ThirdSplash';

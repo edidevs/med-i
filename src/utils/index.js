@@ -7,6 +7,7 @@ export {
   backgroundNotWell,
   backgroundSick,
   backgroundTabs,
+  backgroundHome,
 } from './loadAppropriateAsset';
 export { screenWidth, screenHeight } from './deviceSize';
 export { physical, nutrition, diabetes, tobacco, food, mental } from './links';

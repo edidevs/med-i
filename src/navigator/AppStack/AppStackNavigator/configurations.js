@@ -15,6 +15,8 @@ import {
   IndigestionScreen,
   CartHeader,
   HealthyScreen,
+  AboutUsScreen,
+  TermsScreen,
 } from '../../../components';
 
 const navigationParams = screenName => ({ navigation }) => ({
@@ -90,5 +92,17 @@ export const configurations = {
   Indigestion: {
     screen: IndigestionScreen,
     navigationOptions: navigationParams('Indigestion'),
+  },
+  About: {
+    screen: AboutUsScreen,
+    navigationOptions: {
+      headerTitle: 'About us',
+    },
+  },
+  Terms: {
+    screen: TermsScreen,
+    navigationOptions: {
+      headerTitle: 'Terms',
+    },
   },
 };
