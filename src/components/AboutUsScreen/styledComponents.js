@@ -2,8 +2,7 @@ import styled from 'styled-components/native';
 
 export const TextView = styled.ScrollView.attrs({
   flex: 1,
-  paddingTop: 34,
-  justifyContent: 'center',
+  marginTop: 120,
   paddingLeft: 16,
   paddingRight: 16,
 })``;
