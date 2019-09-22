@@ -17,20 +17,22 @@ import {
 
 import { Medicine } from '../../../../assets/Icons';
 
+const Medication = ({ addItem, itemName }) => (
+  <ItemViewBis>
+    <CircleView>
+      <Medicine />
+    </CircleView>
+    <ItemTextView>
+      <ItemText>{itemName}</ItemText>
+    </ItemTextView>
+    <TouchableOpacity onPress={() => addItem({ itemName })}>
+      <AddIcon />
+    </TouchableOpacity>
+  </ItemViewBis>
+);
+
 const DrugView = ({ addItem, itemName }) =>
-  itemName ? (
-    <ItemViewBis>
-      <CircleView>
-        <Medicine />
-      </CircleView>
-      <ItemTextView>
-        <ItemText>{itemName}</ItemText>
-      </ItemTextView>
-      <TouchableOpacity onPress={() => addItem({ itemName })}>
-        <AddIcon />
-      </TouchableOpacity>
-    </ItemViewBis>
-  ) : null;
+  itemName ? <Medication addItem={addItem} itemName={itemName} /> : null;
 
 const mapDispatchToProps = dispatch => ({
   addItem: item => dispatch(addItemToCart(item)),

@@ -8,7 +8,7 @@ import { ImageContainer, GreetingText } from '../../common/styledComponents';
 
 import { Mascot } from '../../../assets/Icons';
 
-const background = require('../../../assets/Images/HomeScreen.png');
+import { backgroundHome as background } from '../../utils';
 
 const HomeScreen = ({ ...navigation }) => (
   <ImageContainer source={background}>

@@ -10,9 +10,9 @@ const PainScreen = () => {
     symptomTwo: 'Body ache',
     symptomThree: 'Toothache',
     symptomFour: 'Stomach ache',
-    drugOne: 'Paracetamol',
+    drugOne: 'Codeine',
     drugTwo: 'Ibuprofen',
-    drugThree: 'Codeine',
+    drugThree: 'Paracetamol',
   };
   return <SymptomScreen {...otherProps} />;
 };

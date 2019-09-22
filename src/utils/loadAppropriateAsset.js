@@ -20,3 +20,5 @@ export const backgroundTabs =
   screenWidth < 700
     ? require('../../assets/Images/MoreScreen.png')
     : require('../../assets/Images/MoreSTab.png');
+
+export const backgroundHome = require('../../assets/Images/HomeScreen.png');

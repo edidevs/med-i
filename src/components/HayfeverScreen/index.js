@@ -13,9 +13,9 @@ const HayfeverScreen = () => {
     symptomFive: 'Tiredness',
     symptomSix: 'Runny nose',
     drugOne: 'Ceterizine',
-    drugTwo: 'Loratidine',
+    drugTwo: 'Chlorphenamine',
     drugThree: 'Diphenhydramine',
-    drugFour: 'Chlorphenamine',
+    drugFour: 'Loratidine',
   };
   return <SymptomScreen {...otherProps} />;
 };

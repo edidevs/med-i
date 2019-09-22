@@ -7,9 +7,9 @@ const CoughScreen = () => {
   const otherProps = {
     symptomDescription:
       'A productive or non-productive cough\nthat is less than 3 weeks',
-    drugOne: 'Guaifenesin',
-    drugTwo: 'Dextro-methorphan',
-    drugThree: 'Diphenhydramine',
+    drugOne: 'Dextromethorphan',
+    drugTwo: 'Diphenhydramine',
+    drugThree: 'Guaifenesin',
   };
   return <SymptomScreen {...otherProps} />;
 };
