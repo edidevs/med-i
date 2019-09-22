@@ -23,7 +23,8 @@ const CommonScreen = ({ navigation, routeName, content }) => {
 
   useEffect(() => {
     fadeIn();
-    setTimeout(() => handleRoute(navigation, routeName), 3000);
+    const timer = setTimeout(() => handleRoute(navigation, routeName), 3000);
+    return () => clearTimeout(timer);
   }, [fadeIn, navigation, routeName]);
 
   return (

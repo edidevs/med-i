@@ -1,10 +1,14 @@
 {
   "expo": {
-    "name": "medi-i",
+    "name": "Med-i",
     "slug": "med-i",
     "privacy": "public",
     "sdkVersion": "35.0.0",
-    "platforms": ["ios", "android", "web"],
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/Icons/icon.png",
@@ -16,13 +20,19 @@
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": ["**/*"],
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "uk.co.powerh.medi"
+    },
+    "android": {
+      "package": "uk.co.powerh.medi"
     },
     "packagerOpts": {
       "config": "metro.config.js"
     },
-    "description": ""
+    "description": "Medi is a health app that lets you find the proper non-prescription medication to treat your symptoms."
   }
 }
