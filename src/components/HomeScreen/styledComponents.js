@@ -20,7 +20,8 @@ export const BottomViewContainer = styled.View`
   flex-direction: row;
   justify-content: space-between;
   flex: 1;
-  width: ${screenWidth * 0.88}px;
+  /* Make an exception for iphone SE */
+  width: ${screenWidth > 320 ? screenWidth * 0.88 : screenWidth}px;
 `;
 
 export const InterrogationText = styled.Text`

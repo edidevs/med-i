@@ -1,15 +1,14 @@
 import React from 'react';
-import { StatusBar } from 'react-native';
+import { SafeAreaView, StatusBar } from 'react-native';
 
 import { ParagraphText, TextView } from '../AboutUsScreen/styledComponents';
-import { WrapperView } from '../MoreScreen/styledComponents';
 import { ImageContainer } from '../../common/styledComponents';
 
 import { backgroundHome as background } from '../../utils';
 
 const TermsScreen = () => (
   <ImageContainer source={background}>
-    <WrapperView>
+    <SafeAreaView>
       <StatusBar barStyle="light-content" />
       <TextView>
         <ParagraphText>
@@ -33,7 +32,7 @@ const TermsScreen = () => (
           not hesitate to speak with your pharmacist or general practitioner.
         </ParagraphText>
       </TextView>
-    </WrapperView>
+    </SafeAreaView>
   </ImageContainer>
 );
 
