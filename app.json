@@ -3,28 +3,26 @@
     "name": "medi-i",
     "slug": "med-i",
     "privacy": "public",
-    "sdkVersion": "33.0.0",
-    "platforms": [
-      "ios",
-      "android",
-      "web"
-    ],
+    "sdkVersion": "35.0.0",
+    "platforms": ["ios", "android", "web"],
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/Icons/icon.png",
     "splash": {
-      "image": "./assets/splash.png",
-      "resizeMode": "contain",
+      "image": "./assets/Images/splash.png",
+      "resizeMode": "cover",
       "backgroundColor": "#ffffff"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true
-    }
+    },
+    "packagerOpts": {
+      "config": "metro.config.js"
+    },
+    "description": ""
   }
 }

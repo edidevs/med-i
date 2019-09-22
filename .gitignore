@@ -1,9 +1,11 @@
 node_modules/**/*
 .expo/*
+.expo-shared/*
 npm-debug.*
 *.jks
 *.p12
 *.key
+*.svg
 *.mobileprovision
 *.orig.*
 web-build/
@@ -13,3 +15,4 @@ yarn.lock
 package-lock.json
 assets
 .watchmanconfig
+.DS_Store
