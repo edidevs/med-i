@@ -17,7 +17,7 @@ const HomeScreen = ({ ...navigation }) => (
       <TopView>
         <Mascot height={105} width={105} />
         <React.Fragment>
-          <GreetingText>Hey there!</GreetingText>
+          <GreetingText>Good Day!</GreetingText>
         </React.Fragment>
       </TopView>
       <MiddleView>
